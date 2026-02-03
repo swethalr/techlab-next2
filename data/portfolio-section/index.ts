@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
-  FaChartSimple, 
-  FaPhone, 
-  FaMessage, 
-  FaCalendarDays, 
-  FaLocationDot, 
-  FaGlobe, 
-  FaMapLocationDot, 
-  FaRankingStar 
+import {
+  FaChartSimple,
+  FaPhone,
+  FaMessage,
+  FaCalendarDays,
+  FaLocationDot,
+  FaGlobe,
+  FaMapLocationDot,
+  FaRankingStar,
 } from 'react-icons/fa6';
 
 export const marqueeTexts = [

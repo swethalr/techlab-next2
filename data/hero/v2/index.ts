@@ -1,7 +1,7 @@
 export const heroSectionData = {
   // The large scrolling text in the background
-  bgText: "Zammy Zaif",
-  
+  bgText: 'Zammy Zaif',
+
   // The avatar images for the floating stats card
   customers: [
     { src: '/assets/images/hero/avatar-1.png', alt: 'Client 1' },

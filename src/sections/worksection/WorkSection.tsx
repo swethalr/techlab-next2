@@ -54,7 +54,9 @@ export default function WorkSection() {
           </div>
           <h3 className="h3 font-bold leading-tight text-black">
             {workSectionContent.titlePart1}{' '}
-            <span className="italic text-[#3cb878]/80">{workSectionContent.titleHighlight}</span>
+            <span className="italic text-[#3cb878]/80">
+              {workSectionContent.titleHighlight}
+            </span>
           </h3>
         </div>
 
@@ -131,7 +133,7 @@ export default function WorkSection() {
           </Swiper>
 
           {/* Navigation Arrows */}
-          <button className="work-prev border-[#3cb878] absolute left-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-orange-600 md:flex md:h-12 md:w-12 lg:-left-4">
+          <button className="work-prev absolute left-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3cb878] bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-orange-600 md:flex md:h-12 md:w-12 lg:-left-4">
             <FaChevronLeft size={16} />
           </button>
           <button className="work-next absolute right-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-orange-600 md:flex md:h-12 md:w-12 lg:-right-4">

@@ -23,16 +23,30 @@ export default function CtaBanner({ data }: { data: any }) {
                 </filter>
               </defs>
               <motion.rect
-                x="0" y="0" width="100%" height="100%" rx="60"
-                fill="none" stroke="#3cb878" strokeWidth="6" strokeLinecap="round"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                rx="60"
+                fill="none"
+                stroke="#3cb878"
+                strokeWidth="6"
+                strokeLinecap="round"
                 filter="url(#orangeGlow)"
                 initial={{ pathLength: 0.2, pathOffset: 0.05 }}
                 animate={{ pathOffset: 1.05 }}
                 transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
               />
               <motion.rect
-                x="0" y="0" width="100%" height="100%" rx="60"
-                fill="none" stroke="#3cb878" strokeWidth="6" strokeLinecap="round"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                rx="60"
+                fill="none"
+                stroke="#3cb878"
+                strokeWidth="6"
+                strokeLinecap="round"
                 filter="url(#orangeGlow)"
                 initial={{ pathLength: 0.2, pathOffset: 0.55 }}
                 animate={{ pathOffset: 1.55 }}
@@ -43,14 +57,21 @@ export default function CtaBanner({ data }: { data: any }) {
 
           <div className="relative z-20 flex flex-col items-center text-center">
             <h3 className="h3 mb-6 max-w-4xl font-[900] leading-[1.2] tracking-tight text-[#444]">
-              {data.titleMain} <span className="italic text-[#3cb878]">{data.titleHighlight}</span> {data.titleEnd}
+              {data.titleMain}{' '}
+              <span className="italic text-[#3cb878]">
+                {data.titleHighlight}
+              </span>{' '}
+              {data.titleEnd}
             </h3>
             <p className="p mb-12 max-w-2xl font-medium leading-relaxed text-[#666] md:text-[18px]">
               {data.subtitle}
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               {data.buttons.map((text: string, i: number) => (
-                <button key={i} className="h6 rounded-full border border-white/80 bg-white/40 px-8 py-3.5 font-bold text-[#555] shadow-sm backdrop-blur-md transition-all hover:scale-105 hover:bg-white/90 active:scale-95">
+                <button
+                  key={i}
+                  className="h6 rounded-full border border-white/80 bg-white/40 px-8 py-3.5 font-bold text-[#555] shadow-sm backdrop-blur-md transition-all hover:scale-105 hover:bg-white/90 active:scale-95"
+                >
                   {text}
                 </button>
               ))}

@@ -42,7 +42,7 @@ export default function Page() {
   return (
     <>
       <MainHeader version="2" />
-     <HeroSection data={heroSectionData} />
+      <HeroSection data={heroSectionData} />
       <WorkprocessSection data={workprocessSectionData} />
       <CtaBanner data={ctaBannerData} />
       <GrowthSection data={growthSectionData} />
@@ -51,7 +51,7 @@ export default function Page() {
       <AboutSection data={aboutSectionData} />
       <StatisticsSection />
 
-      <OnicxServiceSlider  />
+      <OnicxServiceSlider />
       <WorkSection />
       <PortfolioSection />
 

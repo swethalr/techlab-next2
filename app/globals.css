@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   h1,
   h2,
   h3,
@@ -64,7 +63,6 @@
 
 /* --- Component Classes --- */
 @layer components {
-
   /* Modern Input Styling with Glassmorphism support */
   .contact-input-v2 {
     @apply w-full rounded-xl border border-gray-200/60 bg-white p-4 text-sm text-accent-900 outline-none transition-all placeholder:text-gray-400 focus:border-primary/50 focus:ring-4 focus:ring-primary/5;
@@ -121,7 +119,6 @@
 }
 
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent;

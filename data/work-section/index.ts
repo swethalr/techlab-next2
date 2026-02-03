@@ -1,7 +1,7 @@
 export const workSectionContent = {
-  subtitle: "Our Work",
-  titlePart1: "Our Recent Client",
-  titleHighlight: "Results",
+  subtitle: 'Our Work',
+  titlePart1: 'Our Recent Client',
+  titleHighlight: 'Results',
 };
 
 export const results = [

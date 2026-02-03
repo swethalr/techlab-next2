@@ -36,7 +36,10 @@ export default function ContactSection() {
         <div className="flex flex-col">
           <div className="mb-8">
             <h3 className="h3 font-bold leading-tight tracking-tight text-slate-900">
-              {contactContent.title} <span className="text-[#3cb878]">{contactContent.titleHighlight}</span>
+              {contactContent.title}{' '}
+              <span className="text-[#3cb878]">
+                {contactContent.titleHighlight}
+              </span>
             </h3>
             <p className="p mt-2 font-medium text-slate-700">
               {contactContent.subtitle}
@@ -45,45 +48,57 @@ export default function ContactSection() {
 
           <form className="space-y-5">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <CleanInput label="Name" placeholder="Your Name" required/>
-              <CleanInput label="Email" placeholder="Your email" required/>
-              <CleanInput label="Phone" placeholder="Your Phone" required/>
-              
+              <CleanInput label="Name" placeholder="Your Name" required />
+              <CleanInput label="Email" placeholder="Your email" required />
+              <CleanInput label="Phone" placeholder="Your Phone" required />
+
               {/* DROPDOWN SELECT BOX */}
               <div className="group flex flex-col gap-1.5">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-600 transition-colors group-focus-within:text-[#3cb878]">
                   Select Service <span className="text-red-500">*</span>
                 </label>
-                <select className="h-12 w-full rounded-xl border border-[#3cb878]/20 bg-white/80 px-4 text-slate-900 transition-all focus:border-[#3cb878] focus:outline-none focus:ring-4 focus:ring-[#3cb878]/10 appearance-none cursor-pointer">
+                <select className="h-12 w-full cursor-pointer appearance-none rounded-xl border border-[#3cb878]/20 bg-white/80 px-4 text-slate-900 transition-all focus:border-[#3cb878] focus:outline-none focus:ring-4 focus:ring-[#3cb878]/10">
                   {contactContent.services.map((service, idx) => (
-                    <option key={idx} value={service}>{service}</option>
+                    <option key={idx} value={service}>
+                      {service}
+                    </option>
                   ))}
                 </select>
               </div>
 
               <div className="md:col-span-2">
-                <CleanInput label="GBP or Website URL" placeholder="Your GBP or Website URL"/>
+                <CleanInput
+                  label="GBP or Website URL"
+                  placeholder="Your GBP or Website URL"
+                />
               </div>
             </div>
-            
-            <CleanInput
-              label="Subject"
-              placeholder="Your Subject"
-              area
-            />
+
+            <CleanInput label="Subject" placeholder="Your Subject" area />
 
             {/* RECAPTCHA BOX */}
             <div className="flex items-center justify-start py-2">
-               <div className="flex items-center gap-4 bg-white border border-slate-200 p-3 rounded-lg shadow-sm">
-                  <div className="flex items-center gap-3 px-1">
-                    <input type="checkbox" className="w-6 h-6 cursor-pointer accent-[#3cb878]" />
-                    <span className="text-sm font-medium text-slate-700">I'm not a robot</span>
-                  </div>
-                  <div className="flex flex-col items-center pl-4 border-l border-slate-100">
-                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="recaptcha" className="w-8" />
-                    <span className="text-[9px] text-slate-400 mt-1 uppercase">reCAPTCHA</span>
-                  </div>
-               </div>
+              <div className="flex items-center gap-4 rounded-lg border border-slate-200 bg-white p-3 shadow-sm">
+                <div className="flex items-center gap-3 px-1">
+                  <input
+                    type="checkbox"
+                    className="h-6 w-6 cursor-pointer accent-[#3cb878]"
+                  />
+                  <span className="text-sm font-medium text-slate-700">
+                    I'm not a robot
+                  </span>
+                </div>
+                <div className="flex flex-col items-center border-l border-slate-100 pl-4">
+                  <img
+                    src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                    alt="recaptcha"
+                    className="w-8"
+                  />
+                  <span className="mt-1 text-[9px] uppercase text-slate-400">
+                    reCAPTCHA
+                  </span>
+                </div>
+              </div>
             </div>
 
             <motion.button

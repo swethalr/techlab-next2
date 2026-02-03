@@ -18,12 +18,19 @@ export default function Technologies({ data }: { data: any }) {
 
       <div className="mx-auto max-w-6xl text-center">
         <h3 className="h3 mb-4 tracking-tight text-[#0f172a]">{title}</h3>
-        <p className="p mx-auto max-w-5xl leading-relaxed text-slate-900">{description}</p>
+        <p className="p mx-auto max-w-5xl leading-relaxed text-slate-900">
+          {description}
+        </p>
       </div>
 
       {/* DESKTOP VIEW: SVG Paths and Floating Boxes */}
       <div className="relative mx-auto hidden aspect-[12/7] w-full max-w-[1400px] sm:block">
-        <svg viewBox="0 0 1200 700" fill="none" className="pointer-events-none absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          viewBox="0 0 1200 700"
+          fill="none"
+          className="pointer-events-none absolute inset-0 h-full w-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           {techItems.map((tech: any, i: number) => {
             const isTop = tech.y < centerY;
             const cp1Y = isTop ? centerY - 100 : centerY + 100;
@@ -32,13 +39,22 @@ export default function Technologies({ data }: { data: any }) {
 
             return (
               <g key={`path-${i}`}>
-                <path d={pathD} stroke="#000000" strokeWidth="1.1" fill="none" />
+                <path
+                  d={pathD}
+                  stroke="#000000"
+                  strokeWidth="1.1"
+                  fill="none"
+                />
                 <motion.circle
                   r="2.3"
                   fill="#ad0404"
                   initial={{ offsetDistance: '0%' }}
                   animate={{ offsetDistance: '100%' }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeOut',
+                  }}
                   style={{ offsetPath: `path('${pathD}')` }}
                 />
               </g>
@@ -47,9 +63,13 @@ export default function Technologies({ data }: { data: any }) {
         </svg>
 
         {/* Central Label */}
-        <div 
+        <div
           className="h4 absolute z-30 select-none rounded-2xl border-4 border-white/90 bg-black px-5 py-3 font-bold text-white shadow-[0_20px_50px_rgba(0,0,0,0.45)]"
-          style={{ left: `${(centerX / 1200) * 100}%`, top: `${(centerY / 700) * 100}%`, transform: 'translate(-50%, -50%)' }}
+          style={{
+            left: `${(centerX / 1200) * 100}%`,
+            top: `${(centerY / 700) * 100}%`,
+            transform: 'translate(-50%, -50%)',
+          }}
         >
           TECHNOLOGIES
         </div>
@@ -66,7 +86,9 @@ export default function Technologies({ data }: { data: any }) {
               borderColor: `${tech.color}90`,
             }}
           >
-            <div className="text-2xl" style={{ color: tech.color }}>{tech.icon}</div>
+            <div className="text-2xl" style={{ color: tech.color }}>
+              {tech.icon}
+            </div>
           </div>
         ))}
       </div>
@@ -82,7 +104,9 @@ export default function Technologies({ data }: { data: any }) {
             className="flex flex-col items-center justify-center rounded-2xl border-2 bg-white p-6 shadow-sm"
             style={{ borderColor: `${tech.color}25` }}
           >
-            <div className="mb-2 text-4xl" style={{ color: tech.color }}>{tech.icon}</div>
+            <div className="mb-2 text-4xl" style={{ color: tech.color }}>
+              {tech.icon}
+            </div>
           </motion.div>
         ))}
       </div>

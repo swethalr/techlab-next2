@@ -443,21 +443,15 @@ export default function GoogleRankingExpertSection() {
               >
                 {/* Primary Bio Paragraph */}
                 <p className="p font-medium leading-relaxed  text-slate-600">
-                  With a track record of{' '}
-                  
-                    successfully completing over 2,500+ SEO projects globally
-                  {' '}
-                  and optimizing rankings from none or 10th place to the first
-                  rank on the first page,{' '}
+                  With a track record of successfully completing over 2,500+ SEO
+                  projects globally and optimizing rankings from none or 10th
+                  place to the first rank on the first page,{' '}
                   <span className="font-bold text-[#3cb878]">Zammy</span>, the
                   visionary CEO of VersaForge, is a highly skilled Google Search
                   Engine Ranking Optimization practitioner who began working in
                   2008. Additionally, his work in local SEO is unparalleled,
-                  having ranked{' '}
-                  
-                    over 800 local businesses in just 45 days
-                  
-                  , earning first-rank positions on Google Maps, further
+                  having ranked over 800 local businesses in just 45 days ,
+                  earning first-rank positions on Google Maps, further
                   solidifying his reputation as a leader in delivering tangible,
                   rapid and sustainable results for businesses aiming to enhance
                   their online visibility and achieve long-term growth.
@@ -481,14 +475,11 @@ export default function GoogleRankingExpertSection() {
                 {/* Local SEO Secondary Paragraph */}
                 <p className="p font-medium leading-[1.8]  text-slate-600">
                   Additionally, his work in local SEO is unparalleled, having
-                  ranked{' '}
-                 
-                    over 800 local businesses in just 45 days
-                 
-                  , earning first-rank positions on Google Maps, further
-                  solidifying his reputation as a leader in delivering tangible,
-                  rapid and sustainable results for businesses aiming to enhance
-                  their online visibility and achieve long-term growth.
+                  ranked over 800 local businesses in just 45 days , earning
+                  first-rank positions on Google Maps, further solidifying his
+                  reputation as a leader in delivering tangible, rapid and
+                  sustainable results for businesses aiming to enhance their
+                  online visibility and achieve long-term growth.
                 </p>
               </motion.div>
             </div>
@@ -547,17 +538,14 @@ export default function GoogleRankingExpertSection() {
                   {/* Content Body */}
                   <div className="space-y-8">
                     <p className="p  leading-relaxed text-slate-900 ">
-                      Renowned for delivering rapid, high-impact results,{' '}
-                      
-                        Zammy Zaif
-                      {' '}
-                      has mastered the art of Google Business Profile
+                      Renowned for delivering rapid, high-impact results, Zammy
+                      Zaif has mastered the art of Google Business Profile
                       optimization —
                       <span className="ml-1 font-bold text-[#3cb878]">
                         securing #1 rankings for high-value keywords in just 45
                         days.
-                      </span>
-                       {' '}By leveraging precision-targeted strategies focused on
+                      </span>{' '}
+                      By leveraging precision-targeted strategies focused on
                       primary service terms, Zammy consistently dominates local
                       search, earning recognition as a top-tier Google ranking
                       expert. Our proven methodology transforms visibility into
@@ -2111,11 +2099,12 @@ export default function GoogleRankingExpertSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="h4  leading-relaxed tracking-relaxed">
+                  <h4 className="h4  tracking-relaxed leading-relaxed">
                     Free Website <br /> Audit
                   </h4>
                   <h5 className="h5 font-bold  tracking-[0.02em] text-white">
-                    Boost your online presence with a free website audit tailored to improve SEO and visibility
+                    Boost your online presence with a free website audit
+                    tailored to improve SEO and visibility
                   </h5>
                 </div>
 

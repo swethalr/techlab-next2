@@ -32,19 +32,19 @@ export default function AboutSection({ data }: { data: any }) {
     };
   }, [isDragging, rotateX, rotateY]);
   // inside your component function...
-const [isMobile, setIsMobile] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
 
-React.useEffect(() => {
-  const checkMobile = () => setIsMobile(window.innerWidth < 768);
-  checkMobile();
-  window.addEventListener('resize', checkMobile);
-  return () => window.removeEventListener('resize', checkMobile);
-}, []);
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
-// The Z-distance must be exactly HALF of the width/height
-// Mobile w-64 = 256px -> Z = 128px
-// Desktop w-80 = 320px -> Z = 160px
-const zDistance = isMobile ? '128px' : '160px';
+  // The Z-distance must be exactly HALF of the width/height
+  // Mobile w-64 = 256px -> Z = 128px
+  // Desktop w-80 = 320px -> Z = 160px
+  const zDistance = isMobile ? '128px' : '160px';
 
   return (
     <section className="relative flex min-h-screen select-none flex-col items-center justify-between overflow-hidden bg-[#FDFDFD] px-6 py-16 lg:flex-row lg:px-24">
@@ -62,7 +62,11 @@ const zDistance = isMobile ? '128px' : '160px';
             (e.target as HTMLElement).setPointerCapture(e.pointerId);
             setIsDragging(true);
           }}
-          style={{ rotateX: smoothX, rotateY: smoothY, transformStyle: 'preserve-3d' }}
+          style={{
+            rotateX: smoothX,
+            rotateY: smoothY,
+            transformStyle: 'preserve-3d',
+          }}
           className={`relative h-64 w-64 touch-none md:h-80 md:w-80 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
           {[
@@ -78,7 +82,12 @@ const zDistance = isMobile ? '128px' : '160px';
               className="absolute inset-0 overflow-hidden rounded-sm border border-black/10 bg-white/90 shadow-[0_0_40px_rgba(0,0,0,0.05)]"
               style={{ transform, backfaceVisibility: 'hidden' }}
             >
-              <img src={data.images[i]} alt="Zammy Zaif" draggable="false" className="pointer-events-none h-full w-full object-cover" />
+              <img
+                src={data.images[i]}
+                alt="Zammy Zaif"
+                draggable="false"
+                className="pointer-events-none h-full w-full object-cover"
+              />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent opacity-50" />
             </div>
@@ -87,7 +96,9 @@ const zDistance = isMobile ? '128px' : '160px';
         <ParticleBackground />
         <div className="absolute bottom-10 flex flex-col items-center gap-3 opacity-40 lg:bottom-20">
           <div className="h-12 w-[1px] bg-gradient-to-b from-orange-500 to-transparent" />
-          <span className="h6 font-bold uppercase tracking-[0.5em] text-black">Hold to Spin Archive</span>
+          <span className="h6 font-bold uppercase tracking-[0.5em] text-black">
+            Hold to Spin Archive
+          </span>
         </div>
       </div>
 
@@ -97,7 +108,9 @@ const zDistance = isMobile ? '128px' : '160px';
           <header className="space-y-4">
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-8 bg-[#3cb878]" />
-              <span className="h5 mb-4 font-bold uppercase tracking-[0.2em] text-[#3cb878]">{data.legacy}</span>
+              <span className="h5 mb-4 font-bold uppercase tracking-[0.2em] text-[#3cb878]">
+                {data.legacy}
+              </span>
             </div>
             <h2 className="h2 font-secondary leading-[0.85] tracking-tighter text-gray-900">
               {data.title}
@@ -105,14 +118,24 @@ const zDistance = isMobile ? '128px' : '160px';
           </header>
 
           <p className="p max-w-2xl border-l-4 border-[#3cb878] pl-8 font-medium leading-relaxed text-gray-700">
-            {data.description.text1} <span className="font-bold text-gray-900">{data.description.bold1}</span> {data.description.text2} {data.description.text3} <span className="font-bold text-gray-900">{data.description.bold2}</span>.
+            {data.description.text1}{' '}
+            <span className="font-bold text-gray-900">
+              {data.description.bold1}
+            </span>{' '}
+            {data.description.text2} {data.description.text3}{' '}
+            <span className="font-bold text-gray-900">
+              {data.description.bold2}
+            </span>
+            .
           </p>
 
           <div className="max-w-2xl space-y-6">
             {data.stats.map((s: any, i: number) => (
               <div key={i} className="group space-y-2">
                 <div className="flex items-baseline justify-between">
-                  <span className="h6 font-mono font-bold uppercase tracking-widest text-gray-900">{s.label}</span>
+                  <span className="h6 font-mono font-bold uppercase tracking-widest text-gray-900">
+                    {s.label}
+                  </span>
                   <span className="h6 italic text-[#3cb878]">{s.val}</span>
                 </div>
                 <div className="h-1 w-full overflow-hidden rounded-full bg-gray-100">
@@ -130,14 +153,22 @@ const zDistance = isMobile ? '128px' : '160px';
           </div>
 
           <div className="flex max-w-2xl flex-col gap-4 pt-4 sm:flex-row">
-            <button className="h6 flex-1 rounded-sm bg-[#3cb878] py-4 font-black uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]">Consult Authority</button>
-            <button className="h6 flex-1 rounded-sm border-2 border-[#3cb878] py-4 uppercase tracking-[0.2em] text-[#3cb878] transition-all hover:bg-[#3cb878] hover:text-white">Case Studies</button>
+            <button className="h6 flex-1 rounded-sm bg-[#3cb878] py-4 font-black uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]">
+              Consult Authority
+            </button>
+            <button className="h6 flex-1 rounded-sm border-2 border-[#3cb878] py-4 uppercase tracking-[0.2em] text-[#3cb878] transition-all hover:bg-[#3cb878] hover:text-white">
+              Case Studies
+            </button>
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        @keyframes shimmer { 100% { transform: translateX(100%); } }
+        @keyframes shimmer {
+          100% {
+            transform: translateX(100%);
+          }
+        }
       `}</style>
     </section>
   );

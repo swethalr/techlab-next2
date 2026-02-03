@@ -22,14 +22,13 @@ export default function PortfolioSection() {
   return (
     <section className="relative overflow-hidden bg-transparent px-4 py-20">
       <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
-      
+
       {/* Background Glows */}
       <div className="pointer-events-none absolute left-[-5%] top-[5%] h-[500px] w-[500px] animate-pulse rounded-full bg-primary/30 blur-[100px]" />
       <div className="pointer-events-none absolute right-[-5%] top-[20%] h-[600px] w-[600px] rounded-full bg-primary/20 blur-[150px]" />
       <div className="pointer-events-none absolute bottom-[5%] left-[5%] h-[200px] w-[200px] rounded-full bg-primary/30 blur-[100px]" />
 
       <div className="container relative z-10 mx-auto max-w-5xl">
-        
         {/* 2. THE MARQUEE SECTION */}
         <div className="relative left-[50%] right-[50%] mb-24 ml-[-50vw] mr-[-50vw] w-screen overflow-hidden border-y border-slate-100 bg-[#3cb878]/20 py-12 backdrop-blur-sm">
           <div className="flex whitespace-nowrap">
@@ -41,7 +40,7 @@ export default function PortfolioSection() {
               {duplicatedTexts.map((text, i) => (
                 <div key={i} className="flex items-center gap-20">
                   <div
-                    className="text-[1.5rem] md:text-[2rem] font-bold uppercase text-[#3cb878]"
+                    className="text-[1.5rem] font-bold uppercase text-[#3cb878] md:text-[2rem]"
                     style={{ WebkitTextStroke: '1px #3cb878' }}
                   >
                     {text}
@@ -60,7 +59,9 @@ export default function PortfolioSection() {
               Grow your business sales & revenue
             </h5>
             <h2 className="h2 font-bold leading-tight text-accent-900">
-              Drive your Google <span className="italic text-primary">Performance Max</span> with us
+              Drive your Google{' '}
+              <span className="italic text-primary">Performance Max</span> with
+              us
             </h2>
           </header>
 
@@ -90,13 +91,16 @@ export default function PortfolioSection() {
                 {tabContent[activeTab as keyof typeof tabContent].desc}
               </p>
               <button className="p flex w-fit items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 font-bold text-white shadow-lg shadow-primary/20 transition-transform hover:scale-105">
-                {tabContent[activeTab as keyof typeof tabContent].btn} <FaArrowRight />
+                {tabContent[activeTab as keyof typeof tabContent].btn}{' '}
+                <FaArrowRight />
               </button>
             </motion.article>
 
             <motion.div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900 p-8 text-white shadow-2xl lg:col-span-7">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-              <h6 className="h6 mb-8 font-bold uppercase tracking-widest text-slate-400">Performance Overview</h6>
+              <h6 className="h6 mb-8 font-bold uppercase tracking-widest text-slate-400">
+                Performance Overview
+              </h6>
               <div className="mb-10 flex h-40 items-end justify-between gap-2 px-4">
                 {[40, 70, 45, 90, 65, 80, 55, 95, 70, 85].map((h, i) => (
                   <motion.div
@@ -109,10 +113,19 @@ export default function PortfolioSection() {
                 ))}
               </div>
               <div className="grid grid-cols-3 gap-4 text-center">
-                {[{ l: 'Traffic', v: '+84%' }, { l: 'Leads', v: '+156%' }, { l: 'Sales', v: '+92%' }].map((stat, i) => (
-                  <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                {[
+                  { l: 'Traffic', v: '+84%' },
+                  { l: 'Leads', v: '+156%' },
+                  { l: 'Sales', v: '+92%' },
+                ].map((stat, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm"
+                  >
                     <h4 className="h4 font-black text-primary">{stat.v}</h4>
-                    <h6 className="h6 font-bold uppercase tracking-widest text-slate-400">{stat.l}</h6>
+                    <h6 className="h6 font-bold uppercase tracking-widest text-slate-400">
+                      {stat.l}
+                    </h6>
                   </div>
                 ))}
               </div>
@@ -125,10 +138,13 @@ export default function PortfolioSection() {
           <header className="mb-16 text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-[#3cb878]/10 px-4 py-1.5">
               <FaMapLocationDot className="text-xs text-[#3cb878]" />
-              <h6 className="h6 font-bold uppercase tracking-widest text-[#3cb878]">Boost Visibility • Drive Growth</h6>
+              <h6 className="h6 font-bold uppercase tracking-widest text-[#3cb878]">
+                Boost Visibility • Drive Growth
+              </h6>
             </div>
             <h2 className="h2 font-bold leading-tight text-accent-900">
-              Google Maps <span className="italic text-primary">Ranking Experts</span>
+              Google Maps{' '}
+              <span className="italic text-primary">Ranking Experts</span>
             </h2>
           </header>
 
@@ -141,12 +157,18 @@ export default function PortfolioSection() {
                   className={`group cursor-pointer rounded-[2rem] border p-6 transition-all duration-500 ${hoveredStep === i ? 'border-primary/20 bg-white shadow-xl shadow-primary/5' : 'border-slate-100 bg-transparent'}`}
                 >
                   <div className="flex gap-5">
-                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg ${step.color}`}>
+                    <div
+                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg ${step.color}`}
+                    >
                       {step.icon}
                     </div>
                     <div>
-                      <h4 className="h4 mb-2 font-bold text-accent-900">{step.title}</h4>
-                      <h6 className="h6 leading-relaxed text-slate-500">{step.desc}</h6>
+                      <h4 className="h4 mb-2 font-bold text-accent-900">
+                        {step.title}
+                      </h4>
+                      <h6 className="h6 leading-relaxed text-slate-500">
+                        {step.desc}
+                      </h6>
                     </div>
                   </div>
                 </motion.article>
@@ -179,10 +201,16 @@ export default function PortfolioSection() {
 
                 {/* Stats Bar */}
                 <div className="absolute bottom-6 left-6 right-6 flex justify-around rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-lg backdrop-blur-md">
-                  {[{ v: '98%', l: 'Reach' }, { v: '#1', l: 'Rank' }, { v: '2.4k', l: 'Views' }].map((s, i) => (
+                  {[
+                    { v: '98%', l: 'Reach' },
+                    { v: '#1', l: 'Rank' },
+                    { v: '2.4k', l: 'Views' },
+                  ].map((s, i) => (
                     <div key={i} className="text-center">
                       <h4 className="h4 font-black text-primary">{s.v}</h4>
-                      <h6 className="h6 font-bold uppercase tracking-tighter text-slate-400">{s.l}</h6>
+                      <h6 className="h6 font-bold uppercase tracking-tighter text-slate-400">
+                        {s.l}
+                      </h6>
                     </div>
                   ))}
                 </div>

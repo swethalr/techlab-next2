@@ -7,7 +7,7 @@ import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import Image from 'next/image';
 
 // --- IMPORT DATA ---
-import { servicesData } from '@/data/homepage-services'; 
+import { servicesData } from '@/data/homepage-services';
 
 // Styles
 import 'swiper/css';

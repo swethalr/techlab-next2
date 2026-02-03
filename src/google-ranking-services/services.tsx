@@ -78,7 +78,7 @@ export default function GoogleRankingExpertPage() {
             Home <span className="mx-2">/</span> Google Ranking Expert
           </p>
         </div>
-        {/* Abstract pattern for premium feel */} 
+        {/* Abstract pattern for premium feel */}
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{

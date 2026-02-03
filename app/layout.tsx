@@ -43,7 +43,6 @@ export default async function RootLayout({ children }: Props) {
             )}
           >
             <main>{children}</main>
-            
           </div>
         </ThemeProvider>
         <Toaster

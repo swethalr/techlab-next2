@@ -36,12 +36,12 @@ export function HeroSection({ data, className }: HeroSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Destructure from props instead of importing from a fixed file
-  const { 
-    customers, 
-    statisticsCounterInfo, 
-    ctaButton, 
-    carouselItems, 
-    bgText = "Zammy Zaif" 
+  const {
+    customers,
+    statisticsCounterInfo,
+    ctaButton,
+    carouselItems,
+    bgText = 'Zammy Zaif',
   } = data;
 
   const { scrollYProgress } = useScroll({
@@ -70,7 +70,7 @@ export function HeroSection({ data, className }: HeroSectionProps) {
             {bgText}
           </span>
         </motion.div>
-        
+
         <div className="absolute right-[10%] top-[20%] h-[60%] w-[35%] animate-pulse rounded-full bg-[#3cb878] blur-[100px]" />
         <ParticleBackground />
 
@@ -148,13 +148,21 @@ export function HeroSection({ data, className }: HeroSectionProps) {
                             key={index}
                             className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-lg"
                           >
-                            <Image src={customer.src} alt={customer.alt} fill className="object-cover" />
+                            <Image
+                              src={customer.src}
+                              alt={customer.alt}
+                              fill
+                              className="object-cover"
+                            />
                           </div>
                         ))}
                       </div>
                       <div className="text-left">
                         <h3 className="text-xl font-bold leading-none text-slate-900">
-                          <Counter end={statisticsCounterInfo.count} suffix={statisticsCounterInfo.suffix} />
+                          <Counter
+                            end={statisticsCounterInfo.count}
+                            suffix={statisticsCounterInfo.suffix}
+                          />
                         </h3>
                         <h6 className="h5 font-bold tracking-[0.1em] text-white">
                           {statisticsCounterInfo.about}
@@ -164,8 +172,14 @@ export function HeroSection({ data, className }: HeroSectionProps) {
                   </div>
 
                   {ctaButton && (
-                    <Button asChild className="h-[42px] rounded-[50px] bg-slate-900 px-6 text-white transition-all hover:bg-[#3cb878]">
-                      <CustomLink href={ctaButton.href} className="h6 flex items-center gap-2 font-bold uppercase tracking-[0.15em]">
+                    <Button
+                      asChild
+                      className="h-[42px] rounded-[50px] bg-slate-900 px-6 text-white transition-all hover:bg-[#3cb878]"
+                    >
+                      <CustomLink
+                        href={ctaButton.href}
+                        className="h6 flex items-center gap-2 font-bold uppercase tracking-[0.15em]"
+                      >
                         {ctaButton.label} <FaArrowRight />
                       </CustomLink>
                     </Button>

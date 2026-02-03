@@ -17,7 +17,7 @@ export function TextSlider({ texts }: SliderProps) {
             className="flex items-center justify-center gap-8 lg:gap-[38px]"
             key={index}
           >
-            <h4 className="md:text-xl text-lg font-bold font-secondary text-accent-900 dark:text-white">
+            <h4 className="font-secondary text-lg font-bold text-accent-900 dark:text-white md:text-xl">
               {text}
             </h4>
             <span className="text-xl text-primary lg:text-[50px]">

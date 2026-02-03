@@ -4,7 +4,7 @@ import { MdMonitor, MdCampaign, MdSearch } from 'react-icons/md';
 export interface Service {
   title: string;
   desc: string;
-  icon: React.ReactNode; 
+  icon: React.ReactNode;
   img: string;
   features: string[];
 }

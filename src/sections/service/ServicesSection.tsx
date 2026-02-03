@@ -18,7 +18,8 @@ export default function ServicesSection({ data }: { data: any }) {
       <div className="mx-auto max-w-6xl text-center">
         {/* Header Section */}
         <h3 className="h3 font-bold tracking-tight text-slate-900 ">
-          {title}<span className="text-[#3cb878]">{titleHighlight}</span>
+          {title}
+          <span className="text-[#3cb878]">{titleHighlight}</span>
         </h3>
 
         <p className="p mx-auto mt-8 max-w-4xl leading-relaxed text-slate-800">
