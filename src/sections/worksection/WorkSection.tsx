@@ -95,7 +95,7 @@ export default function WorkSection() {
               <SwiperSlide key={index} className="transition-all duration-500">
                 {({ isActive }) => (
                   <div
-                    className={`group relative h-[350px] overflow-hidden rounded-[30px]  bg-[#3cb878] transition-all duration-700 md:h-[600px] md:rounded-[40px] ${!isActive ? 'scale-90 opacity-100 ' : 'scale-100 opacity-100 shadow-2xl shadow-orange-500/20'}`}
+                    className={`group relative h-[350px] overflow-hidden rounded-[30px]  bg-[#3cb878] transition-all duration-700 md:h-[600px] md:rounded-[40px] ${!isActive ? 'scale-90 opacity-100 ' : 'scale-100 opacity-100 shadow-2xl shadow-[#3cb878]/20'}`}
                   >
                     {/* Image */}
                     <Image
@@ -133,10 +133,10 @@ export default function WorkSection() {
           </Swiper>
 
           {/* Navigation Arrows */}
-          <button className="work-prev absolute left-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3cb878] bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-orange-600 md:flex md:h-12 md:w-12 lg:-left-4">
+          <button className="work-prev absolute left-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#3cb878] bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-[#3cb878] md:flex md:h-12 md:w-12 lg:-left-4">
             <FaChevronLeft size={16} />
           </button>
-          <button className="work-next absolute right-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-orange-600 md:flex md:h-12 md:w-12 lg:-right-4">
+          <button className="work-next absolute right-0 top-1/2 z-30 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#3cb878] text-white transition-all hover:border-[#FF6A00] hover:bg-white hover:text-[#3cb878] md:flex md:h-12 md:w-12 lg:-right-4">
             <FaChevronRight size={16} />
           </button>
         </div>

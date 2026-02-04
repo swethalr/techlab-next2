@@ -49,7 +49,7 @@ const testimonials = [
     role: 'Restaurant Manager',
     image: '/assets/images/clients/abishek.jpeg',
     text: 'Our salon visibility skyrocketed! Clients now discover us easily on Google. Traffic and appointment bookings have improved thanks to Versa Forge’s local SEO magic.',
-    color: 'from-yellow-400 to-orange-500',
+    color: 'from-yellow-400 to-[#3cb878]',
   },
 ];
 

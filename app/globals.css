@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   h1,
   h2,
   h3,
@@ -13,17 +14,17 @@
   }
 
   .h1 {
-    @apply text-[3.25rem] font-bold leading-[1.15] md:text-[4.2rem] xl:text-[4.7rem];
+    @apply text-[3.25rem] font-bold leading-[1.15] md:text-[4.2rem] xl:text-[4.2rem];
     /* Mobile: 36px | Tablet: 56px | PC: 75px */
   }
 
   .h2 {
-    @apply text-[2.75rem] font-bold leading-[1.25] md:text-[3rem] xl:text-[3.0rem];
+    @apply text-[2.75rem] font-bold leading-[1.25] md:text-[3.5rem] xl:text-[3.5rem];
     /* Mobile: 28px | Tablet: 40px | PC: 48px */
   }
 
   .h3 {
-    @apply text-[1.5rem] font-bold leading-[1.25] md:text-[2.25rem] xl:text-[2.25rem];
+    @apply text-[1.5rem] font-bold leading-[1.25] md:text-[2.5rem] xl:text-[2.5rem];
     /* Mobile: 24px | Tablet: 32px | PC: 36px */
   }
 
@@ -63,6 +64,7 @@
 
 /* --- Component Classes --- */
 @layer components {
+
   /* Modern Input Styling with Glassmorphism support */
   .contact-input-v2 {
     @apply w-full rounded-xl border border-gray-200/60 bg-white p-4 text-sm text-accent-900 outline-none transition-all placeholder:text-gray-400 focus:border-primary/50 focus:ring-4 focus:ring-primary/5;
@@ -119,6 +121,7 @@
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;

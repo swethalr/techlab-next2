@@ -88,14 +88,14 @@ export default function AboutSection({ data }: { data: any }) {
                 draggable="false"
                 className="pointer-events-none h-full w-full object-cover"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#3cb878]/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent opacity-50" />
             </div>
           ))}
         </motion.div>
         <ParticleBackground />
         <div className="absolute bottom-10 flex flex-col items-center gap-3 opacity-40 lg:bottom-20">
-          <div className="h-12 w-[1px] bg-gradient-to-b from-orange-500 to-transparent" />
+          <div className="h-12 w-[1px] bg-gradient-to-b from-[#3cb878] to-transparent" />
           <span className="h6 font-bold uppercase tracking-[0.5em] text-black">
             Hold to Spin Archive
           </span>

@@ -91,7 +91,7 @@ export default function OnicxServiceSlider() {
                     <h4 className="h4 mb-3 font-bold text-black transition-colors duration-500">
                       {service.title}
                     </h4>
-                    <p className="p mb-6 leading-relaxed text-slate-800 transition-colors duration-500 group-hover:text-white/90">
+                    <p className="p mb-6 leading-relaxed text-slate-800 transition-colors duration-500 group-hover:text-black">
                       {service.desc}
                     </p>
 

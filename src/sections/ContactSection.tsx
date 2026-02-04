@@ -28,7 +28,7 @@ export default function ContactSection() {
               alt={contactContent.image.alt}
               className="h-full w-full object-cover brightness-110 transition-all duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-orange-600/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3cb878]/20 to-transparent" />
           </div>
           <div className="absolute -left-4 -top-4 h-20 w-20 rounded-tl-[30px] border-l-4 border-t-4 border-[#3cb878]/30" />
         </div>

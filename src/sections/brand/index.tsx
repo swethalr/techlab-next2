@@ -55,7 +55,7 @@ const ParallaxRow = ({ items, baseVelocity = 100, variant }: ParallaxProps) => {
                 key={idx}
                 className={`transition-all duration-700 ${
                   variant === 'accent'
-                    ? 'text-orange-600'
+                    ? 'text-[#3cb878]'
                     : variant === 'white'
                       ? 'marquee-stroke-thin text-transparent '
                       : 'text-slate-900'
@@ -80,7 +80,7 @@ export function BrandMarquee() {
     <section className="relative w-full overflow-hidden bg-white py-12 md:py-20">
       {/* BACKGROUND EFFECTS */}
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute bottom-[5%] right-[-5%] h-[50%] w-[95%] rounded-full bg-orange-600/10 blur-[100px]" />
+        <div className="absolute bottom-[5%] right-[-5%] h-[50%] w-[95%] rounded-full bg-[#3cb878]/10 blur-[100px]" />
         <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(#ff6a00_1px,transparent_1px),linear-gradient(90deg,#ff6a00_1px,transparent_1px)] [background-size:45px_45px]" />
       </div>
 

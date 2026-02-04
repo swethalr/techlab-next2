@@ -292,8 +292,10 @@ export default function GoogleRankingExpertSection() {
             id="evidence-results"
             className="max-w-full space-y-12 overflow-hidden md:space-y-20"
           >
+            
             {/* Header Area */}
             <div className="mx-auto max-w-3xl text-center">
+            
               <h5 className="h5  mb-4 font-bold  tracking-[0.1em] text-[#3cb878]">
                 Our Google Rank Result Drive Sales
               </h5>
@@ -372,7 +374,7 @@ export default function GoogleRankingExpertSection() {
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex flex-col items-center first:border-none lg:items-start lg:border-l lg:border-white/20 lg:px-5"
+                    className="flex flex-col items-center first:border-none lg:items-center lg:border-l lg:border-white/20 lg:px-5"
                   >
                     <div className="flex items-baseline gap-1">
                       {/* Using your H2 class with responsive text size and white color */}
@@ -412,8 +414,9 @@ export default function GoogleRankingExpertSection() {
           {/* --- SECTION 2: GOOGLE RANKING EXPERT (DETAILED BIO) --- */}
           <section
             id="expert-detail"
-            className="max-w-4xl space-x-20 space-y-6 overflow-hidden md:space-y-14"
+            className=" relative space-x-20 space-y-6 overflow-hidden md:space-y-14"
           >
+            
             {/* 1. Sophisticated Header */}
             <div className="mx-auto max-w-4xl text-center">
               <motion.h5
@@ -492,10 +495,10 @@ export default function GoogleRankingExpertSection() {
                   boxShadow: '0 20px 40px rgba(249,115,22,0.3)',
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative flex  items-center gap-4 overflow-hidden rounded-2xl bg-slate-900 px-5 py-4 text-white transition-all duration-300 md:rounded-3xl"
+                className="group relative flex  items-center gap-4 overflow-hidden rounded-2xl bg-slate-900 px-5 py-4 text-[#3cb878] group-hover:text-[#3cb878] transition-all duration-300 md:rounded-3xl"
               >
                 {/* Button Shine Effect inset-0*/}
-                <div className="absolute inset-0 h-full w-full -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform group-hover:animate-[shimmer_1.5s_infinite]" />
+                <div className="absolute inset-0 h-full w-full -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform   group-hover:animate-[shimmer_1.5s_infinite]" />
 
                 <span className="h5 font-bold tracking-[0.1em]">
                   Get Free Audit Now
@@ -516,7 +519,8 @@ export default function GoogleRankingExpertSection() {
           </section>
 
           {/* --- SECTION: GOOGLE BUSINESS PROFILE PERFORMANCE MAX (FIXED & CLEAN) --- */}
-          <section className="overflow-hidden bg-white py-20">
+          <section className=" overflow-hidden bg-white py-20">
+            
             {/* Local State for the Modal */}
             {(() => {
               const [isFormOpen, setIsFormOpen] = React.useState(false);
@@ -617,7 +621,7 @@ export default function GoogleRankingExpertSection() {
                               <input
                                 type="text"
                                 placeholder="Enter your name"
-                                className="mt-1 w-full rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium text-slate-900 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-orange-500"
+                                className="mt-1 w-full rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium text-slate-900 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
                                 required
                               />
                             </div>
@@ -628,14 +632,14 @@ export default function GoogleRankingExpertSection() {
                               <input
                                 type="email"
                                 placeholder="email@company.com"
-                                className="mt-1 w-full rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium text-slate-900 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-orange-500"
+                                className="mt-1 w-full rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium text-slate-900 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
                                 required
                               />
                             </div>
 
                             <button
                               type="submit"
-                              className="group mt-4 flex w-full items-center justify-center gap-3 rounded-2xl bg-slate-900 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-500 hover:bg-orange-500"
+                              className="group mt-4 flex w-full items-center justify-center gap-3 rounded-2xl bg-slate-900 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-500 hover:bg-[#3cb878]"
                             >
                               Get Access Now{' '}
                               <ArrowRight
@@ -670,12 +674,12 @@ export default function GoogleRankingExpertSection() {
             <div className="mx-auto max-w-4xl space-y-16 px-6">
               {/* 1. Premium Header */}
               <div className="space-y-4 text-left">
-                <h3 className="h3  text-center leading-[1.1] tracking-tighter text-slate-900">
+                <h2 className="h2  text-center leading-[1.1] tracking-tighter text-slate-900">
                   First Rank{' '}
-                  <span className="text-orange-500 underline decoration-slate-200 underline-offset-8">
+                  <span className="text-[#3cb878]  ">
                     SEO Services
                   </span>
-                </h3>
+                </h2>
               </div>
 
               {/* 2. Content Description */}
@@ -687,7 +691,7 @@ export default function GoogleRankingExpertSection() {
                     Seo, Aio, AEO & GEO.
                   </span>{' '}
                   Securing the first spot captures the
-                  <span className="mx-1  rounded px-2 py-0.5 font-bold text-orange-500  ">
+                  <span className="mx-1  rounded px-2 py-0.5 font-bold text-[#3cb878]  ">
                     first click and drives maximum traffic.
                   </span>
                   More visitors lead to higher conversions and increased sales
@@ -705,20 +709,20 @@ export default function GoogleRankingExpertSection() {
                 {[
                   {
                     icon: (
-                      <CheckCircle2 className="text-orange-500" size={28} />
+                      <CheckCircle2 className="text-[#3cb878]" size={28} />
                     ),
                     label: 'First Rank',
                   },
                   {
-                    icon: <Cpu className="text-orange-500" size={28} />,
+                    icon: <Cpu className="text-[#3cb878]" size={28} />,
                     label: 'High Conversion',
                   },
                   {
-                    icon: <TrendingUp className="text-orange-500" size={28} />,
+                    icon: <TrendingUp className="text-[#3cb878]" size={28} />,
                     label: 'More Traffic',
                   },
                   {
-                    icon: <Rocket className="text-orange-500" size={28} />,
+                    icon: <Rocket className="text-[#3cb878]" size={28} />,
                     label: 'AI Results',
                   },
                 ].map((item, idx) => (
@@ -726,12 +730,12 @@ export default function GoogleRankingExpertSection() {
                     key={idx}
                     whileHover={{
                       y: -8,
-                      backgroundColor: '#ff6d29',
+                      backgroundColor: '#3cb878',
                       boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
                     }}
                     className="flex flex-col items-center space-y-4 rounded-[2rem] border border-slate-100 bg-white p-8 text-center shadow-sm transition-all"
                   >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white group-hover:text-white]">
                       {item.icon}
                     </div>
                     <h5 className="h5  uppercase tracking-tight text-slate-800">
@@ -751,10 +755,10 @@ export default function GoogleRankingExpertSection() {
                 ].map((stat, i) => (
                   <div key={i} className="space-y-1 text-center lg:text-left">
                     <div className="flex items-baseline justify-center gap-1 lg:justify-start">
-                      <h3 className="h2 font-black leading-none tracking-tighter text-orange-500">
+                      <div className="text-[2.75rem] font-bold  md:text-[3.5rem] xl:text-[3.0rem] font-black leading-none tracking-tighter text-[#3cb878]">
                         <Counter value={stat.val} />
-                      </h3>
-                      <span className="h3 font-bold text-orange-500">
+                      </div>
+                      <span className="h3 font-bold text-[#3cb878]">
                         {stat.unit}
                       </span>
                     </div>
@@ -780,14 +784,14 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <h5 className="h5 text-center  font-bold uppercase text-orange-500  ">
+                <h5 className="h5 text-center  font-bold uppercase text-[#3cb878]  ">
                   First Rank SEO Service Provider
                 </h5>
                 <h2 className="h2  text-center leading-[0.9] tracking-tighter text-slate-900">
                   Expertise in
-                  <span className="text-orange-500"> Google SEO</span>
+                  <span className="text-[#3cb878]"> Google SEO</span>
                 </h2>
-                <div className="mx-auto mt-6 h-1.5 w-20 rounded-full bg-orange-500" />
+                <div className="mx-auto mt-6 h-1.5 w-20 rounded-full bg-[#3cb878]" />
               </motion.div>
 
               {/* 2. Detailed Bio Paragraph */}
@@ -829,7 +833,7 @@ export default function GoogleRankingExpertSection() {
                   for performance monitoring and tracking. This focused approach
                   is why Zammy is recognized not just as an SEO specialist, but
                   as a dedicated{' '}
-                  <span className="font-black text-orange-600">
+                  <span className="font-black text-[#3cb878]">
                     Google SEO expert.
                   </span>
                   Our Google SEO services focus on securing the #1 position on
@@ -886,12 +890,12 @@ export default function GoogleRankingExpertSection() {
               {/* 1. Strategy Overview: Flex Layout */}
 
               <div className="space-y-4 text-center">
-                <h5 className="h5 text-center font-bold uppercase tracking-[0.4em] text-orange-500 ">
+                <h5 className="h5 text-center font-bold uppercase tracking-[0.4em] text-[#3cb878] ">
                   Methodical Excellence
                 </h5>
                 <h3 className="h3 leading-[0.9] tracking-tighter text-slate-900">
                   Our Google
-                  <span className="text-orange-500"> Ranking Strategy</span>
+                  <span className="text-[#3cb878]"> Ranking Strategy</span>
                 </h3>
               </div>
               <div className="flex flex-col items-center gap-12 lg:flex-row">
@@ -964,14 +968,14 @@ export default function GoogleRankingExpertSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    whileHover={{ y: -5, backgroundColor: '#ff7332' }}
-                    className="group relative overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-sm transition-all duration-500 hover:border-orange-200 hover:shadow-xl"
+                    whileHover={{ y: -5, backgroundColor: '#3cb878' }}
+                    className="group relative overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#3cb878] hover:shadow-xl"
                   >
                     {/* Subtle Accent Background */}
-                    <div className="absolute right-0 top-0 -mr-16 -mt-16 h-32 w-32 rounded-bl-[5rem] bg-orange-50 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute right-0 top-0 -mr-16 -mt-16 h-32 w-32 rounded-bl-[5rem] bg-[#DBFFEC] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     <div className="relative z-10 space-y-4">
-                      <span className="inline-block rounded-full bg-orange-100 px-4 py-1 text-[12px] font-bold uppercase  tracking-widest text-orange-600">
+                      <span className="inline-block rounded-full bg-[#DBFFEC] px-4 py-1 text-[12px] font-bold uppercase  tracking-widest text-[#3cb878]">
                         {pillar.tag}
                       </span>
                       <h4 className="h4  uppercase tracking-tight  text-slate-900">
@@ -987,7 +991,7 @@ export default function GoogleRankingExpertSection() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-[3rem] bg-orange-500 p-10 text-white md:flex-row"
+                className="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-[3rem] bg-[#3cb878] p-10 text-white md:flex-row"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] opacity-10 [background-size:20px_20px]" />
                 <div className="relative z-10 text-center md:text-left">
@@ -998,7 +1002,7 @@ export default function GoogleRankingExpertSection() {
                     Experience the power of manual, tool-free Google SEO.
                   </p>
                 </div>
-                <button className="h5 relative z-10 rounded-2xl bg-white px-8 py-4   font-black uppercase tracking-widest text-orange-600 shadow-lg transition-all hover:bg-slate-900 active:scale-95">
+                <button className="h5 relative z-10 rounded-2xl bg-white px-8 py-4   font-black uppercase tracking-widest text-[#3cb878] shadow-lg transition-all hover:bg-slate-900 active:scale-95">
                   Audit Strategy
                 </button>
               </motion.div>
@@ -1014,12 +1018,12 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="mb-16 space-y-4 text-center"
               >
-                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-orange-500 ">
+                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-[#3cb878] ">
                   Our Client&apos;s Sales Performance
                 </h5>
                 <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
                   SEO Growth{' '}
-                  <span className="text-orange-500">Case Studies</span>
+                  <span className="text-[#3cb878]">Case Studies</span>
                 </h3>
 
                 <p className="p mx-auto max-w-xl pt-4 font-medium text-slate-700">
@@ -1043,7 +1047,7 @@ export default function GoogleRankingExpertSection() {
                   loop={true}
                   autoplay={{ delay: 5000, disableOnInteraction: false }}
                   pagination={{ clickable: true, dynamicBullets: true }}
-                  className="overflow-hidden rounded-[2.5rem] border border-slate-100 bg-slate-50 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.12)]"
+                  className="overflow-hidden rounded-[2.5rem] border border-slate-100 bg-[#3cb878] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.12)]"
                 >
                   {caseStudies.map((study, index) => (
                     <SwiperSlide key={index}>
@@ -1061,7 +1065,7 @@ export default function GoogleRankingExpertSection() {
                 </Swiper>
 
                 {/* Decorative Floating Element */}
-                <div className="absolute -bottom-6 -right-6 -z-10 h-24 w-24 rounded-full bg-orange-500/10 blur-3xl" />
+                <div className="absolute -bottom-6 -right-6 -z-10 h-24 w-24 rounded-full bg-[#3cb878]/10 blur-3xl" />
               </motion.div>
 
               {/* --- UPDATED CALL TO ACTION BUTTON --- */}
@@ -1070,7 +1074,7 @@ export default function GoogleRankingExpertSection() {
                   onClick={() => setIsModalOpen(true)} // Opens the modal
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative inline-flex items-center gap-4 rounded-2xl bg-orange-500 px-10 py-6 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-orange-500"
+                  className="group relative inline-flex items-center gap-4 rounded-2xl bg-[#3cb878] px-10 py-6 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
                 >
                   <span className=" h6 font-bold uppercase tracking-[0.25em]">
                     Want to be our Next Success Case Study?
@@ -1099,7 +1103,7 @@ export default function GoogleRankingExpertSection() {
                       className="relative flex w-full max-w-2xl flex-col overflow-hidden rounded-[3rem] bg-white shadow-2xl md:flex-row"
                     >
                       {/* Left Side: Brand Accent */}
-                      <div className="hidden w-1/3 flex-col justify-between bg-orange-500 p-10 text-white md:flex">
+                      <div className="hidden w-1/3 flex-col justify-between bg-[#3cb878] p-10 text-white md:flex">
                         <div className="space-y-4">
                           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
                             <TrendingUp size={24} />
@@ -1117,7 +1121,7 @@ export default function GoogleRankingExpertSection() {
                       <div className="relative flex-1 p-8 md:p-12">
                         <button
                           onClick={() => setIsModalOpen(false)}
-                          className="absolute right-6 top-6 p-2 text-slate-400 transition-colors hover:text-orange-500"
+                          className="absolute right-6 top-6 p-2 text-slate-400 transition-colors hover:text-[#3cb878]"
                         >
                           <X size={24} />
                         </button>
@@ -1178,12 +1182,12 @@ export default function GoogleRankingExpertSection() {
                           <textarea
                             placeholder="Briefly describe your growth goals..."
                             rows={3}
-                            className="w-full resize-none rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-orange-500"
+                            className="w-full resize-none rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
                           ></textarea>
 
                           <button
                             type="submit"
-                            className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-orange-500 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
+                            className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-[#3cb878] py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
                           >
                             Submit Application{' '}
                             <Send
@@ -1201,7 +1205,7 @@ export default function GoogleRankingExpertSection() {
 
             <style jsx>{`
               .form-input-premium {
-                @apply w-full rounded-2xl border border-slate-100 bg-slate-50 py-4 pl-12 pr-5 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-orange-500;
+                @apply w-full rounded-2xl border border-slate-100 bg-slate-50 py-4 pl-12 pr-5 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878];
               }
             `}</style>
           </section>
@@ -1219,12 +1223,12 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="mb-16 space-y-4 text-center"
               >
-                <h5 className="h5  font-bold uppercase tracking-[0.4em] text-orange-500">
+                <h5 className="h5  font-bold uppercase tracking-[0.4em] text-[#3cb878]">
                   Successful Businesses Testimonials
                 </h5>
                 <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
                   Client&apos;s{' '}
-                  <span className="text-orange-500"> Reviews</span>
+                  <span className="text-[#3cb878]"> Reviews</span>
                 </h3>
               </motion.div>
 
@@ -1248,16 +1252,14 @@ export default function GoogleRankingExpertSection() {
                       >
                         {/* Massive Decorative Quote Icon */}
                         <Quote
-                          className="absolute right-10 top-10 text-orange-500/10"
+                          className="absolute right-10 top-10 text-[#3cb878]/10"
                           size={120}
                         />
 
                         <div className="relative z-10 space-y-8">
                           <p className="p  italic leading-relaxed  text-slate-900">
                             &quot;Working with{' '}
-                            <span className="font-bold text-slate-900">
-                              Zammy Zaif
-                            </span>{' '}
+                            Zammy Zaif{' '}
                             has been a game-changer for our business. His
                             expertise as a Google SEO Consultant has helped us
                             achieve first-rank results for multiple keywords,
@@ -1279,7 +1281,7 @@ export default function GoogleRankingExpertSection() {
                               <h4 className="h4 font-black uppercase tracking-tighter text-slate-900">
                                 Zain Towing Service LLC
                               </h4>
-                              <p className="p mt-1 text-xs font-black uppercase tracking-widest text-orange-500">
+                              <p className="p mt-1 text-xs font-black uppercase tracking-widest text-[#3cb878]">
                                 Valuable Client
                               </p>
                             </div>
@@ -1300,7 +1302,7 @@ export default function GoogleRankingExpertSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className=" group rounded-2xl bg-slate-900 px-10 py-5 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-orange-500"
+                  className=" group rounded-2xl bg-slate-900 px-10 py-5 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
                 >
                   <span className="p flex items-center gap-3 font-bold uppercase tracking-[0.25em]">
                     Our Google Reviews
@@ -1308,7 +1310,7 @@ export default function GoogleRankingExpertSection() {
                       {[...Array(5)].map((_, i) => (
                         <span
                           key={i}
-                          className="text-orange-400 group-hover:text-orange-500"
+                          className="text-[#3cb878] group-hover:text-[#3cb878]"
                         >
                           ★
                         </span>
@@ -1329,7 +1331,7 @@ export default function GoogleRankingExpertSection() {
                 transition: all 0.3s ease;
               }
               .swiper-pagination-bullet-active {
-                background: #f97316 !important;
+                background: #3cb878 !important;
 
                 width: 30px !important;
                 border-radius: 5px !important;
@@ -1348,7 +1350,7 @@ export default function GoogleRankingExpertSection() {
                 <motion.h5
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="h5 font-bold uppercase tracking-[0.3em] text-orange-600"
+                  className="h5 font-bold uppercase tracking-[0.3em] text-[#3cb878]"
                 >
                   As an expert Google SEO agency, we offer the following
                   essencials
@@ -1359,7 +1361,7 @@ export default function GoogleRankingExpertSection() {
                   className="  h2 mt-4 tracking-tighter text-slate-900"
                 >
                   Our Google{' '}
-                  <span className="text-orange-500"> SEO Services</span>
+                  <span className="text-[#3cb878]"> SEO Services</span>
                 </motion.h2>
               </div>
 
@@ -1379,14 +1381,14 @@ export default function GoogleRankingExpertSection() {
                       whileHover={{ y: -8 }}
                       className="group relative"
                     >
-                      <div className="h-full rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-500 group-hover:border-orange-200 group-hover:shadow-[0_20px_50px_-15px_rgba(249,115,22,0.2)]">
+                      <div className="h-full rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-500 group-hover:border-[#3cb878] group-hover:shadow-[0_30px_60px_-15px_rgba(60,184,120,0.7)]">
                         {/* Icon Design */}
-                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 transition-colors duration-500 group-hover:bg-orange-500">
-                          <Icon className="h-7 w-7 text-orange-600 transition-colors duration-500 group-hover:text-white" />
+                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#DBFFEC] transition-colors duration-500 group-hover:bg-[#3cb878]">
+                          <Icon className="h-7 w-7 text-[#3cb878] transition-colors duration-500 group-hover:text-white" />
                         </div>
 
                         {/* Text Content */}
-                        <h3 className="h3 mb-3 font-bold text-slate-900 transition-colors group-hover:text-orange-600">
+                        <h3 className="h3 mb-3 font-bold text-slate-900 transition-colors group-hover:text-[#3cb878]">
                           {service.title}
                         </h3>
                         <p className="p  text-slate-900">{service.desc}</p>
@@ -1416,12 +1418,12 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="space-y-4 text-center"
               >
-                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-orange-500">
+                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-[#3cb878]">
                   Google Maps Dominance
                 </h5>
                 <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
                   Local SEO for
-                  <span className="text-orange-500"> Google Maps Rankings</span>
+                  <span className="text-[#3cb878]"> Google Maps Rankings</span>
                 </h3>
               </motion.div>
 
@@ -1443,7 +1445,7 @@ export default function GoogleRankingExpertSection() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="p mt-6 text-center font-bold italic leading-relaxed text-orange-500"
+                  className="p mt-6 text-center font-bold italic leading-relaxed text-[#3cb878]"
                 >
                   "We focus on sales results, not just rankings. Get ready to
                   turn searches into real-world customers with Zammy and Team."
@@ -1468,10 +1470,10 @@ export default function GoogleRankingExpertSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                    className="group flex items-start gap-4 rounded-2xl p-4 transition-colors hover:bg-orange-400"
+                    className="group flex items-start gap-4 rounded-2xl p-4 transition-colors hover:bg-[#3cb878]"
                   >
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 shadow-lg shadow-orange-200 transition-transform group-hover:scale-110">
-                      <Check size={14} className="stroke-[4px] text-white" />
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white shadow-lg shadow-[#DBFFEC] transition-transform group-hover:scale-110">
+                      <Check size={14} className="stroke-[4px] text-[#3cb878]" />
                     </div>
                     <p className="p text-sm font-bold leading-snug text-slate-700 md:text-base">
                       {feature}
@@ -1485,7 +1487,7 @@ export default function GoogleRankingExpertSection() {
           {/* --- SECTION: HOW TO CHOOSE A GOOGLE SEO EXPERT --- */}
           <section
             id="choose-expert-steps"
-            className="overflow-hidden bg-white py-6"
+            className="overflow-hidden bg-white py-20"
           >
             <div className="mx-auto max-w-5xl px-6">
               {/* 1. Header Area */}
@@ -1495,12 +1497,12 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="mb-20 space-y-4 text-center"
               >
-                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-orange-500">
+                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-[#3cb878]">
                   Hire the Right Ranking Optimizer
                 </h5>
                 <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
                   How to Choose a
-                  <span className="text-orange-500"> Google SEO Expert</span>
+                  <span className="text-[#3cb878]"> Google SEO Expert</span>
                 </h3>
               </motion.div>
 
@@ -1551,17 +1553,17 @@ export default function GoogleRankingExpertSection() {
                         viewport={{ once: true }}
                         className="group w-full lg:w-[45%]"
                       >
-                        <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-900 bg-white p-8 shadow-sm transition-all duration-500 group-hover:border-orange-600 group-hover:bg-orange-200 group-hover:shadow-2xl md:p-10">
+                        <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-900 bg-white p-8 shadow-sm transition-all duration-500 group-hover:border-[#3cb878] group-hover:bg-[#DBFFEC] group-hover:shadow-2xl md:p-10">
                           {/* Decorative Step Number (Background) */}
                           <span className="text-8xl pointer-events-none absolute -bottom-4 -right-4 font-black text-slate-50 transition-colors group-hover:text-orange-50">
                             0{idx + 1}
                           </span>
 
                           <div className="relative z-10 space-y-4">
-                            <div className="inline-block rounded-full bg-orange-500 px-5 py-1.5 text-[18px] font-bold uppercase tracking-widest text-white shadow-lg shadow-orange-200">
+                            <div className="inline-block rounded-full bg-[#3cb878] px-5 py-1.5 text-[18px] font-bold uppercase tracking-widest text-white shadow-lg shadow-[#3cb878]">
                               {item.step}
                             </div>
-                            <h3 className="h3  uppercase tracking-tighter text-slate-900 transition-colors group-hover:text-orange-600">
+                            <h3 className="h3  uppercase tracking-tighter text-slate-900 transition-colors group-hover:text-[#3cb878]">
                               {item.title}
                             </h3>
                             <p className="p font-medium text-slate-900 ">
@@ -1572,8 +1574,8 @@ export default function GoogleRankingExpertSection() {
                       </motion.div>
 
                       {/* Central Node Dot */}
-                      <div className="absolute left-1/2 z-20 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-4 border-slate-100 bg-white transition-all group-hover:border-orange-500 lg:flex">
-                        <div className="h-3 w-3 animate-pulse rounded-full bg-orange-600" />
+                      <div className="absolute left-1/2 z-20 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-4 border-slate-100 bg-white transition-all group-hover:border-[#3cb878] lg:flex">
+                        <div className="h-3 w-3 animate-pulse rounded-full bg-[#3cb878]" />
                       </div>
 
                       {/* Spacer for Desktop */}
@@ -1587,7 +1589,7 @@ export default function GoogleRankingExpertSection() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="mt-20 rounded-[3rem] bg-gradient-to-r from-orange-400 to-orange-600 p-1 shadow-2xl shadow-orange-200"
+                className="mt-20 rounded-[3rem] bg-[#3cb878]  p-1 shadow-2xl shadow-[#3cb878]"
               >
                 <div className="flex flex-col items-center justify-between gap-8 rounded-[2.8rem] bg-white p-10 text-center md:flex-row">
                   <div className="text-left">
@@ -1601,7 +1603,7 @@ export default function GoogleRankingExpertSection() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p rounded-2xl bg-orange-600 px-10 py-5 font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-white hover:text-orange-600"
+                    className="p rounded-2xl bg-[#3cb878] px-10 py-5 font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]"
                   >
                     Book Your Free Audit
                   </motion.button>
@@ -1622,12 +1624,12 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="mb-20 space-y-4 text-center"
               >
-                <h5 className="h5  uppercase tracking-[0.2em] text-orange-500">
+                <h5 className="h5  uppercase tracking-[0.2em] text-[#3cb878]">
                   Decoding the Search Engine
                 </h5>
                 <h3 className=" h3 leading-[0.9] tracking-tighter text-slate-900 ">
                   Factors of{' '}
-                  <span className="text-orange-500">Google Rank Algorithm</span>
+                  <span className="text-[#3cb878]">Google Rank Algorithm</span>
                 </h3>
               </motion.div>
 
@@ -1644,7 +1646,7 @@ export default function GoogleRankingExpertSection() {
                       className="space-y-8"
                     >
                       <div className="space-y-4">
-                        <h4 className="  h4 italic tracking-tight text-orange-600 text-slate-900">
+                        <h4 className="  h4 italic tracking-tight text-[#3cb878] text-slate-900">
                           {algoData[activeTab].title}
                         </h4>
                         <div className="h-1.5 w-20 rounded-full bg-slate-900" />
@@ -1658,7 +1660,7 @@ export default function GoogleRankingExpertSection() {
                         {algoData[activeTab].highlights.map((tag, i) => (
                           <span
                             key={i}
-                            className="bg-orange-20 rounded-full border border-orange-100 px-4 py-2 text-xs font-bold uppercase text-orange-500"
+                            className="bg-orange-20 rounded-full border border-[#3cb878] px-4 py-2 text-xs font-bold uppercase text-[#3cb878]"
                           >
                             # {tag}
                           </span>
@@ -1699,16 +1701,16 @@ export default function GoogleRankingExpertSection() {
                         onClick={() => setActiveTab(item.label as TabKey)}
                         className={`group flex w-full items-center justify-between rounded-[2rem] border p-6 text-left transition-all duration-500 ${
                           isActive
-                            ? 'border-orange-400 bg-orange-500 shadow-[0_20px_40px_-10px_rgba(249,115,22,0.4)]'
-                            : 'border-slate-100 bg-white shadow-sm hover:border-orange-200'
+                            ? 'border-[#3cb878] bg-[#3cb878] shadow-[0_20px_40px_-10px_rgb(219,255,236,0.2)]'
+                            : 'border-slate-100 bg-white shadow-sm hover:border-[#3cb878]'
                         }`}
                       >
                         <div className="flex items-center gap-5">
                           <div
                             className={`flex h-12 w-12 items-center justify-center rounded-2xl transition-colors duration-500 ${
                               isActive
-                                ? 'bg-white text-orange-600'
-                                : 'bg-slate-900 text-orange-500'
+                                ? 'bg-white text-[#3cb878]'
+                                : 'bg-slate-900 text-[#3cb878]'
                             }`}
                           >
                             {item.icon}
@@ -1716,7 +1718,7 @@ export default function GoogleRankingExpertSection() {
                           <div>
                             <p
                               className={`mb-2  text-[14px]  font-bold uppercase leading-none tracking-widest ${
-                                isActive ? 'text-orange-100' : 'text-slate-700'
+                                isActive ? 'text-[#dbffec]' : 'text-slate-700'
                               }`}
                             >
                               {item.label}
@@ -1734,7 +1736,7 @@ export default function GoogleRankingExpertSection() {
                           className={`transition-transform duration-500 ${
                             isActive
                               ? 'translate-x-2 text-white'
-                              : 'text-slate-200 group-hover:text-orange-300'
+                              : 'text-slate-200 group-hover:text-[#3cb878]'
                           }`}
                           size={20}
                         />
@@ -1750,7 +1752,7 @@ export default function GoogleRankingExpertSection() {
                 whileInView={{ opacity: 1 }}
                 className="mt-20 border-t border-slate-100 pt-10 text-center"
               >
-                <p className="p mx-auto max-w-3xl font-bold italic leading-relaxed text-orange-500">
+                <p className="p mx-auto max-w-3xl font-bold italic leading-relaxed text-[#3cb878]">
                   &ldquo;Zammy&apos;s ability to decode algorithmic updates and
                   implement high-impact optimizations makes him a standout
                   Google Ranking expert.&rdquo;
@@ -1770,7 +1772,7 @@ export default function GoogleRankingExpertSection() {
                   <motion.h5
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    className="h5  tracking-[0.2em] text-orange-500"
+                    className="h5  tracking-[0.2em] text-[#3cb878]"
                   >
                     Industry Specialization
                   </motion.h5>
@@ -1779,9 +1781,9 @@ export default function GoogleRankingExpertSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="h3 leading-tight tracking-tighter text-slate-900"
                   >
-                    Sectors We Serve with <br />
-                    <span className="text-orange-500">
-                      Google SEO Expertise
+                    Sectors We
+                    <span className="text-[#3cb878]"> Serve
+                        
                     </span>
                   </motion.h3>
                 </div>
@@ -1805,13 +1807,13 @@ export default function GoogleRankingExpertSection() {
                     whileHover={{ y: -10 }}
                     transition={{ delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                    className="group relative flex h-48 flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-slate-100 bg-slate-50 transition-all duration-500 hover:border-orange-200 hover:bg-white hover:shadow-[0_20px_50px_rgba(249,115,22,0.1)]"
+                    className="group relative flex h-48 flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-slate-100 bg-slate-50 transition-all duration-500 hover:border-[#3cb878] hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(60,184,120,0.7)]"
                   >
                     <div className="relative z-10 flex flex-col items-center gap-4">
-                      <div className="rounded-2xl bg-white p-4 text-slate-800 shadow-sm transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white">
+                      <div className="rounded-2xl bg-white p-4 text-slate-800 shadow-sm transition-all duration-500 group-hover:bg-[#3cb878] group-hover:text-white">
                         <sector.icon size={32} strokeWidth={1.5} />
                       </div>
-                      <span className="px-4 text-center font-bold uppercase tracking-tight text-slate-900 transition-colors group-hover:text-orange-600">
+                      <span className="px-4 text-center font-bold uppercase tracking-tight text-slate-900 transition-colors group-hover:text-[#3cb878]">
                         {sector.name}
                       </span>
                     </div>
@@ -1831,7 +1833,7 @@ export default function GoogleRankingExpertSection() {
             className="relative bg-slate-50 py-24"
           >
             {/* Abstract Background Element */}
-            <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-orange-500/5 blur-[100px]" />
+            <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-[#3cb878]/5 blur-[100px]" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6">
               <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
@@ -1843,13 +1845,13 @@ export default function GoogleRankingExpertSection() {
                   <div>
                     <motion.h3 className="h3 leading-[1.1]  tracking-tighter text-slate-900">
                       Google Expert <br />
-                      <span className="italic text-orange-500">
+                      <span className="italic text-[#3cb878]">
                         Impacting
                       </span>{' '}
                       <br />
                       Search Engines
                     </motion.h3>
-                    <div className="mt-6 h-2 w-20 rounded-full bg-orange-500" />
+                    <div className="mt-6 h-2 w-20 rounded-full bg-[#3cb878]" />
                   </div>
 
                   <p className="p  text-slate-600">
@@ -1860,7 +1862,7 @@ export default function GoogleRankingExpertSection() {
                   </p>
 
                   <div className="flex gap-4">
-                    <button className="rounded-2xl bg-orange-500 px-8 py-4 font-bold uppercase tracking-widest text-white shadow-lg shadow-slate-200 transition-all hover:bg-white hover:text-orange-500">
+                    <button className="rounded-2xl bg-[#3cb878] px-8 py-4 font-bold uppercase tracking-widest text-white shadow-lg shadow-slate-200 transition-all hover:bg-white hover:text-[#3cb878]">
                       Discuss Project
                     </button>
                   </div>
@@ -1872,19 +1874,19 @@ export default function GoogleRankingExpertSection() {
                       num: '01',
                       title: 'Business Analysis',
                       desc: 'Studying targeted audience, potential customers and their business culture.',
-                      icon: <Target className="text-orange-500" />,
+                      icon: <Target className="text-[#3cb878]" />,
                     },
                     {
                       num: '02',
                       title: 'Strategic Planning',
                       desc: 'Customizing SEO techniques based on competitor footprint and niche demands.',
-                      icon: <Lightbulb className="text-orange-500" />,
+                      icon: <Lightbulb className="text-[#3cb878]" />,
                     },
                     {
                       num: '03',
                       title: 'Superior Execution',
                       desc: 'Implementing high-impact optimizations for long-term algorithmic dominance.',
-                      icon: <TrendingUp className="text-orange-500" />,
+                      icon: <TrendingUp className="text-[#3cb878]" />,
                     },
                   ].map((step, i) => (
                     <motion.div
@@ -1893,10 +1895,10 @@ export default function GoogleRankingExpertSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.1 }}
                       viewport={{ once: true }}
-                      className="group flex flex-col items-start gap-4 rounded-[1.5rem] border border-slate-100 bg-white p-5 shadow-sm transition-all duration-500 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/5 sm:flex-row md:gap-6 md:rounded-[2.5rem] md:p-8"
+                      className="group flex flex-col items-start gap-4 rounded-[1.5rem] border border-slate-100 bg-white p-5 shadow-sm transition-all duration-500 hover:border-[#3cb878] hover:shadow-xl hover:shadow-[#3cb878]/5 sm:flex-row md:gap-6 md:rounded-[2.5rem] md:p-8"
                     >
                       {/* Number Icon - Adjusted size for mobile */}
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-orange-50 text-base font-black text-orange-600 transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white md:h-14 md:w-14 md:rounded-2xl md:text-lg">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#DBFFEC] text-base font-black text-[#3cb878] transition-all duration-500 group-hover:bg-[#3cb878] group-hover:text-white md:h-14 md:w-14 md:rounded-2xl md:text-lg">
                         {step.num}
                       </div>
 
@@ -1930,7 +1932,7 @@ export default function GoogleRankingExpertSection() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  className="mb-2 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-4 py-2 text-orange-600"
+                  className="mb-2 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-[#DBFFEC] px-4 py-2 text-[#3cb878]"
                 >
                   <Sparkles size={16} className="animate-pulse" />
                   <h5 className="h5 font-bold uppercase ">Common Inquiries</h5>
@@ -1941,7 +1943,7 @@ export default function GoogleRankingExpertSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   className="h3 tracking-tighter  text-slate-900"
                 >
-                  Google's <span className="text-orange-500"> Choice</span>
+                  Google's <span className="text-[#3cb878]"> Choice</span>
                 </motion.h3>
               </div>
 
@@ -1959,8 +1961,8 @@ export default function GoogleRankingExpertSection() {
                       viewport={{ once: true }}
                       className={`relative overflow-hidden rounded-[2rem] border transition-all duration-500 ${
                         isOpen
-                          ? 'border-orange-200 bg-white shadow-[0_20px_40px_rgba(249,115,22,0.08)]'
-                          : 'border-slate-100 bg-slate-50/50 hover:border-orange-100'
+                          ? 'border-[#3cb878] bg-white shadow-[0_20px_40px_rgba(249,115,22,0.08)]'
+                          : 'border-slate-100 bg-slate-50/50 hover:border-[#3cb878]'
                       }`}
                     >
                       <button
@@ -1971,8 +1973,8 @@ export default function GoogleRankingExpertSection() {
                           <div
                             className={`flex h-10 w-10 items-center justify-center rounded-2xl transition-all duration-500 md:h-12 md:w-12 ${
                               isOpen
-                                ? 'rotate-12 bg-orange-500 text-white'
-                                : 'bg-white text-slate-400 shadow-sm group-hover:text-orange-500'
+                                ? 'rotate-12 bg-[#3cb878] text-white'
+                                : 'bg-white text-slate-400 shadow-sm group-hover:text-[#3cb878]'
                             }`}
                           >
                             <HelpCircle size={24} strokeWidth={1.5} />
@@ -1989,7 +1991,7 @@ export default function GoogleRankingExpertSection() {
                         </div>
 
                         <div
-                          className={`transition-transform duration-500 ${isOpen ? 'rotate-180 text-orange-500' : 'text-slate-300'}`}
+                          className={`transition-transform duration-500 ${isOpen ? 'rotate-180 text-[#3cb878]' : 'text-slate-300'}`}
                         >
                           <ChevronDown size={24} />
                         </div>
@@ -2026,60 +2028,20 @@ export default function GoogleRankingExpertSection() {
                 whileInView={{ opacity: 1 }}
                 className="relative mt-16 overflow-hidden rounded-[2.5rem] bg-white p-8 text-center"
               >
-                <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-orange-500/10" />
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-[#3cb878]/10" />
                 <h4 className="h4 relative z-10 mb-4 font-bold text-slate-900">
                   Still have questions about your ranking?
                 </h4>
-                <button className="h5 relative z-10 rounded-xl bg-orange-500 px-8 py-4  font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-white hover:text-orange-500">
+                <button className="h5 relative z-10 rounded-xl bg-[#3cb878] px-8 py-4  font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]">
                   Contact Expert Now
                 </button>
               </motion.div>
             </div>
           </section>
 
-          {/* 15. COMPETITOR TAKEOVER STRATEGY */}
-          <section
-            id="takeover"
-            className="rounded-[4rem] bg-white p-16 text-slate-900 shadow-2xl"
-          >
-            <h4 className="h4 mb-10 font-black uppercase text-orange-500">
-              Competitor Disruption
-            </h4>
-            <div className="grid gap-12 md:grid-cols-2">
-              <div>
-                <h4 className="h4 mb-4 font-black uppercase text-slate-500">
-                  Their SEO
-                </h4>
-                <p className="p">
-                  Keyword stuffing, slow loading, and generic AI-spun content
-                  that gets penalized.
-                </p>
-              </div>
-              <div>
-                <h4 className="h4 mb-4 font-black uppercase text-orange-500">
-                  Our Expert SEO
-                </h4>
-                <p className="p font-bold">
-                  Semantic precision, ultra-performance speed, and authoritative
-                  human-led strategy.
-                </p>
-              </div>
-            </div>
-          </section>
+          
 
-          {/* 18. PREMIUM CALL-TO-ACTION */}
-          <section
-            id="cta-bottom"
-            className="rounded-[5rem] bg-white py-32 text-center text-slate-900"
-          >
-            <h4 className="h4  mb-12  leading-none tracking-tighter">
-              Secure Position #1 Today.
-            </h4>
-            <button className="p rounded-full bg-orange-500 px-16 py-8 font-bold uppercase  tracking-widest text-white shadow-2xl  transition-all hover:scale-105 hover:bg-white hover:text-orange-500">
-              Start Your Sprint
-            </button>
-          </section>
-        </main>
+     </main>
 
         {/* SIDEBAR (Sticky on Right) */}
         <aside className="order-1 hidden w-[20%] lg:order-2 lg:block">
@@ -2088,7 +2050,7 @@ export default function GoogleRankingExpertSection() {
             <motion.section
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="group relative overflow-hidden  rounded-[3rem] bg-[#3cb878] p-8 text-white shadow-[0_30px_60px_-15px_rgba(249,115,22,0.3)]"
+              className="group relative overflow-hidden  rounded-[3rem] bg-[#3cb878] p-8 text-white shadow-[0_30px_60px_-15px_rgba(60,184,120,0.7)]"
             >
               {/* Decorative Background Icon */}
               <Search className="absolute -right-4 -top-4 h-32 w-32 opacity-10 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110" />
