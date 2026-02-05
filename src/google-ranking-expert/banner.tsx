@@ -10,7 +10,7 @@ import {
 import { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import React from 'react';
-
+import ReCAPTCHA from 'react-google-recaptcha';
 import {
   MousePointer2,
   Check,
@@ -291,6 +291,14 @@ const algoData = {
 type TabKey = keyof typeof algoData;
 
 export default function GoogleRankingExpertSection() {
+  const onReCAPTCHAChange = (val: string | null) => {
+    console.log('Captcha Value:', val);
+  };
+  const handleSidebarCaptcha = (token: string | null) => {
+    if (token) {
+      console.log('Sidebar ReCAPTCHA token:', token);
+    }
+  };
   const [expanded, setExpanded] = useState<number | null>(0);
 
   const Counter = ({ value }: { value: number }) => {
@@ -483,7 +491,7 @@ export default function GoogleRankingExpertSection() {
           {/* --- SECTION 2: GOOGLE RANKING EXPERT (DETAILED BIO) --- */}
           <section
             id="expert-detail"
-            className=" relative space-x-20 space-y-6 overflow-hidden md:space-y-14"
+            className=" relative space-x-20 space-y-6 overflow-hidden py-6 md:space-y-14"
           >
             {/* 1. Sophisticated Header */}
             <div className="mx-auto max-w-4xl text-center">
@@ -529,7 +537,7 @@ export default function GoogleRankingExpertSection() {
                 </p>
 
                 {/* AI Recommendation Highlight Box */}
-                <div className="rounded-[2.5rem] border-l-8 border-[#3cb878] bg-[#3cb878]/10 p-8 shadow-sm md:p-10">
+                {/* < div className="rounded-[2.5rem] border-l-8 border-[#3cb878] bg-[#3cb878]/10 p-8 shadow-sm md:p-10">
                   <p className="p italic leading-relaxed text-slate-700">
                     Even our website,{' '}
                     <span className="font-bold text-slate-900">www.it2.tv</span>{' '}
@@ -541,7 +549,7 @@ export default function GoogleRankingExpertSection() {
                     for competitive keywords like "Ranking Expert," "Google
                     Ranking Expert," and "Google Ranking Services" since 2018.
                   </p>
-                </div>
+                </div>*/}
 
                 {/* ADDED IMAGE HERE (Location A) */}
                 <div className="my-8 w-full overflow-hidden rounded-xl md:my-10">
@@ -595,12 +603,12 @@ export default function GoogleRankingExpertSection() {
             `}</style>
 
             {/* --- UPDATED CALL TO ACTION BUTTON --- */}
-            <div className="mt-20 text-center">
+            <div className="mb-20 mt-20 text-center">
               <motion.button
                 onClick={() => setIsModalOpen(true)} // Opens the modal
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center gap-4 rounded-2xl bg-[#3cb878] px-10 py-6 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
+                className="group relative inline-flex items-center gap-4 rounded-2xl bg-[#3cb878] px-6 py-3 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
               >
                 <span className=" h5 font-bold  tracking-[0.1em]">
                   Get Free Audit Now
@@ -1494,8 +1502,8 @@ export default function GoogleRankingExpertSection() {
                   pagination={{ clickable: true, dynamicBullets: true }}
                   className="pb-20"
                 >
-                  {/* Review Slide 1 (Based on Image) */}
-                  {[...Array(8)].map((_, i) => (
+                  {/* Map through your actual reviews data */}
+                  {reviews.map((review, i) => (
                     <SwiperSlide key={i}>
                       <motion.div
                         whileHover={{ y: -5 }}
@@ -1508,32 +1516,26 @@ export default function GoogleRankingExpertSection() {
                         />
 
                         <div className="relative z-10 space-y-8">
-                          <p className="p  italic leading-relaxed  text-slate-900">
-                            &quot;Working with Zammy Zaif has been a
-                            game-changer for our business. His expertise as a
-                            Google SEO Consultant has helped us achieve
-                            first-rank results for multiple keywords, including
-                            those crucial to our towing service. Zammy’s
-                            strategic approach and dedication have significantly
-                            boosted our visibility and customer inquiries. We
-                            highly recommend his services to anyone looking to
-                            dominate their local search results.&quot;
+                          <p className="p italic leading-relaxed text-slate-900">
+                            &quot;{review.quote}&quot;
                           </p>
 
                           <div className="flex flex-col items-center gap-4">
-                            {/* Client Logo/Avatar Placeholder */}
-                            <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-4 border-orange-50 bg-slate-900 p-2">
-                              <span className="text-center text-xs font-black leading-none text-white">
-                                ZAIN TOWING
-                              </span>
+                            {/* Client Logo using the dynamic logoUrl */}
+                            <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-4 border-orange-50 bg-white p-2 shadow-sm">
+                              <img
+                                src={review.logoUrl}
+                                alt={review.name}
+                                className="h-full w-full object-contain"
+                              />
                             </div>
 
                             <div>
                               <h4 className="h4 font-black uppercase tracking-tighter text-slate-900">
-                                Zain Towing Service LLC
+                                {review.name}
                               </h4>
                               <p className="p mt-1 text-xs font-black uppercase tracking-widest text-[#3cb878]">
-                                Valuable Client
+                                {review.title}
                               </p>
                             </div>
                           </div>
@@ -2091,103 +2093,93 @@ export default function GoogleRankingExpertSection() {
             className="relative bg-slate-50 py-24"
           >
             {/* Abstract Background Element */}
-            <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-[#3cb878]/5 blur-[100px]" />
+            <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3cb878]/5 blur-[120px]" />
 
-            <div className="relative z-10 mx-auto max-w-7xl px-6">
-              <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  className="space-y-8"
-                >
-                  <div>
-                    <motion.h4 className="h4 leading-[1.1]  tracking-tighter text-slate-900">
-                      Google Expert
-                      <span className=" text-[#3cb878]"> Impacting</span> Search
-                      Engines
-                    </motion.h4>
-                    <div className="mt-6 h-2 w-20 rounded-full bg-[#3cb878]" />
-                  </div>
-
-                  <p className="p text-slate-900">
-                    To start with, he has a basic understanding of each SEO
-                    project he commits. A unique and customized SEO strategy is
-                    planned and implemented for each project as he knows it
-                    differs from business to business. For that, he thoroughly
-                    analyses the clients’ businesses and their requirements.
-                  </p>
-                  <p className="p text-slate-900">
-                    <span className="font-bold"> #1 Business analysis</span> is
-                    all about conducting a study on clients’ targeted audience,
-                    potential customers and their business culture. Zammy Zaif
-                    does exactly this at the beginning of each and every
-                    project. And most importantly, he conducts competitor
-                    analysis to get an overview of that particular niche market.
-                    He basically does research to find answers for these
-                    questions:
-                  </p>
-                  <p className="p font-medium text-slate-900">
-                    What SEO techniques do other competitors follow?
-                  </p>
-                  <p className="p font-medium text-slate-900">
-                    Do they have a positive impact on the public?
-                  </p>
-                  <p className="p font-medium text-slate-900">
-                    If yes, how can we customize the SEO strategy for our
-                    clients in order to supersede them?
-                  </p>
-                </motion.div>
-
-                <div className="space-y-6">
-                  {[
-                    {
-                      num: '01',
-                      title: 'Business Analysis',
-                      desc: 'Studying targeted audience, potential customers and their business culture.',
-                      icon: <Target className="text-[#3cb878]" />,
-                    },
-                    {
-                      num: '02',
-                      title: 'Strategic Planning',
-                      desc: 'Customizing SEO techniques based on competitor footprint and niche demands.',
-                      icon: <Lightbulb className="text-[#3cb878]" />,
-                    },
-                    {
-                      num: '03',
-                      title: 'Superior Execution',
-                      desc: 'Implementing high-impact optimizations for long-term algorithmic dominance.',
-                      icon: <TrendingUp className="text-[#3cb878]" />,
-                    },
-                  ].map((step, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: 20 }} // Reduced x offset for mobile stability
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.1 }}
-                      viewport={{ once: true }}
-                      className="group flex flex-col items-start gap-4 rounded-[1.5rem] border border-slate-100 bg-white p-5 shadow-sm transition-all duration-500 hover:border-[#3cb878] hover:shadow-xl hover:shadow-[#3cb878]/5 sm:flex-row md:gap-6 md:rounded-[2.5rem] md:p-8"
-                    >
-                      {/* Number Icon - Adjusted size for mobile */}
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#DBFFEC] text-base font-black text-[#3cb878] transition-all duration-500 group-hover:bg-[#3cb878] group-hover:text-white md:h-14 md:w-14 md:rounded-2xl md:text-lg">
-                        {step.num}
-                      </div>
-
-                      <div className="space-y-2">
-                        <h5 className="h5 flex  flex-wrap items-center gap-2  text-slate-900">
-                          {step.title}
-                          <span className="inline-block transition-transform duration-300 group-hover:scale-110">
-                            {step.icon}
-                          </span>
-                        </h5>
-                        <p className="p text-slate-700 ">{step.desc}</p>
-                      </div>
-                    </motion.div>
-                  ))}
+            <div className="relative z-10  max-w-4xl px-6 ">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center space-y-8"
+              >
+                {/* Centered Heading */}
+                <div>
+                  <h4 className="h4 leading-[1.1] tracking-tighter text-slate-900">
+                    Google Expert
+                    <span className="text-[#3cb878]"> Impacting</span> Search
+                    Engines
+                  </h4>
                 </div>
-              </div>
+
+                {/* Centered Paragraphs */}
+                <p className="p text-slate-900">
+                  To start with, he has a basic understanding of each SEO
+                  project he commits. A unique and customized SEO strategy is
+                  planned and implemented for each project as he knows it
+                  differs from business to business. For that, he thoroughly
+                  analyses the clients’ businesses and their requirements.
+                </p>
+
+                <p className="p text-slate-900">
+                  <span className="font-bold text-[#3cb878]">
+                    #1 Business analysis
+                  </span>{' '}
+                  is all about conducting a study on clients’ targeted audience,
+                  potential customers and their business culture. Zammy Zaif
+                  does exactly this at the beginning of each and every project.
+                  And most importantly, he conducts competitor analysis to get
+                  an overview of that particular niche market. He basically does
+                  research to find answers for these questions:
+                </p>
+
+                {/* Question List with Icons */}
+                <div className="mt-8 space-y-6 text-left sm:mx-auto sm:max-w-2xl">
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm"
+                  >
+                    <div className="mt-1 flex-shrink-0">
+                      <Search className="text-[#3cb878]" size={20} />
+                    </div>
+                    <p className="p font-medium text-slate-900">
+                      What SEO techniques do other competitors follow?
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm"
+                  >
+                    <div className="mt-1 flex-shrink-0">
+                      <Users className="text-[#3cb878]" size={20} />
+                    </div>
+                    <p className="p font-medium text-slate-900">
+                      Do they have a positive impact on the public?
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm"
+                  >
+                    <div className="mt-1 flex-shrink-0">
+                      <TrendingUp className="text-[#3cb878]" size={20} />
+                    </div>
+                    <p className="p font-medium text-slate-900">
+                      If yes, how can we customize the SEO strategy for our
+                      clients in order to supersede them?
+                    </p>
+                  </motion.div>
+                </div>
+              </motion.div>
             </div>
           </section>
-
           <section
             id="faq-premium"
             className="relative overflow-hidden bg-white py-24"
@@ -2425,8 +2417,156 @@ export default function GoogleRankingExpertSection() {
               </span>
             </button>
           </div>
+          {/* SIDEBAR CONTACT FORM - PIXEL PERFECT START */}
+          {/* 5. SIDEBAR CONTACT FORM - MOVE IT HERE (INSIDE THE DIV) */}
+          <div className="w-full overflow-hidden rounded-[2.5rem] border-2 border-[#3cb878] bg-white shadow-2xl">
+            {/* Brand Green Header */}
+            <div className="bg-[#3cb878] py-6 text-center">
+              <h2 className="h2 uppercase tracking-tighter text-white">
+                Get in touch
+              </h2>
+            </div>
+
+            {/* Form Content */}
+            <form className="space-y-4 p-5 lg:p-6">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Website URL"
+                  className="h-12 w-full rounded-full border border-slate-200 bg-slate-50/50 px-6 text-sm text-slate-700 outline-none transition-all focus:border-[#3cb878] focus:bg-white focus:ring-1 focus:ring-[#3cb878]/20"
+                />
+              </div>
+
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="h-12 w-full rounded-full border border-slate-200 bg-slate-50/50 px-6 text-sm text-slate-700 outline-none transition-all focus:border-[#3cb878] focus:bg-white focus:ring-1 focus:ring-[#3cb878]/20"
+                />
+              </div>
+
+              <div className="relative">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="h-12 w-full rounded-full border border-slate-200 bg-slate-50/30 px-6 text-sm text-slate-700 outline-none transition-all focus:border-[#3cb878] focus:bg-white focus:ring-1 focus:ring-[#3cb878]/20"
+                />
+              </div>
+
+              <div className="relative">
+                <input
+                  type="tel"
+                  placeholder="Phone"
+                  className="h-12 w-full rounded-full border border-slate-200 bg-slate-50/30 px-6 text-sm text-slate-700 outline-none transition-all focus:border-[#3cb878] focus:bg-white focus:ring-1 focus:ring-[#3cb878]/20"
+                />
+              </div>
+
+              {/* reCAPTCHA - Properly scaled for Sidebar width */}
+              <div className="flex justify-center overflow-hidden py-2">
+                <div className="origin-center scale-[0.75] xl:scale-[0.8]">
+                  <ReCAPTCHA
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onChange={handleSidebarCaptcha}
+                  />
+                </div>
+              </div>
+
+              {/* Brand Green Submit Button */}
+              <button
+                type="submit"
+                className="h-14 w-full rounded-full bg-[#3cb878] text-sm font-black uppercase tracking-[0.15em] text-white shadow-lg transition-all hover:bg-slate-900 hover:shadow-green-500/20 active:scale-95"
+              >
+                SUBMIT NOW
+              </button>
+            </form>
+          </div>
+          {/* SIDEBAR CONTACT FORM - PIXEL PERFECT END */}
         </aside>
       </div>
+
+      <section className="font-sans flex min-h-[650px] w-full flex-col bg-white lg:flex-row">
+        {/* LEFT SIDE: ONLY IMAGE - CLEAN VERSION */}
+        <div className="relative flex w-full items-end justify-center overflow-hidden bg-[#FFB400] pt-10 lg:w-1/2 lg:pt-20">
+          <div className="relative z-10 w-full px-4 lg:px-10">
+            <img
+              src="https://it2.tv/img/google-maps-local-seo-ranking-expert/first-rank-expert.webp"
+              alt="Best SEO Expert"
+              className="mx-auto block h-auto max-h-[600px] w-full object-contain"
+            />
+          </div>
+        </div>
+
+        {/* RIGHT SIDE: FORM COLUMN */}
+        <div className="flex w-full items-center justify-center bg-[#3cb878] p-6 md:p-12 lg:w-1/2 lg:p-16">
+          <div className="w-full max-w-2xl rounded-[2.5rem] border-[3px] border-white/30 p-8 md:p-12">
+            {/* Form Heading: H2 inside H2 as requested */}
+            <h4 className="h4 mb-10 text-center tracking-tight text-white">
+              Get a free SEO plan
+            </h4>
+
+            <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <input
+                type="text"
+                placeholder="Name*"
+                required
+                className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+              />
+              <input
+                type="text"
+                placeholder="Your Phone*"
+                required
+                className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+              />
+              <input
+                type="email"
+                placeholder="Your Email*"
+                required
+                className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+              />
+
+              <div className="relative">
+                <select className="h-14 w-full cursor-pointer appearance-none rounded-full bg-white px-6 text-slate-500 focus:outline-none">
+                  <option value="">Website SEO Services</option>
+                  <option value="google-ranking">Google Ranking</option>
+                  <option value="local-seo">Local SEO</option>
+                </select>
+                <ChevronDown
+                  className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 text-slate-400"
+                  size={20}
+                />
+              </div>
+
+              <input
+                type="text"
+                placeholder="GBP or Website URL"
+                className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+              />
+
+              {/* ReCAPTCHA Container */}
+              <div className="flex justify-center py-2 md:col-span-2">
+                <div className="scale-90 transform rounded-xl bg-white p-2 shadow-md md:scale-100">
+                  <ReCAPTCHA
+                    sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                    onChange={(val: string | null) => console.log(val)}
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                className="mt-2 rounded-full bg-[#FF5A2C] py-5 font-black uppercase tracking-wider text-white shadow-xl transition-all duration-300 hover:bg-slate-900 active:scale-95 md:col-span-2"
+              >
+                Submit Seo Estimate Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
