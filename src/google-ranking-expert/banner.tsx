@@ -12,6 +12,7 @@ import { useState } from 'react';
 import React from 'react';
 
 import {
+  MousePointer2,
   Check,
   Zap,
   Search,
@@ -80,6 +81,73 @@ interface Service {
   icon: LucideIcon;
   desc: string;
 }
+
+const reviews = [
+  {
+    name: 'Zain Towing Service LLC',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/zain-towing-service-lousiana.svg',
+    quote:
+      'Working with Zammy Zaif has been a game-changer for our business. His expertise as a Google SEO Consultant has helped us achieve first-rank results for multiple keywords, including those crucial to our towing service. Zammy’s strategic approach and dedication have significantly boosted our visibility and customer inquiries. We highly recommend his services to anyone looking to dominate their local search results.',
+  },
+  {
+    name: 'Ambica Gold Buyers',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/ambica-gold-bommanahalli.svg',
+    quote:
+      'Zammy Zaif’s exceptional skills as a Google SEO Expert have truly transformed our online presence. He successfully secured top rankings for our key phrases related to gold buying services. His meticulous approach to SEO and commitment to delivering results have made a remarkable difference in our business’s visibility and growth. We are incredibly satisfied with his work and would gladly endorse his services.',
+  },
+  {
+    name: 'Sri Sairam Tution Centre',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/sairam-tuition-chennai.svg',
+    quote:
+      'We’ve been thoroughly impressed with Zammy Zaif’s expertise as a Google SEO Consultant. Thanks to his strategic SEO efforts, we now rank at the top for numerous keywords related to our physics tuition services. His attention to detail and ability to achieve first-rank results have been instrumental in attracting more students to our centre. Zammy’s work has exceeded our expectations, and we highly recommend him.',
+  },
+  {
+    name: 'Studio7RK Photography',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/studio7rk-salem.svg',
+    quote:
+      'Zammy Zaif has done an outstanding job in boosting our online presence. As a Google SEO Expert, he achieved first-rank results for various keywords related to our photography services. His expertise and dedication to SEO have greatly increased our visibility and client inquiries. We are delighted with the results and highly recommend Zammy for anyone looking to enhance their search engine rankings.',
+  },
+  {
+    name: 'Orange Beauty Clinic',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/orange-clinic-chennai.svg',
+    quote:
+      'Thanks to Zammy Zaif’s exceptional skills as a Google SEO Consultant, we have seen significant improvements in our online search rankings. His expertise led to top positions for several keywords related to our scar removal clinic. Zammy’s professional approach and effective SEO strategies have had a substantial positive impact on our business. We are very pleased with his services and recommend him without reservation.',
+  },
+  {
+    name: 'Kathleen Black International Inc.',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/kathleena-black-toronto.svg',
+    quote:
+      'Zammy Zaif’s work as a Google SEO Expert has been pivotal for our real estate business coaching services. His strategic SEO efforts have secured top rankings for many of our targeted keywords, enhancing our global visibility. Zammy’s dedication and results-oriented approach have been instrumental in our growth. We are extremely satisfied with his services and highly recommend him.',
+  },
+  {
+    name: 'Infant Traders',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/infant-traders-tuticorin.svg',
+    quote:
+      'Zammy Zaif’s expertise as a Google SEO Consultant has greatly improved our online presence. His effective SEO strategies achieved first-rank results for multiple keywords related to scuba products in Tuticorin. Zammy’s thorough and professional approach has significantly boosted our visibility and customer engagement. We are thrilled with the results and highly recommend his services.',
+  },
+  {
+    name: 'Prima Properties',
+    title: 'Valuable Client',
+    logoUrl:
+      'https://it2.tv/seo-services/img/demo-content/clients/prima-properties-london.svg',
+    quote:
+      'We are very pleased with Zammy Zaif’s work as a Google SEO Expert. His strategic SEO efforts led to top rankings for several keywords related to our property buying services in London. Zammy’s ability to deliver first-rank results and his commitment to our success have been invaluable. We highly recommend him to anyone seeking to enhance their search engine performance.',
+  },
+];
 
 const services = [
   {
@@ -160,23 +228,23 @@ const faqData = [
   {
     question: 'Who is google ranking expert?',
     answer:
-      "A Google Ranking Expert is a specialized SEO professional who focuses specifically on aligning website content and technical infrastructure with Google's complex ranking algorithms to drive organic traffic.",
+      "Zammy Zaif stands out as a remarkable Certified Google Ranking Expert, providing exceptional SEO services to his clients. What sets him apart is his commitment to relying solely on the Google algorithm, adhering strictly to Google's guidelines and leveraging Google Ranking Factors, without any reliance on third-party tools or plugins.",
   },
   {
     question: 'Why we need a Google Ranking Expert?',
     answer:
-      "With Google processing billions of searches daily, an expert ensures your business doesn't get lost. They navigate algorithmic updates, perform deep technical audits, and implement high-impact strategies that internal teams might overlook.",
+      "A Google Ranking Expert is an individual or professional who specializes in optimizing websites to achieve higher rankings in Google search results. They possess in-depth knowledge of Google's search algorithms and implement various strategies to improve a website's visibility and organic traffic.",
   },
   {
     question: 'What services do Google Ranking Experts provide?',
     answer:
-      'Services include comprehensive keyword mapping, competitor footprint analysis, technical SEO audits, high-authority link building, and local SEO optimization for Google Maps dominance.',
+      'Google Ranking Experts offer a range of services aimed at improving your websites rankings. These services may include keyword research, on-page optimization, technical SEO audits, link building, content creation and optimization, website speed optimization, mobile optimization, local SEO, and tracking and reporting on keyword rankings and website performance.',
   },
   {
     question:
       'How long does it take to see results with Google Ranking Services?',
     answer:
-      'While initial technical improvements show within weeks, significant ranking shifts typically occur within 3 to 6 months. Our signature 45-Day Challenge is designed to accelerate this timeline through aggressive optimization.',
+      'The time it takes to see results from Google Ranking Services can vary depending on various factors, including the competitiveness of your industry, the current state of your websites SEO, and the strategies implemented by the expert. Generally, it can take 90 days to 180 days notice significant improvements in your websites rankings, but consistent efforts and ongoing optimization can lead to long-term success.',
   },
 ];
 
@@ -184,7 +252,7 @@ const faqData = [
 const algoData = {
   'AI Models': {
     title: 'AI & Machine Learning Dominance',
-    desc: "Google leverages advanced AI models like RankBrain for query interpretation, BERT for natural language processing, and MUM for multi-modal search. Zammy optimizes content to satisfy these 'thinking' algorithms by focusing on semantic relevance rather than just keywords.",
+    desc: 'Google’s ranking algorithm is a sophisticated, multi-layered system that begins with crawling, where Googlebot discovers and scans web pages, followed by indexing, where qualifying content is stored in Google’s vast search index.',
     highlights: [
       'RankBrain Integration',
       'BERT Contextual Optimization',
@@ -193,7 +261,7 @@ const algoData = {
   },
   'Core Signals': {
     title: 'E-E-A-T & Trust Framework',
-    desc: 'The algorithm evaluates pages against E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness). We build your digital footprint to prove to Google that you are a verified leader in your niche, securing long-term ranking stability.',
+    desc: 'During ranking, the algorithm evaluates indexed pages against hundreds of signals - including E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), mobile-friendliness, page speed, secure connections (HTTPS), and content relevance - leveraging advanced AI models like RankBrain, BERT, and MUM to refine results.',
     highlights: [
       'Author Persona Building',
       'Trust Signal Audits',
@@ -201,8 +269,8 @@ const algoData = {
     ],
   },
   Technical: {
-    title: 'Crawlability & Indexing Logic',
-    desc: "Before you can rank, you must be found. We optimize your technical architecture to ensure Googlebot can crawl and index your site efficiently without hitting 'crawl traps' or wasted budget. This includes advanced sitemap logic and schema markup.",
+    title: 'MUM & Indexing Logic',
+    desc: 'Finally, in the serving phase, Google delivers the most authoritative and useful content tailored to user intent, incorporating personalization and SERP features. What sets Zammy apart is his data-driven, strategic approach that aligns with Google’s evolving algorithms.',
     highlights: [
       'Crawl Budget Optimization',
       'Schema Architecture',
@@ -211,7 +279,7 @@ const algoData = {
   },
   'User Experience': {
     title: 'Core Web Vitals & Speed',
-    desc: 'User signals are the new SEO. We fine-tune your LCP, FID, and CLS scores to ensure a lightning-fast, stable experience. Google rewards sites that users enjoy interacting with, leading to lower bounce rates and higher conversions.',
+    desc: 'Combining deep technical expertise in crawl optimization, indexability audits and ranking signal enhancement with a focus on sustainable, user-first SEO, his ability to decode algorithmic updates ensures long-term visibility and performance in competitive search landscapes.',
     highlights: [
       'LCP Performance Tuning',
       'Mobile-First Infrastructure',
@@ -249,11 +317,11 @@ export default function GoogleRankingExpertSection() {
 
   const caseStudies = [
     {
-      src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800',
+      src: '/assets/images/google-ranking-services/pure-self-seo-growth.webp',
       alt: 'HVAC Business Growth Case Study',
     },
     {
-      src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800',
+      src: '/assets/images/google-ranking-services/hvac-contractor-seo-case-study.webp',
       alt: 'Google Ranking Success',
     },
   ];
@@ -292,10 +360,8 @@ export default function GoogleRankingExpertSection() {
             id="evidence-results"
             className="max-w-full space-y-12 overflow-hidden md:space-y-20"
           >
-            
             {/* Header Area */}
             <div className="mx-auto max-w-3xl text-center">
-            
               <h5 className="h5  mb-4 font-bold  tracking-[0.1em] text-[#3cb878]">
                 Our Google Rank Result Drive Sales
               </h5>
@@ -330,12 +396,15 @@ export default function GoogleRankingExpertSection() {
                 className="!static w-full"
               >
                 {[
-                  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-                  'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop',
-                  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-                  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-                  'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop',
-                  'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop',
+                  '/assets/images/google-ranking-services/preston-dental-seo-win.webp',
+                  '/assets/images/google-ranking-services/realestate-coach.webp',
+                  '/assets/images/google-ranking-services/property-buyers-in-london-result.webp',
+                  '/assets/images/google-ranking-services/shingle-roofing-experts-los-angeles-result.webp',
+                  '/assets/images/google-ranking-services/dentru.webp',
+                  '/assets/images/google-ranking-services/google-business-ranking-performance.webp',
+                  '/assets/images/google-ranking-services/roy-cleeves.webp',
+                  '/assets/images/google-ranking-services/dentru-gurgaon.webp',
+                  '/assets/images/google-ranking-services/studio-7rk.webp',
                 ].map((imgSrc, index) => (
                   <SwiperSlide
                     key={index}
@@ -364,10 +433,10 @@ export default function GoogleRankingExpertSection() {
               {/* Metrics Grid: 1 Column on Mobile, 4 on Desktop */}
               <div className="relative z-10 grid grid-cols-1 gap-10 lg:grid-cols-4 lg:gap-0">
                 {[
-                  { v: 2.5, unit: 'K+', label: 'Elite Projects' },
-                  { v: 85, unit: 'K+', label: '1st Page Ranks' },
-                  { v: 20, unit: 'K+', label: 'Absolute #1 Spots' },
-                  { v: 20, unit: '+', label: 'Years of Mastery' },
+                  { v: 2, unit: 'K+', label: 'Clients' },
+                  { v: 85, unit: 'K+', label: '1st Page Rank' },
+                  { v: 20, unit: 'K+', label: '1st Rank Results' },
+                  { v: 20, unit: '+', label: 'Years of Experience' },
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
@@ -416,7 +485,6 @@ export default function GoogleRankingExpertSection() {
             id="expert-detail"
             className=" relative space-x-20 space-y-6 overflow-hidden md:space-y-14"
           >
-            
             {/* 1. Sophisticated Header */}
             <div className="mx-auto max-w-4xl text-center">
               <motion.h5
@@ -445,19 +513,19 @@ export default function GoogleRankingExpertSection() {
                 className="space-y-8"
               >
                 {/* Primary Bio Paragraph */}
-                <p className="p font-medium leading-relaxed  text-slate-600">
+                <p className="p font-medium leading-relaxed  text-slate-700">
                   With a track record of successfully completing over 2,500+ SEO
                   projects globally and optimizing rankings from none or 10th
-                  place to the first rank on the first page,{' '}
-                  <span className="font-bold text-[#3cb878]">Zammy</span>, the
+                  place to the first rank on the first page, Zammy, the
                   visionary CEO of VersaForge, is a highly skilled Google Search
                   Engine Ranking Optimization practitioner who began working in
-                  2008. Additionally, his work in local SEO is unparalleled,
-                  having ranked over 800 local businesses in just 45 days ,
-                  earning first-rank positions on Google Maps, further
-                  solidifying his reputation as a leader in delivering tangible,
-                  rapid and sustainable results for businesses aiming to enhance
-                  their online visibility and achieve long-term growth.
+                  2008. Even our website, www.it2.tv has secured the 1st spot
+                  and the Google Ai Mode Recommendation, Chatgpt, Claude, Bing,
+                  Yahoo, Preplexity and all other ai platforms for competitive
+                  keywords like "Ranking Expert," "Google Ranking Expert," and
+                  "Google Ranking Services" since 2018, maintaining these
+                  positions despite the heavy global competition, which presents
+                  a day-to-day challenge
                 </p>
 
                 {/* AI Recommendation Highlight Box */}
@@ -475,10 +543,19 @@ export default function GoogleRankingExpertSection() {
                   </p>
                 </div>
 
+                {/* ADDED IMAGE HERE (Location A) */}
+                <div className="my-8 w-full overflow-hidden rounded-xl md:my-10">
+                  <img
+                    src="/assets/images/google-ranking-services/google-ranking-expert-zammy-zaif.webp"
+                    alt="Google Search Performance"
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+
                 {/* Local SEO Secondary Paragraph */}
-                <p className="p font-medium leading-[1.8]  text-slate-600">
+                <p className="p font-medium leading-relaxed  text-slate-600">
                   Additionally, his work in local SEO is unparalleled, having
-                  ranked over 800 local businesses in just 45 days , earning
+                  ranked over 800 local businesses in just 45 days, earning
                   first-rank positions on Google Maps, further solidifying his
                   reputation as a leader in delivering tangible, rapid and
                   sustainable results for businesses aiming to enhance their
@@ -488,8 +565,8 @@ export default function GoogleRankingExpertSection() {
             </div>
 
             {/* 3. Premium CTA Button: Advanced Animation */}
-            <div className="flex flex-col items-center lg:items-center ">
-              <motion.button
+            {/* <div className="flex flex-col items-center lg:items-center ">
+               <motion.button
                 whileHover={{
                   scale: 1.05,
                   boxShadow: '0 20px 40px rgba(249,115,22,0.3)',
@@ -497,7 +574,7 @@ export default function GoogleRankingExpertSection() {
                 whileTap={{ scale: 0.95 }}
                 className="group relative flex  items-center gap-4 overflow-hidden rounded-2xl bg-slate-900 px-5 py-4 text-[#3cb878] group-hover:text-[#3cb878] transition-all duration-300 md:rounded-3xl"
               >
-                {/* Button Shine Effect inset-0*/}
+              
                 <div className="absolute inset-0 h-full w-full -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform   group-hover:animate-[shimmer_1.5s_infinite]" />
 
                 <span className="h5 font-bold tracking-[0.1em]">
@@ -507,7 +584,7 @@ export default function GoogleRankingExpertSection() {
                   <Zap size={16} fill="white" stroke="white" />
                 </div>
               </motion.button>
-            </div>
+            </div> */}
 
             <style jsx>{`
               @keyframes shimmer {
@@ -516,11 +593,150 @@ export default function GoogleRankingExpertSection() {
                 }
               }
             `}</style>
+
+            {/* --- UPDATED CALL TO ACTION BUTTON --- */}
+            <div className="mt-20 text-center">
+              <motion.button
+                onClick={() => setIsModalOpen(true)} // Opens the modal
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative inline-flex items-center gap-4 rounded-2xl bg-[#3cb878] px-10 py-6 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
+              >
+                <span className=" h5 font-bold  tracking-[0.1em]">
+                  Get Free Audit Now
+                </span>
+              </motion.button>
+            </div>
+
+            {/* --- PREMIUM MODAL OVERLAY --- */}
+            <AnimatePresence>
+              {isModalOpen && (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6">
+                  {/* Backdrop */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => setIsModalOpen(false)}
+                    className="absolute inset-0 bg-slate-900/80 backdrop-blur-xl"
+                  />
+
+                  {/* Modal Card */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 40 }}
+                    className="relative flex w-full max-w-2xl flex-col overflow-hidden rounded-[3rem] bg-white shadow-2xl md:flex-row"
+                  >
+                    {/* Left Side: Brand Accent */}
+                    <div className="hidden w-1/3 flex-col justify-between bg-[#3cb878] p-10 text-white md:flex">
+                      <div className="space-y-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
+                          <TrendingUp size={24} />
+                        </div>
+                        <h3 className="text-2xl font-black uppercase leading-none tracking-tighter">
+                          Let's Build Your Success
+                        </h3>
+                      </div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest opacity-80">
+                        Manual SEO Strategy • 100% ROI Focused
+                      </p>
+                    </div>
+
+                    {/* Right Side: The Form */}
+                    <div className="relative flex-1 p-8 md:p-12">
+                      <button
+                        onClick={() => setIsModalOpen(false)}
+                        className="absolute right-6 top-6 p-2 text-slate-400 transition-colors hover:text-[#3cb878]"
+                      >
+                        <X size={24} />
+                      </button>
+
+                      <div className="mb-8">
+                        <h4 className="text-xl font-black uppercase tracking-tight text-slate-900">
+                          Contact us Now
+                        </h4>
+                        <p className="p mt-1 text-slate-700">
+                          Fill in the details to start your journey to #1.
+                        </p>
+                      </div>
+
+                      <form
+                        className="space-y-4"
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          setIsModalOpen(false);
+                        }}
+                      >
+                        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                          <div className="relative">
+                            <input
+                              type="text"
+                              placeholder="Full Name"
+                              required
+                              className="form-input-premium"
+                            />
+                          </div>
+                          <div className="relative">
+                            <input
+                              type="email"
+                              placeholder="Email Address"
+                              required
+                              className="form-input-premium"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="relative">
+                          <input
+                            type="url"
+                            placeholder="Website URL"
+                            required
+                            className="form-input-premium"
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            required
+                            className="form-input-premium"
+                          />
+                        </div>
+
+                        <textarea
+                          placeholder="Briefly describe your growth goals..."
+                          rows={3}
+                          className="w-full resize-none rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
+                        ></textarea>
+
+                        <button
+                          type="submit"
+                          className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-[#3cb878] py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
+                        >
+                          Submit Application{' '}
+                          <Send
+                            size={16}
+                            className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                          />
+                        </button>
+                      </form>
+                    </div>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
+
+            <style jsx>{`
+              .form-input-premium {
+                @apply w-full rounded-2xl border border-slate-100 bg-slate-50 py-4 pl-12 pr-5 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878];
+              }
+            `}</style>
           </section>
 
           {/* --- SECTION: GOOGLE BUSINESS PROFILE PERFORMANCE MAX (FIXED & CLEAN) --- */}
           <section className=" overflow-hidden bg-white py-20">
-            
             {/* Local State for the Modal */}
             {(() => {
               const [isFormOpen, setIsFormOpen] = React.useState(false);
@@ -541,7 +757,7 @@ export default function GoogleRankingExpertSection() {
 
                   {/* Content Body */}
                   <div className="space-y-8">
-                    <p className="p  leading-relaxed text-slate-900 ">
+                    <p className="p  font-medium leading-relaxed text-slate-700 ">
                       Renowned for delivering rapid, high-impact results, Zammy
                       Zaif has mastered the art of Google Business Profile
                       optimization —
@@ -554,7 +770,7 @@ export default function GoogleRankingExpertSection() {
                       search, earning recognition as a top-tier Google ranking
                       expert. Our proven methodology transforms visibility into
                       revenue, making them the go-to authority for businesses
-                      aiming to outperform competitors.
+                      aiming to outperform competitors and own their market.
                     </p>
                   </div>
 
@@ -615,7 +831,7 @@ export default function GoogleRankingExpertSection() {
                             }}
                           >
                             <div className="text-left">
-                              <label className="ml-1 text-[10px] font-black uppercase tracking-widest text-slate-700">
+                              <label className="ml-1 text-[12px] font-black uppercase tracking-widest text-slate-700">
                                 Full Name
                               </label>
                               <input
@@ -626,12 +842,12 @@ export default function GoogleRankingExpertSection() {
                               />
                             </div>
                             <div className="text-left">
-                              <label className="ml-1 text-[10px] font-black uppercase tracking-widest text-slate-700">
-                                Work Email
+                              <label className="ml-1 text-[12px] font-black uppercase tracking-widest text-slate-700">
+                                Email
                               </label>
                               <input
                                 type="email"
-                                placeholder="email@company.com"
+                                placeholder="Enter your Email"
                                 className="mt-1 w-full rounded-xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium text-slate-900 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
                                 required
                               />
@@ -639,7 +855,7 @@ export default function GoogleRankingExpertSection() {
 
                             <button
                               type="submit"
-                              className="group mt-4 flex w-full items-center justify-center gap-3 rounded-2xl bg-slate-900 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-500 hover:bg-[#3cb878]"
+                              className="group mt-4 flex w-full items-center justify-center gap-3 rounded-2xl bg-slate-900 py-5 text-[14px] font-black uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-500 hover:bg-[#3cb878]"
                             >
                               Get Access Now{' '}
                               <ArrowRight
@@ -676,9 +892,7 @@ export default function GoogleRankingExpertSection() {
               <div className="space-y-4 text-left">
                 <h2 className="h2  text-center leading-[1.1] tracking-tighter text-slate-900">
                   First Rank{' '}
-                  <span className="text-[#3cb878]  ">
-                    SEO Services
-                  </span>
+                  <span className="text-[#3cb878]  ">SEO Services</span>
                 </h2>
               </div>
 
@@ -686,44 +900,77 @@ export default function GoogleRankingExpertSection() {
               <div className="space-y-6">
                 <p className="p  font-medium leading-relaxed text-slate-600">
                   Zammy & Team are dedicated to providing First Rank SEO
-                  services in{' '}
-                  <span className="font-bold text-slate-900">
-                    Seo, Aio, AEO & GEO.
-                  </span>{' '}
-                  Securing the first spot captures the
+                  services in Seo, Aio, AEO & GEO. Securing the first spot
+                  captures the
                   <span className="mx-1  rounded px-2 py-0.5 font-bold text-[#3cb878]  ">
                     first click and drives maximum traffic.
                   </span>
                   More visitors lead to higher conversions and increased sales
                   growth. Ranking first in Google and other AI platforms
-                  strengthens your brand&apos;s visibility and credibility. It
-                  firmly positions your business as an industry leader. Over
-                  time, it helps build strong authority and trust online. People
+                  strengthens your brand’s visibility and credibility. It firmly
+                  positions your business as an industry leader. Over time, it
+                  helps build strong authority and trust online. People
                   naturally trust brands that top the search results. With Zammy
                   & Team, aiming for #1 means aiming for lasting success.
                 </p>
               </div>
 
               {/* 3. Feature Cards: 4-Grid Premium UI */}
-              <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-6">
                 {[
                   {
                     icon: (
-                      <CheckCircle2 className="text-[#3cb878]" size={28} />
+                      <CheckCircle2
+                        className="text-[#3cb878] group-hover:text-white"
+                        size={28}
+                      />
                     ),
                     label: 'First Rank',
                   },
                   {
-                    icon: <Cpu className="text-[#3cb878]" size={28} />,
-                    label: 'High Conversion',
+                    icon: (
+                      <MousePointer2
+                        className="text-[#3cb878] group-hover:text-white"
+                        size={28}
+                      />
+                    ),
+                    label: 'First Click',
                   },
                   {
-                    icon: <TrendingUp className="text-[#3cb878]" size={28} />,
+                    icon: (
+                      <Target
+                        className="text-[#3cb878] group-hover:text-white"
+                        size={28}
+                      />
+                    ),
+                    label: 'Brand Visibility',
+                  },
+                  {
+                    icon: (
+                      <Sparkles
+                        className="text-[#3cb878] group-hover:text-white"
+                        size={28}
+                      />
+                    ),
+                    label: 'AI Results',
+                  },
+                  {
+                    icon: (
+                      <TrendingUp
+                        className="text-[#3cb878] group-hover:text-white"
+                        size={28}
+                      />
+                    ),
                     label: 'More Traffic',
                   },
                   {
-                    icon: <Rocket className="text-[#3cb878]" size={28} />,
-                    label: 'AI Results',
+                    icon: (
+                      <Activity
+                        className="text-[#3cb878] group-hover:text-white"
+                        size={28}
+                      />
+                    ),
+                    label: 'High Conversion',
                   },
                 ].map((item, idx) => (
                   <motion.div
@@ -735,7 +982,7 @@ export default function GoogleRankingExpertSection() {
                     }}
                     className="flex flex-col items-center space-y-4 rounded-[2rem] border border-slate-100 bg-white p-8 text-center shadow-sm transition-all"
                   >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white group-hover:text-white]">
+                    <div className="group-hover:text-white] flex h-14 w-14 items-center justify-center rounded-2xl bg-white">
                       {item.icon}
                     </div>
                     <h5 className="h5  uppercase tracking-tight text-slate-800">
@@ -746,7 +993,7 @@ export default function GoogleRankingExpertSection() {
               </div>
 
               {/* 4. Statistics Counters: Premium Orange Theme */}
-              <div className="grid grid-cols-2 gap-10 border-t border-slate-50 pt-10 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-14 border-t border-slate-50 pt-10 lg:grid-cols-4">
                 {[
                   { val: 800, unit: '+', label: 'Local Profiles' },
                   { val: 12, unit: 'K+', label: '1st Rank Rank' },
@@ -755,14 +1002,14 @@ export default function GoogleRankingExpertSection() {
                 ].map((stat, i) => (
                   <div key={i} className="space-y-1 text-center lg:text-left">
                     <div className="flex items-baseline justify-center gap-1 lg:justify-start">
-                      <div className="text-[2.75rem] font-bold  md:text-[3.5rem] xl:text-[3.0rem] font-black leading-none tracking-tighter text-[#3cb878]">
+                      <div className="text-[2.75rem] font-black  font-bold leading-none tracking-tighter text-[#3cb878] md:text-[3.5rem] xl:text-[3.0rem]">
                         <Counter value={stat.val} />
                       </div>
-                      <span className="h3 font-bold text-[#3cb878]">
+                      <span className="h4 font-bold text-[#3cb878]">
                         {stat.unit}
                       </span>
                     </div>
-                    <h6 className="h6 uppercase tracking-[0.2em] text-slate-700">
+                    <h6 className="h6 uppercase tracking-[0.2em] text-slate-900">
                       {stat.label}
                     </h6>
                   </div>
@@ -809,11 +1056,19 @@ export default function GoogleRankingExpertSection() {
                     Zammy Zaif
                   </span>{' '}
                   has spent 20+ years mastering Google’s evolving algorithms
-                  through strict adherence to Google’s SEO guidelines, manual
-                  strategies, and real-time research without relying on plugins,
-                  third-party tools, or automation. Zammy’s expertise extends
-                  across{' '}
-                  <span className="italic  text-slate-900">
+                  through strict adherence to Google’s SEO guidelines,
+                  <span className="font-bold text-[#3cb878]">
+                    {' '}
+                    manual strategies,
+                  </span>{' '}
+                  and real-time research -
+                  <span className="font-bold text-[#3cb878]">
+                    {' '}
+                    without relying on plugins, third-party tools, or
+                    automation.
+                  </span>{' '}
+                  Zammy’s expertise extends across{' '}
+                  <span className="font-bold  text-slate-900">
                     Google’s own ecosystem
                   </span>
                   , using tools like Google Search Results for rank tracking,
@@ -823,28 +1078,24 @@ export default function GoogleRankingExpertSection() {
                   </span>{' '}
                   and{' '}
                   <span className="font-bold text-slate-800">
-                    Google Trends
+                    Google Trends for research,
                   </span>{' '}
-                  for research, and
+                  and
                   <span className="font-bold text-slate-800">
                     {' '}
-                    Google Search Console, Analytics, and Tag Manager
+                    Google Search Console, Analytics,{' '}
+                  </span>{' '}
+                  and{' '}
+                  <span className="font-bold text-slate-800">
+                    {' '}
+                    Tag Manager
                   </span>{' '}
                   for performance monitoring and tracking. This focused approach
                   is why Zammy is recognized not just as an SEO specialist, but
                   as a dedicated{' '}
-                  <span className="font-black text-[#3cb878]">
+                  <span className="font-bold text-slate-800">
                     Google SEO expert.
                   </span>
-                  Our Google SEO services focus on securing the #1 position on
-                  Google by making businesses easily found at the top of search
-                  results by potential customers. We drive maximum visibility,
-                  transformative business growth, and increased sales through
-                  expert strategies such as primary category keyword
-                  optimization, long-tail revenue-focused optimization, nearby
-                  optimization, quality content creation, and technical
-                  improvements. That’s why Zammy is trusted by small and
-                  medium-sized businesses worldwide.
                 </p>
               </motion.div>
 
@@ -857,7 +1108,7 @@ export default function GoogleRankingExpertSection() {
                 className="relative overflow-hidden rounded-[3rem] border border-slate-100 bg-slate-50 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)]"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800"
+                  src="/assets/images/google-ranking-services/expertise-in-google-seo.webp"
                   alt="Expertise in Google SEO - Zammy Zaif"
                   className="block h-auto w-full object-cover"
                 />
@@ -865,19 +1116,20 @@ export default function GoogleRankingExpertSection() {
                 {/* Decorative Gradient Overlay */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
               </motion.div>
-
-              {/* 4. Secondary Call to Action (Optional for UX) */}
-              <div className="pt-6 text-center">
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="inline-flex items-center gap-2 rounded-full border  border-slate-100 bg-slate-50 px-6 py-3"
-                >
-                  <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
-                  <h6 className="h6 text-center font-bold uppercase  tracking-widest text-slate-700">
-                    Manual Algorithm Alignment Active
-                  </h6>
-                </motion.div>
-              </div>
+              <p className="p  font-medium leading-relaxed text-slate-600">
+                Our Google SEO services focus on securing the #1 position on
+                Google by making businesses easily found at the top of search
+                results by potential customers. We drive maximum visibility,
+                <span className="font-bold text-[#3cb878]">
+                  {' '}
+                  transformative business growth, and increased sales through
+                  expert strategies{' '}
+                </span>{' '}
+                such as primary category keyword optimization, long-tail
+                revenue-focused optimization, nearby optimization, quality
+                content creation, and technical improvements. That’s why Zammy
+                is trusted by small and medium-sized businesses worldwide.
+              </p>
             </div>
           </section>
 
@@ -890,7 +1142,7 @@ export default function GoogleRankingExpertSection() {
               {/* 1. Strategy Overview: Flex Layout */}
 
               <div className="space-y-4 text-center">
-                <h5 className="h5 text-center font-bold uppercase tracking-[0.4em] text-[#3cb878] ">
+                <h5 className="h5 text-center font-bold uppercase  text-[#3cb878] ">
                   Methodical Excellence
                 </h5>
                 <h3 className="h3 leading-[0.9] tracking-tighter text-slate-900">
@@ -898,7 +1150,7 @@ export default function GoogleRankingExpertSection() {
                   <span className="text-[#3cb878]"> Ranking Strategy</span>
                 </h3>
               </div>
-              <div className="flex flex-col items-center gap-12 lg:flex-row">
+              <div className="flex flex-col items-center gap-12 ">
                 <div className="flex-1 space-y-6">
                   <p className="p font-medium leading-relaxed text-slate-600">
                     A successful Google ranking strategy centers around creating
@@ -920,7 +1172,7 @@ export default function GoogleRankingExpertSection() {
                 >
                   <div className="overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-2 shadow-2xl">
                     <img
-                      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800"
+                      src="/assets/images/google-ranking-services/google-ranking-strategy.webp"
                       alt="Google Strategy Diagram"
                       className="h-auto w-full rounded-[2rem] object-contain"
                     />
@@ -938,12 +1190,12 @@ export default function GoogleRankingExpertSection() {
                   },
                   {
                     title: 'One H1 Per Page',
-                    desc: 'On-page SEO, including meta titles, descriptions, headers, and internal linking, is essential for optimization. Correct H1 usage avoids black-hat tactics.',
+                    desc: ' On-page SEO, including meta titles, descriptions, headers, and internal linking, is essential for optimization, while using H1 tags correctly is crucial to avoid black-hat SEO tactics.',
                     tag: 'On-Page SEO',
                   },
                   {
                     title: 'Technical Optimization',
-                    desc: 'Fast page load speed, mobile optimization, HTTPS security, and clear site structure contribute to improved rankings.',
+                    desc: 'Technical SEO elements like fast page load speed, mobile optimization, HTTPS security, and clear site structure also contribute to improved rankings.',
                     tag: 'Core Vitals',
                   },
                   {
@@ -953,12 +1205,12 @@ export default function GoogleRankingExpertSection() {
                   },
                   {
                     title: 'No 3rd Party Tools & Plugins',
-                    desc: 'Manual SEO implementation on Coding. Analyzing and monitoring search results directly ensures maximum control over algorithm alignment.',
+                    desc: ' Building authority through quality backlinks and optimizing for local search, especially via Google Business Profiles, ensures higher visibility.',
                     tag: 'Manual Code',
                   },
                   {
                     title: 'No 3rd Party Tools & Plugins',
-                    desc: 'Manual SEO implementation on Coding. Analyzing and monitoring search results directly ensures maximum control over algorithm alignment.',
+                    desc: 'Consistent adherence to Google’s guidelines and adapting to algorithm changes is key to sustained SEO success.',
                     tag: 'Manual Code',
                   },
                 ].map((pillar, i) => (
@@ -969,16 +1221,16 @@ export default function GoogleRankingExpertSection() {
                     transition={{ delay: i * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5, backgroundColor: '#3cb878' }}
-                    className="group relative overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#3cb878] hover:shadow-xl"
+                    className="group relative overflow-hidden rounded-[2.5rem] border-2 border-[#3cb878] bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#3cb878] hover:shadow-xl"
                   >
                     {/* Subtle Accent Background */}
                     <div className="absolute right-0 top-0 -mr-16 -mt-16 h-32 w-32 rounded-bl-[5rem] bg-[#DBFFEC] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     <div className="relative z-10 space-y-4">
-                      <span className="inline-block rounded-full bg-[#DBFFEC] px-4 py-1 text-[12px] font-bold uppercase  tracking-widest text-[#3cb878]">
+                      {/*<span className="inline-block rounded-full bg-[#DBFFEC] px-4 py-1 text-[12px] font-bold uppercase  tracking-widest text-[#3cb878]">
                         {pillar.tag}
-                      </span>
-                      <h4 className="h4  uppercase tracking-tight  text-slate-900">
+                      </span>*/}
+                      <h4 className="h4   tracking-tight  text-slate-900">
                         {pillar.title}
                       </h4>
                       <p className="p text-slate-900 ">{pillar.desc}</p>
@@ -988,7 +1240,7 @@ export default function GoogleRankingExpertSection() {
               </div>
 
               {/* 3. Strategy Footer Highlight */}
-              <motion.div
+              {/*} <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 className="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-[3rem] bg-[#3cb878] p-10 text-white md:flex-row"
@@ -1005,7 +1257,7 @@ export default function GoogleRankingExpertSection() {
                 <button className="h5 relative z-10 rounded-2xl bg-white px-8 py-4   font-black uppercase tracking-widest text-[#3cb878] shadow-lg transition-all hover:bg-slate-900 active:scale-95">
                   Audit Strategy
                 </button>
-              </motion.div>
+              </motion.div>*/}
             </div>
           </section>
 
@@ -1026,9 +1278,9 @@ export default function GoogleRankingExpertSection() {
                   <span className="text-[#3cb878]">Case Studies</span>
                 </h3>
 
-                <p className="p mx-auto max-w-xl pt-4 font-medium text-slate-700">
+                <p className="p mx-auto max-w-2xl pt-4 font-medium text-slate-700">
                   Creating and delivering useful and relevant content has always
-                  been the foundation of our success stories.
+                  been his
                 </p>
               </motion.div>
 
@@ -1047,11 +1299,11 @@ export default function GoogleRankingExpertSection() {
                   loop={true}
                   autoplay={{ delay: 5000, disableOnInteraction: false }}
                   pagination={{ clickable: true, dynamicBullets: true }}
-                  className="overflow-hidden rounded-[2.5rem] border border-slate-100 bg-[#3cb878] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.12)]"
+                  className="overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white shadow-[0_50px_100px_-20px_rgba(0,0,0,0.12)]"
                 >
                   {caseStudies.map((study, index) => (
                     <SwiperSlide key={index}>
-                      <div className="relative aspect-[16/9] w-full overflow-hidden">
+                      <div className="relative aspect-[18/9] w-full overflow-hidden">
                         <img
                           src={study.src}
                           alt={study.alt}
@@ -1077,7 +1329,7 @@ export default function GoogleRankingExpertSection() {
                   className="group relative inline-flex items-center gap-4 rounded-2xl bg-[#3cb878] px-10 py-6 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
                 >
                   <span className=" h6 font-bold uppercase tracking-[0.25em]">
-                    Want to be our Next Success Case Study?
+                    Want to be our Next Success Case Study
                   </span>
                 </motion.button>
               </div>
@@ -1128,7 +1380,7 @@ export default function GoogleRankingExpertSection() {
 
                         <div className="mb-8">
                           <h4 className="text-xl font-black uppercase tracking-tight text-slate-900">
-                            Case Study Application
+                            Contact us Now
                           </h4>
                           <p className="mt-1 text-sm text-slate-500">
                             Fill in the details to start your journey to #1.
@@ -1187,9 +1439,9 @@ export default function GoogleRankingExpertSection() {
 
                           <button
                             type="submit"
-                            className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-[#3cb878] py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
+                            className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-[#3cb878] py-5 text-[11px] text-sm font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
                           >
-                            Submit Application{' '}
+                            SUBMIT{' '}
                             <Send
                               size={16}
                               className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
@@ -1227,8 +1479,7 @@ export default function GoogleRankingExpertSection() {
                   Successful Businesses Testimonials
                 </h5>
                 <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
-                  Client&apos;s{' '}
-                  <span className="text-[#3cb878]"> Reviews</span>
+                  Client&apos;s <span className="text-[#3cb878]"> Reviews</span>
                 </h3>
               </motion.div>
 
@@ -1258,15 +1509,15 @@ export default function GoogleRankingExpertSection() {
 
                         <div className="relative z-10 space-y-8">
                           <p className="p  italic leading-relaxed  text-slate-900">
-                            &quot;Working with{' '}
-                            Zammy Zaif{' '}
-                            has been a game-changer for our business. His
-                            expertise as a Google SEO Consultant has helped us
-                            achieve first-rank results for multiple keywords,
-                            including those crucial to our towing service.
-                            Zammy’s strategic approach and dedication have
-                            significantly boosted our visibility and customer
-                            inquiries.&quot;
+                            &quot;Working with Zammy Zaif has been a
+                            game-changer for our business. His expertise as a
+                            Google SEO Consultant has helped us achieve
+                            first-rank results for multiple keywords, including
+                            those crucial to our towing service. Zammy’s
+                            strategic approach and dedication have significantly
+                            boosted our visibility and customer inquiries. We
+                            highly recommend his services to anyone looking to
+                            dominate their local search results.&quot;
                           </p>
 
                           <div className="flex flex-col items-center gap-4">
@@ -1350,7 +1601,7 @@ export default function GoogleRankingExpertSection() {
                 <motion.h5
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="h5 font-bold uppercase tracking-[0.3em] text-[#3cb878]"
+                  className="h5 font-bold uppercase  text-[#3cb878]"
                 >
                   As an expert Google SEO agency, we offer the following
                   essencials
@@ -1388,10 +1639,10 @@ export default function GoogleRankingExpertSection() {
                         </div>
 
                         {/* Text Content */}
-                        <h3 className="h3 mb-3 font-bold text-slate-900 transition-colors group-hover:text-[#3cb878]">
+                        <h4 className="h4 mb-3 font-bold text-slate-900 transition-colors group-hover:text-[#3cb878]">
                           {service.title}
-                        </h3>
-                        <p className="p  text-slate-900">{service.desc}</p>
+                        </h4>
+                        <p className="p text-slate-900">{service.desc}</p>
 
                         {/* Visual Decoration */}
                         <div className="absolute right-6 top-6 opacity-[0.03] transition-opacity group-hover:opacity-[0.1]">
@@ -1438,7 +1689,15 @@ export default function GoogleRankingExpertSection() {
                   Zammy and our team specialize in Local SEO, helping businesses
                   dominate Google Maps rankings. Our signature 45-Day First Rank
                   SEO Challenge has successfully delivered 800+ projects to
-                  Google’s top position for 15 targeted keywords each.
+                  Google’s top position for 15 targeted keywords each. Our
+                  strategy boosts calls, bookings, website clicks, and drives
+                  real foot traffic to your location. By targeting the right
+                  audience nearby, we increase your visibility exactly where it
+                  matters. Higher map rankings lead to better trust and customer
+                  engagement. Local SEO is key for growth in today’s competitive
+                  market. We focus on sales results, not just rankings. Get
+                  ready to turn searches into real-world customers with Zammy
+                  and Team.
                 </motion.p>
 
                 <motion.p
@@ -1473,7 +1732,10 @@ export default function GoogleRankingExpertSection() {
                     className="group flex items-start gap-4 rounded-2xl p-4 transition-colors hover:bg-[#3cb878]"
                   >
                     <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white shadow-lg shadow-[#DBFFEC] transition-transform group-hover:scale-110">
-                      <Check size={14} className="stroke-[4px] text-[#3cb878]" />
+                      <Check
+                        size={14}
+                        className="stroke-[4px] text-[#3cb878]"
+                      />
                     </div>
                     <p className="p text-sm font-bold leading-snug text-slate-700 md:text-base">
                       {feature}
@@ -1497,7 +1759,7 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="mb-20 space-y-4 text-center"
               >
-                <h5 className="h5 font-bold uppercase tracking-[0.4em] text-[#3cb878]">
+                <h5 className="h5 font-bold uppercase  text-[#3cb878]">
                   Hire the Right Ranking Optimizer
                 </h5>
                 <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
@@ -1593,9 +1855,9 @@ export default function GoogleRankingExpertSection() {
               >
                 <div className="flex flex-col items-center justify-between gap-8 rounded-[2.8rem] bg-white p-10 text-center md:flex-row">
                   <div className="text-left">
-                    <h3 className="h3 font-bold text-slate-900 ">
+                    <h4 className="h4 font-bold text-slate-900 ">
                       Ready to Hire an Expert?
-                    </h3>
+                    </h4>
                     <p className="p  text-slate-900">
                       Make the right choice for your business growth today.
                     </p>
@@ -1603,7 +1865,7 @@ export default function GoogleRankingExpertSection() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p rounded-2xl bg-[#3cb878] px-10 py-5 font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]"
+                    className="p rounded-2xl bg-[#3cb878] px-10 py-5 font-bold uppercase text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]"
                   >
                     Book Your Free Audit
                   </motion.button>
@@ -1656,7 +1918,7 @@ export default function GoogleRankingExpertSection() {
                         {algoData[activeTab].desc}
                       </p>
 
-                      <div className="flex flex-wrap gap-3">
+                      {/* <div className="flex flex-wrap gap-3">
                         {algoData[activeTab].highlights.map((tag, i) => (
                           <span
                             key={i}
@@ -1665,7 +1927,7 @@ export default function GoogleRankingExpertSection() {
                             # {tag}
                           </span>
                         ))}
-                      </div>
+                      </div> */}
                     </motion.div>
                   </AnimatePresence>
                 </div>
@@ -1767,34 +2029,30 @@ export default function GoogleRankingExpertSection() {
             className="overflow-hidden bg-white py-14"
           >
             <div className="mx-auto max-w-7xl px-6">
-              <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <div className="mb-16 flex flex-col justify-center text-center  ">
                 <div className="space-y-4">
                   <motion.h5
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    className="h5  tracking-[0.2em] text-[#3cb878]"
+                    className="h5  tracking-[0.1em] text-[#3cb878]"
                   >
                     Industry Specialization
                   </motion.h5>
-                  <motion.h3
+                  <motion.h4
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="h3 leading-tight tracking-tighter text-slate-900"
+                    className="h4 leading-tight tracking-tighter text-slate-900"
                   >
                     Sectors We
-                    <span className="text-[#3cb878]"> Serve
-                        
-                    </span>
-                  </motion.h3>
+                    <span className="text-[#3cb878]"> Serve</span>
+                  </motion.h4>
                 </div>
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="p max-w-md font-medium text-slate-700"
+                  className="p  mx-auto mt-10 justify-center text-center font-medium text-slate-800"
                 >
-                  Expert Google Ranking Services Across 200+ Business
-                  Categories, delivering hyper-targeted results for niche
-                  markets.
+                  Expert Google Ranking Services Across 200+ Business Categories
                 </motion.p>
               </div>
 
@@ -1843,29 +2101,41 @@ export default function GoogleRankingExpertSection() {
                   className="space-y-8"
                 >
                   <div>
-                    <motion.h3 className="h3 leading-[1.1]  tracking-tighter text-slate-900">
-                      Google Expert <br />
-                      <span className="italic text-[#3cb878]">
-                        Impacting
-                      </span>{' '}
-                      <br />
-                      Search Engines
-                    </motion.h3>
+                    <motion.h4 className="h4 leading-[1.1]  tracking-tighter text-slate-900">
+                      Google Expert
+                      <span className=" text-[#3cb878]"> Impacting</span> Search
+                      Engines
+                    </motion.h4>
                     <div className="mt-6 h-2 w-20 rounded-full bg-[#3cb878]" />
                   </div>
 
-                  <p className="p  text-slate-600">
+                  <p className="p text-slate-900">
                     To start with, he has a basic understanding of each SEO
                     project he commits. A unique and customized SEO strategy is
                     planned and implemented for each project as he knows it
-                    differs from business to business.
+                    differs from business to business. For that, he thoroughly
+                    analyses the clients’ businesses and their requirements.
                   </p>
-
-                  <div className="flex gap-4">
-                    <button className="rounded-2xl bg-[#3cb878] px-8 py-4 font-bold uppercase tracking-widest text-white shadow-lg shadow-slate-200 transition-all hover:bg-white hover:text-[#3cb878]">
-                      Discuss Project
-                    </button>
-                  </div>
+                  <p className="p text-slate-900">
+                    <span className="font-bold"> #1 Business analysis</span> is
+                    all about conducting a study on clients’ targeted audience,
+                    potential customers and their business culture. Zammy Zaif
+                    does exactly this at the beginning of each and every
+                    project. And most importantly, he conducts competitor
+                    analysis to get an overview of that particular niche market.
+                    He basically does research to find answers for these
+                    questions:
+                  </p>
+                  <p className="p font-medium text-slate-900">
+                    What SEO techniques do other competitors follow?
+                  </p>
+                  <p className="p font-medium text-slate-900">
+                    Do they have a positive impact on the public?
+                  </p>
+                  <p className="p font-medium text-slate-900">
+                    If yes, how can we customize the SEO strategy for our
+                    clients in order to supersede them?
+                  </p>
                 </motion.div>
 
                 <div className="space-y-6">
@@ -1903,12 +2173,12 @@ export default function GoogleRankingExpertSection() {
                       </div>
 
                       <div className="space-y-2">
-                        <h4 className="h4 flex  flex-wrap items-center gap-2 tracking-tight text-slate-900">
+                        <h5 className="h5 flex  flex-wrap items-center gap-2  text-slate-900">
                           {step.title}
                           <span className="inline-block transition-transform duration-300 group-hover:scale-110">
                             {step.icon}
                           </span>
-                        </h4>
+                        </h5>
                         <p className="p text-slate-700 ">{step.desc}</p>
                       </div>
                     </motion.div>
@@ -1938,13 +2208,13 @@ export default function GoogleRankingExpertSection() {
                   <h5 className="h5 font-bold uppercase ">Common Inquiries</h5>
                 </motion.div>
 
-                <motion.h3
+                <motion.h4
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="h3 tracking-tighter  text-slate-900"
+                  className="h4 tracking-tighter  text-slate-900"
                 >
                   Google's <span className="text-[#3cb878]"> Choice</span>
-                </motion.h3>
+                </motion.h4>
               </div>
 
               {/* FAQ List */}
@@ -2021,27 +2291,9 @@ export default function GoogleRankingExpertSection() {
                   );
                 })}
               </div>
-
-              {/* Bottom CTA */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                className="relative mt-16 overflow-hidden rounded-[2.5rem] bg-white p-8 text-center"
-              >
-                <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-[#3cb878]/10" />
-                <h4 className="h4 relative z-10 mb-4 font-bold text-slate-900">
-                  Still have questions about your ranking?
-                </h4>
-                <button className="h5 relative z-10 rounded-xl bg-[#3cb878] px-8 py-4  font-bold uppercase tracking-widest text-white shadow-xl transition-all hover:bg-white hover:text-[#3cb878]">
-                  Contact Expert Now
-                </button>
-              </motion.div>
             </div>
           </section>
-
-          
-
-     </main>
+        </main>
 
         {/* SIDEBAR (Sticky on Right) */}
         <aside className="order-1 hidden w-[20%] lg:order-2 lg:block">
@@ -2064,10 +2316,10 @@ export default function GoogleRankingExpertSection() {
                   <h4 className="h4  tracking-relaxed leading-relaxed">
                     Free Website <br /> Audit
                   </h4>
-                  <h5 className="h5 font-bold  tracking-[0.02em] text-white">
+                  <p className="p   tracking-[0.02em] text-white">
                     Boost your online presence with a free website audit
                     tailored to improve SEO and visibility
-                  </h5>
+                  </p>
                 </div>
 
                 <button className="flex w-full items-center justify-between rounded-2xl bg-white px-6 py-4 text-xs font-black uppercase tracking-widest text-[#3cb878] transition-all hover:bg-slate-900 hover:text-[#3cb878]">
