@@ -2419,16 +2419,16 @@ export default function GoogleRankingExpertSection() {
           </div>
           {/* SIDEBAR CONTACT FORM - PIXEL PERFECT START */}
           {/* 5. SIDEBAR CONTACT FORM - MOVE IT HERE (INSIDE THE DIV) */}
-          <div className="w-full overflow-hidden rounded-[2.5rem] border-2 border-[#3cb878] bg-white shadow-2xl">
+        {/*  <div className="w-full overflow-hidden rounded-[2.5rem] border-2 border-[#3cb878] bg-white shadow-2xl">
             {/* Brand Green Header */}
-            <div className="bg-[#3cb878] py-6 text-center">
+           {/* <div className="bg-[#3cb878] py-6 text-center">
               <h2 className="h2 uppercase tracking-tighter text-white">
                 Get in touch
               </h2>
             </div>
 
             {/* Form Content */}
-            <form className="space-y-4 p-5 lg:p-6">
+          {/*  <form className="space-y-4 p-5 lg:p-6">
               <div className="relative">
                 <input
                   type="text"
@@ -2462,7 +2462,7 @@ export default function GoogleRankingExpertSection() {
               </div>
 
               {/* reCAPTCHA - Properly scaled for Sidebar width */}
-              <div className="flex justify-center overflow-hidden py-2">
+             {/* <div className="flex justify-center overflow-hidden py-2">
                 <div className="origin-center scale-[0.75] xl:scale-[0.8]">
                   <ReCAPTCHA
                     sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
@@ -2472,7 +2472,7 @@ export default function GoogleRankingExpertSection() {
               </div>
 
               {/* Brand Green Submit Button */}
-              <button
+           {/*   <button
                 type="submit"
                 className="h-14 w-full rounded-full bg-[#3cb878] text-sm font-black uppercase tracking-[0.15em] text-white shadow-lg transition-all hover:bg-slate-900 hover:shadow-green-500/20 active:scale-95"
               >
