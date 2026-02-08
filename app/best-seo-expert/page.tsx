@@ -23,7 +23,79 @@ export default function FullSEOPage() {
           
     <div className="bg-white text-[#444] font-sans selection:bg-[#3cb878] selection:text-white">
           <Hero />
-          <AboutSection/>
+          <AboutSection />
+          <section className="bg-black py-16 md:py-24 font-sans">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          
+          {/* Left Side: Stats and Certificate Card */}
+          <div className="w-full lg:w-1/2">
+            <div className="bg-[#29cc84] rounded-xl p-8 md:p-12 text-center shadow-lg">
+              {/* Image Container */}
+              <div className="bg-white p-2 rounded-lg shadow-md mb-10 overflow-hidden">
+                <img 
+                  src="https://it2.tv/seo-services/img/best-seo-professional-zammy-zaif.webp" 
+                  alt="Zammy Zaif Certificate" 
+                  className="w-full h-auto block rounded"
+                />
+              </div>
+              
+              {/* Stats Section */}
+              <div className="flex flex-col gap-8">
+                <div>
+                  <h3 className="text-white text-5xl md:text-6xl font-bold leading-none">18+</h3>
+                  <p className="text-white text-lg mt-1">Years Of Experience</p>
+                </div>
+                <div>
+                  <h3 className="text-white text-5xl md:text-6xl font-bold leading-none">2T</h3>
+                  <p className="text-white text-lg mt-1">Plus Clients</p>
+                </div>
+                <div>
+                  <h3 className="text-white text-5xl md:text-6xl font-bold leading-none">3K+</h3>
+                  <p className="text-white text-lg mt-1">Projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Content */}
+          <div className="w-full lg:w-1/2">
+            <span className="text-[#29cc84] text-lg font-semibold block mb-2">
+              Proven Ranking Mastery Since 2008
+            </span>
+            
+            <h2 className="text-[#222222] text-4xl md:text-5xl font-extrabold mb-4">
+              Best Google SEO Professional
+            </h2>
+            
+            <div className="w-16 h-[3px] bg-[#29cc84] mb-8"></div>
+
+            <div className="space-y-6 text-[#444444] leading-relaxed text-base md:text-[17px]">
+              <p>
+                Zammy Zaif earns the global title of the best SEO professional through his unmatched 
+                track record of delivering #1 Google rankings for clients globally since 2008.
+                Zaif's strategies consistently secure First & Top positions by adhering strictly to 
+                Google guidelines, transforming small businesses into lead-generating powerhouses.
+                <span className="font-bold text-[#222222]"> His shift since 2014 to prioritize the #1 spot</span> has boosted organic traffic by up to 
+                50% and click-through rates by 20% for websites. 
+                This precision stems from deep technical audits, on-page optimization and ethical 
+                link-building that align with evolving algorithms.
+              </p>
+              
+              <p>
+                Google recognizes Zaif via featured snippets and Search Central mentions, 
+                spotlighting his content as authoritative since 2018. 
+                Over 20 years, his methods have engaged 5 million+ users monthly without 
+                third-party shortcuts, earning trust from 1000+ entrepreneurs. 
+                As CEO of Versa Forge, he resolves complex issues like map spam and profile 
+                hurdles for local dominance.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div> 
+    </section>
       {/* --- SECTION 1: SERVICES GRID --- */}
       <section className="py-20 container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">

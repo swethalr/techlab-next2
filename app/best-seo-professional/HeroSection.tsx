@@ -149,7 +149,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-white text-5xl md:text-6xl lg:text-[3.5rem] font-bold leading-tight mb-6 px-4">
+          <h1 className="text-white  h1 font-bold leading-tight mb-6 px-4">
             {slides[currentSlide].title}
           </h1>
 
@@ -197,8 +197,8 @@ const HeroSection: React.FC = () => {
         aria-label="Previous slide"
       >
         <svg
-          width="60"
-          height="60"
+          width="100"
+          height="100"
           viewBox="0 0 60 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -234,8 +234,8 @@ const HeroSection: React.FC = () => {
         aria-label="Next slide"
       >
         <svg
-          width="60"
-          height="60"
+          width="100"
+          height="100"
           viewBox="0 0 60 60"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +268,7 @@ const HeroSection: React.FC = () => {
           href="https://wa.me/919344618144"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#25d366] hover:bg-[#20c157] text-white flex items-center justify-center gap-2 px-4 py-6 shadow-lg transition-all duration-300 border-b border-white/20"
+          className="bg-[#25d366] hover:bg-[#20c157] text-white flex items-center justify-center gap-2 px-2 py-4 shadow-lg transition-all duration-300 border-b border-white/20"
           style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           <svg
@@ -286,7 +286,7 @@ const HeroSection: React.FC = () => {
 
         {/* Mail Us Button */}
         <button
-          className="bg-[#1e88e5] hover:bg-[#1976d2] text-white flex items-center justify-center gap-2 px-4 py-6 shadow-lg transition-all duration-300"
+          className="bg-[#1e88e5] hover:bg-[#1976d2] text-white flex items-center justify-center gap-2 px-2 py-4 shadow-lg transition-all duration-300"
           style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
         >
           <svg
@@ -303,28 +303,7 @@ const HeroSection: React.FC = () => {
         </button>
       </div>
 
-      {/* Hamburger Menu Button (Top Right) */}
-      <button
-        className="fixed top-24 right-8 z-40 bg-[#ff6b35] hover:bg-[#ff5722] w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300"
-        aria-label="Menu"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </button>
+     
     </section>
   );
 };
