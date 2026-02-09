@@ -974,9 +974,6 @@ type CardItem = {
             </div>
           </div>
         </div>
-
-      
-        
           </section>
 
            <section className="overflow-hidden relative bg-white py-24 selection:bg-orange-100 lg:py-32">

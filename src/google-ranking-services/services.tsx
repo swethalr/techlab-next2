@@ -268,7 +268,7 @@ const [pricingSwiper, setPricingSwiper] = React.useState<SwiperType | null>(null
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                   
                   Our specialized Google & AI SEO Ranking services are engineered to propel your online visibility
                   with a multi-pronged approach for Future 2026.
@@ -280,7 +280,7 @@ const [pricingSwiper, setPricingSwiper] = React.useState<SwiperType | null>(null
                   We develop user-centric, semantic-rich experiences that decisively outpace the competition. This comprehensive methodology is designed to
                   capture the next wave of search behavior. The result is a significant and sustained increase in high-intent organic traffic.
                   This directly
-                  <span className ="font-bold text-slate-900">drives a greater volume of qualified inquiries and those all-important sales conversions.</span> Our focus is building
+                  <span className ="font-bold text-black">drives a greater volume of qualified inquiries and those all-important sales conversions.</span> Our focus is building
                   a future-proof digital foundation that delivers lasting growth.
                  
                 </p>
@@ -357,7 +357,7 @@ const [pricingSwiper, setPricingSwiper] = React.useState<SwiperType | null>(null
                 Google Ranking Services
               </span>
             </h2>
-            <p className="p text-slate-700 font-medium max-w-7xl" >Google Ranking Services specializes in achieving the first rank on Google's SERP for clients locally & globally. We offer comprehensive services, including competitor analysis, strategic content creation, high-quality backlinks, GBP optimization & on-page technical optimization tailored to align with Google's algorithms. Our team of Google Rank Experts attracts the right audience for your business with our specialized SEO ranking services.</p>
+            <p className="p text-black  max-w-7xl" >Google Ranking Services specializes in achieving the first rank on Google's SERP for clients locally & globally. We offer comprehensive services, including competitor analysis, strategic content creation, high-quality backlinks, GBP optimization & on-page technical optimization tailored to align with Google's algorithms. Our team of Google Rank Experts attracts the right audience for your business with our specialized SEO ranking services.</p>
           </div>
 
           {/* Carousel Wrapper: This div prevents the spillover into the sidebar */}
@@ -578,7 +578,7 @@ const [pricingSwiper, setPricingSwiper] = React.useState<SwiperType | null>(null
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                   
                  Google's #1 ranking as a search engine directly benefits businesses because it drives immense traffic to websites that appear at the top of search results. High visibility on Google translates to increased brand awareness, more potential customers finding your website, and ultimately a boost in lead generation and sales. Essentially, strong Google search performance equates to an inherent competitive advantage and signifies success in the digital landscape, making it a point of pride for any business.
                 </p>
@@ -672,7 +672,7 @@ const [pricingSwiper, setPricingSwiper] = React.useState<SwiperType | null>(null
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                   
                 Our team specializes in optimizing your Google Business Profile to maximize visibility and attract qualified leads in your local area. We'll ensure your profile is complete, accurate, and showcases positive customer reviews. Additionally, we'll strategically use Google Posts, messaging features, and targeted Q&A responses to build trust and convert searchers into customers. Our service helps you dominate local search results and drive a consistent stream of warm leads directly to your business.
                 </p>
@@ -766,10 +766,10 @@ Boost Website Visibility - </span> Accelerate Sales
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                   The visibility of a website is one of the most important factors for running a successful business. Accelerate your sales by boosting your website's visibility. Our data-driven optimization strategies transform your website presence into a high-performing sales machine. With customized design enhancements, persuasive copywriting and targeted A/B testing, we focus on relevant business-enquiry keywords to lead you towards sales qualified leads.
                 </p>
-                <p className="p font-medium leading-relaxed text-slate-700 ">
+                <p className="p  leading-[2em] text-black ">
                   This increased visibility will take your business website to the top of search results, driving more organic traffic and has high chances of converting those leads into customers. By attracting more business, our optimization method builds strong credibility to help you stand out among your competitors easily. This active engagement will earn the trust of your targeted audience, resulting in more clicks. Choose our ranking services to quickly increase your business growth with high number of sales.
                 </p>
               </div>
@@ -840,10 +840,10 @@ Dominating GEO & </span> Ai Search Rankings
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-white">
+                <p className="p leading-[2em] text-white">
                   Search engine ranking defines where a website or URL appears on search engine results pages. Pages that rank well are placed at the top, attracting more visitors and engagement. Dominating GEO and AI search rankings means becoming the leading choice for local and AI-driven search queries, elevating your visibility in location-based and AI-powered search environments. Higher rankings not only boost your presence but establish your brand as an authoritative and trusted resource. Our strategies ensure you don’t just appear in search results— you stand out prominently, becoming the focal point in both the digital and local search landscapes.
                 </p>
-                <p className="p font-medium leading-relaxed text-white ">
+                <p className="p leading-[2em] text-white ">
                  We leverage advanced location targeting, AI-powered content optimization including AEO, and user behavior signals to capture traffic from both traditional and emerging AI platforms. This approach helps you maintain a competitive edge as search evolves in 2026, ensuring your business thrives across all search dimensions.
                 </p>
               </div>
@@ -911,10 +911,10 @@ Dominating GEO & </span> Ai Search Rankings
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p   leading-[2em] text-black">
                  Benefit from our seasoned SEO experts who are committed to delivering Website Ranking Optimization services aimed at securing the prestigious No.1 position on Google. With a track record dating back to 2008, we've consistently assisted businesses in dominating search results and reaching the summit of Google. Harness the potency of top-tier outcomes through our unwavering SEO services. Since 2014, we've enabled businesses of all scales to conquer search rankings and secure coveted first-page placements on Google.
                 </p>
-                <p className="p font-medium leading-relaxed text-slate-700 ">
+                <p className="p leading-[2em] text-black ">
                    With our unwavering dedication to tangible results, we assure you of substantial sales growth and heightened online visibility. Join forces with us to elevate your business to the pinnacle of Google's rankings.
                 </p>
               </div>
@@ -983,7 +983,7 @@ Dominating GEO & </span> Ai Search Rankings
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                   
                 Focusing your business growth with Google offers several compelling advantages. Google's dominance in search makes mastering Search Engine Optimization (SEO) critical – aligning your website with Google's algorithms boosts visibility and attracts organic traffic. Moreover, Google provides an array of invaluable free tools: Google Analytics helps you understand website performance, Google My Business enhances local search presence, and Google Search Console aids in technical SEO management. Leveraging these resources alongside strategic SEO practices positions your business to thrive within the vast Google ecosystem, driving increased traffic, leads, and ultimately sustainable growth.
                 </p>
@@ -1078,10 +1078,10 @@ Dominating GEO & </span> Ai Search Rankings
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                  Benefit from our seasoned SEO experts who are committed to delivering Website Ranking Optimization services aimed at securing the prestigious No.1 position on Google. With a track record dating back to 2008, we've consistently assisted businesses in dominating search results and reaching the summit of Google. Harness the potency of top-tier outcomes through our unwavering SEO services. Since 2014, we've enabled businesses of all scales to conquer search rankings and secure coveted first-page placements on Google.
                 </p>
-                <p className="p font-medium leading-relaxed text-slate-700 ">
+                <p className="p leading-[2em] text-black ">
                    With our unwavering dedication to tangible results, we assure you of substantial sales growth and heightened online visibility. Join forces with us to elevate your business to the pinnacle of Google's rankings.
                 </p>
               </div>
@@ -1145,7 +1145,7 @@ Dominating GEO & </span> Ai Search Rankings
               </div>
 
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-700">
+                <p className="p leading-[2em] text-black">
                   Winning Google's algorithm and emerging victorious in competitions requires a multifaceted approach focused on high-quality, user-centric content. Prioritize original, in-depth content that addresses searcher intent while adhering to Google's quality guidelines. Employ technical SEO best practices, ensuring your site is fast, mobile-friendly, and crawlable. Build authority through reputable backlinks from relevant websites. Stay updated on algorithm changes, and don't engage in manipulative tactics that violate Google's guidelines. Remember that genuine value for users lies at the heart of long-term success.
                 </p>
               </div>

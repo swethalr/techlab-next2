@@ -521,7 +521,7 @@ export default function GoogleRankingExpertSection() {
                 className="space-y-8"
               >
                 {/* Primary Bio Paragraph */}
-                <p className="p font-medium leading-relaxed  text-slate-700">
+                <p className="p leading-[2em]  text-black">
                   With a track record of successfully completing over 2,500+ SEO
                   projects globally and optimizing rankings from none or 10th
                   place to the first rank on the first page, Zammy, the
@@ -561,7 +561,7 @@ export default function GoogleRankingExpertSection() {
                 </div>
 
                 {/* Local SEO Secondary Paragraph */}
-                <p className="p font-medium leading-relaxed  text-slate-600">
+                <p className="p leading-[2em]  text-black">
                   Additionally, his work in local SEO is unparalleled, having
                   ranked over 800 local businesses in just 45 days, earning
                   first-rank positions on Google Maps, further solidifying his
@@ -765,11 +765,11 @@ export default function GoogleRankingExpertSection() {
 
                   {/* Content Body */}
                   <div className="space-y-8">
-                    <p className="p  font-medium leading-relaxed text-slate-700 ">
+                    <p className="p leading-[2em] text-black ">
                       Renowned for delivering rapid, high-impact results, Zammy
                       Zaif has mastered the art of Google Business Profile
                       optimization —
-                      <span className="ml-1 font-bold text-[#3cb878]">
+                      <span className="ml-1  text-[#3cb878]">
                         securing #1 rankings for high-value keywords in just 45
                         days.
                       </span>{' '}
@@ -906,7 +906,7 @@ export default function GoogleRankingExpertSection() {
 
               {/* 2. Content Description */}
               <div className="space-y-6">
-                <p className="p  font-medium leading-relaxed text-slate-600">
+                <p className="p leading-[2em] text-black">
                   Zammy & Team are dedicated to providing First Rank SEO
                   services in Seo, Aio, AEO & GEO. Securing the first spot
                   captures the
@@ -1057,7 +1057,7 @@ export default function GoogleRankingExpertSection() {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <p className="p  font-medium leading-relaxed text-slate-600">
+                <p className="p leading-[2em] text-black">
                   Google dominates 96% of global search traffic, far ahead of
                   competitors like Bing, Yahoo, Yandex, and Baidu.
                   <span className="ml-1 font-bold text-slate-900">
@@ -1124,7 +1124,7 @@ export default function GoogleRankingExpertSection() {
                 {/* Decorative Gradient Overlay */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
               </motion.div>
-              <p className="p  font-medium leading-relaxed text-slate-600">
+              <p className="p leading-[2em] text-black">
                 Our Google SEO services focus on securing the #1 position on
                 Google by making businesses easily found at the top of search
                 results by potential customers. We drive maximum visibility,
@@ -1160,7 +1160,7 @@ export default function GoogleRankingExpertSection() {
               </div>
               <div className="flex flex-col items-center gap-12 ">
                 <div className="flex-1 space-y-6">
-                  <p className="p font-medium leading-relaxed text-slate-600">
+                  <p className="p leading-[2em] text-black">
                     A successful Google ranking strategy centers around creating
                     high-quality, user-focused content that aligns with Google’s
                     algorithm.{' '}
@@ -1286,7 +1286,7 @@ export default function GoogleRankingExpertSection() {
                   <span className="text-[#3cb878]">Case Studies</span>
                 </h3>
 
-                <p className="p mx-auto max-w-2xl pt-4 font-medium text-slate-700">
+                <p className="p mx-auto max-w-2xl pt-4  text-black">
                   Creating and delivering useful and relevant content has always
                   been his
                 </p>
@@ -1686,7 +1686,7 @@ export default function GoogleRankingExpertSection() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="p font-medium leading-relaxed text-slate-600 "
+                  className="p leading-[2em] text-black "
                 >
                   Zammy and our team specialize in Local SEO, helping businesses
                   dominate Google Maps rankings. Our signature 45-Day First Rank
@@ -2052,7 +2052,7 @@ export default function GoogleRankingExpertSection() {
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="p  mx-auto mt-10 justify-center text-center font-medium text-slate-800"
+                  className="p  mx-auto mt-10 justify-center text-center text-slate-900"
                 >
                   Expert Google Ranking Services Across 200+ Business Categories
                 </motion.p>
