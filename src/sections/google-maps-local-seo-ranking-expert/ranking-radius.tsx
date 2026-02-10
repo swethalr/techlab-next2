@@ -107,7 +107,7 @@ const RankingRadar = () => {
         <div className={`px-2 py-1 rounded text-[10px] font-black border tracking-tighter ${
           activeIndex === idx ? "bg-emerald-500 text-black border-emerald-400" : "bg-zinc-900 text-emerald-500"
         }`}>
-          RANK #1
+          RANK #1 
         </div>
         <div className={`w-3 h-3 rounded-full ${activeIndex === idx ? "bg-emerald-400 shadow-[0_0_15px_#10b981]" : "bg-zinc-800"}`} />
       </motion.div>
@@ -116,11 +116,11 @@ const RankingRadar = () => {
 </div>
 
         {/* RIGHT: THE CONTENT (Educational) */}
-              {/*  <div className="flex flex-col gap-6">*/}
+              {/*  <div className="flex flex-col  there is gap-6 ''''''bg-emarad-500 text-black border-emarald summan'''''gap-6">*/}
               <div className="lg:col-span-7 flex flex-col gap-6 lg:pl-10">
           <div className="mb-4">
             
-            <h3 className="h3 text-white tracking-tighter leading-[0.9] mb-6">
+            <h3 className="h3 text-white tracking-tighter  leading-[0.9]  mb-6">
              Google Maps Ranking Radius for {' '}
               <span className="text-emerald-500">Local Keywords </span>
             </h3>
@@ -159,9 +159,9 @@ const RankingRadar = () => {
                       <h4 className={`h4 font-bold transition-colors ${activeIndex === index ? 'text-emerald-400' : 'text-zinc-200'}`}>
                         {item.title}
                       </h4>
-                      <span className={`text-lg font-mono font-bold ${activeIndex === index ? 'text-emerald-400' : 'text-zinc-200'}`}>
+                      {/*  <span className={`text-lg font-mono font-bold ${activeIndex === index ? 'text-emerald-400' : 'text-zinc-200'}`}>
                         {item.stats}
-                      </span>
+                      </span>*/}
                     </div>
                     <p className={`text-[16px] leading-relaxed transition-colors ${activeIndex === index ? 'text-zinc-300' : 'text-zinc-300'}`}>
                       {item.desc}

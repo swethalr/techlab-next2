@@ -31,7 +31,7 @@ const PremiumSEOExpert = () => {
                 <img 
                   src="/assets/images/best-seo-expert/local-seo-expert.webp" 
                   alt="Zammy Zaif" 
-                  className="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-98"
+                  className="w-full h-auto object-contain grayscale group-hover:grayscale-0  transition-all duration-1000 scale-100 group-hover:scale-98"
                 />
                 
                 {/* Dynamic Rank Badge */}
