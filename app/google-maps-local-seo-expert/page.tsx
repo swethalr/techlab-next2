@@ -9,11 +9,9 @@ import RadarSection from '@/src/sections/google-maps-local-seo-ranking-expert/ra
 import RankingEngine from '@/src/sections/google-maps-local-seo-ranking-expert/search-engine-optimization'
 import { Footer } from '@/src/layout/footer/v1';
 import WorkSectionDark from '@/src/sections/worksection/worksectiondark';
-import {
-  motion,
- 
-} from 'framer-motion';
-import { Trophy, Quote,ChevronDown} from 'lucide-react';
+import {  motion, AnimatePresence } from 'framer-motion';
+import { X, TrendingUp, Send, Trophy, Quote, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -30,6 +28,8 @@ import 'swiper/css/effect-coverflow';
 
 
 export default function GoogleMapsLocalSeoRankingExpertPage() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const reviews = [
   {
     name: 'Zain Towing Service LLC',
@@ -107,7 +107,7 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
 
 
  <section className="relative overflow-hidden bg-black py-24 lg:py-32">
-         <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
+         <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:40px_40px]" />
       <div className="pointer-events-none absolute bottom-[5%] left-[-5%] h-[500px] w-[500px] animate-pulse rounded-full bg-[#3cb878]/30 blur-[100px]" />
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/10 blur-[190px]" />
@@ -128,12 +128,12 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
                 Our First Rank Result speak for us
               </span>
             </motion.div>
-            <h2 className="h2 tracking-tighter text-white">
+            <h3 className="h3 tracking-tighter text-white">
               1st Rank {' '}
               <span className=" text-[#3cb878]">
                Result in 45 Days
               </span>
-            </h2>
+            </h3>
            
           </div>
 
@@ -221,11 +221,9 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
                 viewport={{ once: true }}
                 className="mb-16 space-y-4 text-center"
               >
-                <h5 className="h5  font-bold uppercase tracking-[0.2em] text-[#3cb878]">
-                  Successful Businesses Testimonials
-                </h5>
+                
                 <h3 className="h3  leading-[0.9] tracking-tighter text-white">
-                  Client&apos;s <span className="text-[#3cb878]"> Reviews</span>
+                Happy Client&apos;s <span className="text-[#3cb878]"> – Testimonials</span>
                 </h3>
               </motion.div>
 
@@ -347,7 +345,7 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
 
         <img
           src="/assets/images/best-seo-expert/global-google-ranking-expert.webp"
-          alt="Local SEO 1st Rank Expert"
+          alt="Global Google Ranking Expert"
           className="relative z-10 w-full rounded-3xl shadow-2xl border border-green-100"
         />
       </div>
@@ -355,25 +353,159 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
       {/* CONTENT SIDE */}
      <div className="lg:col-span-7">
        <span className="p text-emerald-400 font-medium uppercase">Zammy Zaif</span>
-        <h2 className="h2 text-white max-w-6xl leading-tight"> 
+        <h3 className="h3 text-white max-w-6xl leading-tight"> 
          Global Google Ranking Expert
-        </h2>
+        </h3>
 
         <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-4 mb-6"></div>
    
         <p className="text-white p leading-relaxed">
-          Zammy Zaif is a recognized authority in Google Business Profile (formerly Google My Business) optimization, celebrated for his profound understanding of Google’s guidelines, ranking factors, and algorithms. With a proven track record across various industries and countries, he has effectively resolved claims and verification issues while optimizing profiles to secure the No. 1 rank. Since the platform's inception, Zammy has adhered to best practices to achieve and maintain top rankings for businesses on Google Maps.
+                Zammy Zaif is a recognized authority in Google Business Profile (formerly Google My Business) optimization,
+                celebrated for his profound understanding of Google’s guidelines, ranking factors, and algorithms.
+                With a proven track record across various industries and countries, he has effectively resolved claims and
+                verification issues while optimizing profiles to secure the No. 1 rank. Since the platform's inception,
+                Zammy has adhered to best practices to achieve and maintain top rankings for businesses on Google Maps.
         </p>
 
         {/* CTA */}
         <div className="mt-8">
-          <button className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
+                <motion.button
+          
+                  onClick={() => setIsModalOpen(true)} // Opens the modal
+                  className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
             GET QUOTE
             <span className="inline-block transform group-hover:translate-x-1 transition">
               →
             </span>
-          </button>
-        </div>
+          </motion.button>
+              </div>
+              
+   {/* --- PREMIUM MODAL OVERLAY --- */}
+            <AnimatePresence>
+              {isModalOpen && (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6">
+                  {/* Backdrop */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => setIsModalOpen(false)}
+                    className="absolute inset-0 bg-slate-900/80 backdrop-blur-xl"
+                  />
+
+                  {/* Modal Card */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 40 }}
+                    className="relative flex w-full max-w-2xl flex-col overflow-hidden rounded-[3rem] bg-white shadow-2xl md:flex-row"
+                  >
+                    {/* Left Side: Brand Accent */}
+                    <div className="hidden w-1/3 flex-col justify-between bg-[#3cb878] p-10 text-white md:flex">
+                      <div className="space-y-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
+                          <TrendingUp size={24} />
+                        </div>
+                        <h3 className="text-2xl font-black uppercase leading-none tracking-tighter">
+                          Let's Build Your Success
+                        </h3>
+                      </div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest opacity-80">
+                        Manual SEO Strategy • 100% ROI Focused
+                      </p>
+                    </div>
+
+                    {/* Right Side: The Form */}
+                    <div className="relative flex-1 p-8 md:p-12">
+                      <button
+                        onClick={() => setIsModalOpen(false)}
+                        className="absolute right-6 top-6 p-2 text-slate-400 transition-colors hover:text-[#3cb878]"
+                      >
+                        <X size={24} />
+                      </button>
+
+                      <div className="mb-8">
+                        <h4 className="text-xl font-black uppercase tracking-tight text-slate-900">
+                          Contact us Now
+                        </h4>
+                        <p className="p mt-1 text-slate-700">
+                          Fill in the details to start your journey to #1.
+                        </p>
+                      </div>
+
+                      <form
+                        className="space-y-4"
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          setIsModalOpen(false);
+                        }}
+                      >
+                        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                          <div className="relative">
+                            <input
+                              type="text"
+                              placeholder="Full Name"
+                              required
+                              className="form-input-premium"
+                            />
+                          </div>
+                          <div className="relative">
+                            <input
+                              type="email"
+                              placeholder="Email Address"
+                              required
+                              className="form-input-premium"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="relative">
+                          <input
+                            type="url"
+                            placeholder="Website URL"
+                            required
+                            className="form-input-premium"
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            required
+                            className="form-input-premium"
+                          />
+                        </div>
+
+                        <textarea
+                          placeholder="Briefly describe your growth goals..."
+                          rows={3}
+                          className="w-full resize-none rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
+                        ></textarea>
+
+                        <button
+                          type="submit"
+                          className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-[#3cb878] py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
+                        >
+                          Submit Application{' '}
+                          <Send
+                            size={16}
+                            className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                          />
+                        </button>
+                      </form>
+                    </div>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
+
+            <style jsx>{`
+              .form-input-premium {
+                @apply w-full rounded-2xl border border-slate-100 bg-slate-50 py-4 pl-12 pr-5 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878];
+              }
+            `}</style>
+
       </div>
     </div>
   </div> 
@@ -382,7 +514,16 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
       
       <section className="relative bg-black  py-20 overflow-hidden">
   
-
+<div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/50 blur-[190px]" />
+        <div
+          className="absolute inset-0 opacity-[0.09]"
+          style={{
+            backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
+            backgroundSize: '45px 45px',
+          }}
+        />
+      </div>
   <div className="relative max-w-7xl mx-auto px-6">
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center"> 
 
@@ -448,9 +589,9 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
       {/* CONTENT SIDE */}
      <div className="lg:col-span-7">
       
-        <h2 className="h2 text-white max-w-6xl leading-tight"> 
+        <h3 className="h3 text-white max-w-6xl leading-tight"> 
          Google Places to Google Maps
-        </h2>
+        </h3>
 
         <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-4 mb-6"></div>
    
@@ -460,26 +601,157 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
 
         {/* CTA */}
         <div className="mt-8">
-          <button className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
+                <motion.button
+                  onClick={() => setIsModalOpen(true)} // Opens the modal
+                  className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
             Contact Now
             <span className="inline-block transform group-hover:translate-x-1 transition">
               →
             </span>
-          </button>
-        </div>
+          </motion.button>
+              </div>
+              
+
+              
+
+
+  {/* --- PREMIUM MODAL OVERLAY --- */}
+            <AnimatePresence>
+              {isModalOpen && (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6">
+                  {/* Backdrop */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => setIsModalOpen(false)}
+                    className="absolute inset-0 bg-slate-900/80 backdrop-blur-xl"
+                  />
+
+                  {/* Modal Card */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 40 }}
+                    className="relative flex w-full max-w-2xl flex-col overflow-hidden rounded-[3rem] bg-white shadow-2xl md:flex-row"
+                  >
+                    {/* Left Side: Brand Accent */}
+                    <div className="hidden w-1/3 flex-col justify-between bg-[#3cb878] p-10 text-white md:flex">
+                      <div className="space-y-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
+                          <TrendingUp size={24} />
+                        </div>
+                        <h3 className="text-2xl font-black uppercase leading-none tracking-tighter">
+                          Let's Build Your Success
+                        </h3>
+                      </div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest opacity-80">
+                        Manual SEO Strategy • 100% ROI Focused
+                      </p>
+                    </div>
+
+                    {/* Right Side: The Form */}
+                    <div className="relative flex-1 p-8 md:p-12">
+                      <button
+                        onClick={() => setIsModalOpen(false)}
+                        className="absolute right-6 top-6 p-2 text-slate-400 transition-colors hover:text-[#3cb878]"
+                      >
+                        <X size={24} />
+                      </button>
+
+                      <div className="mb-8">
+                        <h4 className="text-xl font-black uppercase tracking-tight text-slate-900">
+                          Contact us Now
+                        </h4>
+                        <p className="p mt-1 text-slate-700">
+                          Fill in the details to start your journey to #1.
+                        </p>
+                      </div>
+
+                      <form
+                        className="space-y-4"
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          setIsModalOpen(false);
+                        }}
+                      >
+                        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                          <div className="relative">
+                            <input
+                              type="text"
+                              placeholder="Full Name"
+                              required
+                              className="form-input-premium"
+                            />
+                          </div>
+                          <div className="relative">
+                            <input
+                              type="email"
+                              placeholder="Email Address"
+                              required
+                              className="form-input-premium"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="relative">
+                          <input
+                            type="url"
+                            placeholder="Website URL"
+                            required
+                            className="form-input-premium"
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            required
+                            className="form-input-premium"
+                          />
+                        </div>
+
+                        <textarea
+                          placeholder="Briefly describe your growth goals..."
+                          rows={3}
+                          className="w-full resize-none rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878]"
+                        ></textarea>
+
+                        <button
+                          type="submit"
+                          className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-[#3cb878] py-5 text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200 transition-all hover:bg-slate-900"
+                        >
+                          Submit Application{' '}
+                          <Send
+                            size={16}
+                            className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                          />
+                        </button>
+                      </form>
+                    </div>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
+
+            <style jsx>{`
+              .form-input-premium {
+                @apply w-full rounded-2xl border border-slate-100 bg-slate-50 py-4 pl-12 pr-5 text-sm font-medium outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#3cb878];
+              }
+            `}</style>
+
+
+
+
+
+
+
       </div>
     </div>
   </div> 
       </section>
-
-
-      
-      
       <RankingEngine/>
-     
-      
-
-
             <section className="font-sans flex min-h-[650px] w-full flex-col bg-black lg:flex-row">
               {/* LEFT SIDE: ONLY IMAGE - CLEAN VERSION */}
               <div className="relative flex w-full items-end justify-center overflow-hidden bg-emerald-900/40 pt-10 lg:w-1/2 lg:pt-20">

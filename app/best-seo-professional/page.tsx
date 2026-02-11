@@ -311,7 +311,7 @@ type CardItem = {
             <div
               key={index}
               className={`
-                relative overflow-hidden rounded-2xl border-4 border-[#3cb878] bg-[#f7f7f7] p-8
+                relative overflow-hidden rounded-2xl border-4 border-[#3cb878] bg-white p-8
                 transition-colors duration-500 group
                 ${card.active ? "text-white" : "text-[#222]"}
               `}
@@ -368,9 +368,9 @@ type CardItem = {
       </div>
     </section>
           <LeadForm/>
-<section className="relative bg-[#29cc84] overflow-hidden py-20 md:py-28">
+<section className="relative bg-[#3bc878]/50  overflow-hidden py-20 md:py-28">
       
-      {/* Decorative Background Image */}
+      {/* Decorative Background Image bg-[#29cc84] */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/assets/images/best-seo-expert/elements.png"
@@ -388,7 +388,7 @@ type CardItem = {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-        <h3 className="text-white h3 font-bold mb-4">
+        <h3 className="text-black h3 font-bold mb-4">
           Client Impact and Innovation
         </h3>
 
@@ -399,7 +399,7 @@ type CardItem = {
           <span className="block w-12 h-[2px] bg-white opacity-70"></span>
         </div>
 
-        <p className="text-white p leading-relaxed max-w-3xl mx-auto">
+        <p className="text-black p leading-relaxed max-w-3xl mx-auto">
           Zaif customizes plans around audience insights, competitors and AIDA
           frameworks to drive sales conversions beyond mere visibility. His
           content creation - optimized blogs, SOPs, and meta structures—elevates
@@ -430,28 +430,22 @@ type CardItem = {
                     src="/assets/images/best-seo-expert/different-industry-experience.webp"
                     alt="Google Ranking Platforms Cloud"
                     className=" h-full w-full "
-    
                   />
                 </div>
               </div>
-
               {/* Decorative Background Aura */}
               <div className="absolute left-1/2 top-1/2 -z-10 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3cb878] blur-[100px]" />
             </div>
-
             {/* --- CONTENT AREA --- */}
             <div className="w-full space-y-10 lg:w-[60%]">
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#3cb878]] h-0.5 w-12" />
-                  
+                  <div className="bg-[#3cb878]] h-0.5 w-12" />                  
                 </div>
                  <h5 className="h5 mb-1 font-bold uppercase tracking-wider text-[#3cb878]">
             Extensive Professional Experience
             </h5>
-                <h3 className="h3 leading-[0.95]  text-slate-900">
-                 
-                   
+                <h3 className="h3 leading-[0.95]  text-slate-900">                                    
                     Diverse Industries & Geographies
                 </h3>
               </div>
@@ -506,15 +500,12 @@ type CardItem = {
           }}
         />
           </section>
-          
-
           <section className=" relative py-20 md:py-28">
             
  {/* Background Grids and Glows */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
-      <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute left-[-5%] top-[-10%] h-[50%] w-[95%] rounded-full bg-[#3cb878]/20 blur-[100px]" />
-      </div>
+     
+      
+        
 
       <div className="max-w-6xl mx-auto px-4 text-center">
         

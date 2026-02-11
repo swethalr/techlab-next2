@@ -47,14 +47,25 @@ const radarData = [
 ];
 
 const RankingRadar = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(3);
 
   return (
     <section className="relative bg-[#050505] py-24 px-6 overflow-hidden min-h-screen flex items-center">
       {/* Background Grid for Technical Trust */}
-      <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:60px_60px]" />
-      
+      {/*<div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:60px_60px]" />
           {/*  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">*/}
+      
+<div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/20 blur-[190px]" />
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
+            backgroundSize: '45px 45px',
+          }}
+        />
+      </div>
+
           <div className="max-w-[1600px] mx-auto grid lg:grid-cols-12 gap-8 items-center relative z-10">
               
             
@@ -66,7 +77,7 @@ const RankingRadar = () => {
   <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center">
     
     {/* Static Concentric Rings */}
-    {[25, 50, 75, 100].map((size) => (
+    {[100, 75, 50, 25].map((size) => (
       <div 
         key={size} 
         className="absolute rounded-full border border-emerald-500/10" 

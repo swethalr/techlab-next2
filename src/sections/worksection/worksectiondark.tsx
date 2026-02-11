@@ -103,19 +103,19 @@ export default function WorkSectiondark() {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
-                    {/* Gradient Overlay */}
+                    {/* Gradient Overlay   ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`*/}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A112E] via-transparent to-transparent opacity-90" />
 
                     {/* Content */}
                     <div
-                      className={`absolute bottom-0 left-0 w-full p-6 transition-all duration-500 md:p-8 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+                      className={`absolute bottom-0 left-0 w-full p-6 transition-all duration-500 md:p-8 `}
                     >
-                      <span className="mb-3 inline-block rounded-md bg-[#3cb878] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                      <span className="mb-3 inline-block rounded-md bg-white px-3 py-1 text-[12px] font-bold uppercase tracking-wider text-black">
                         {item.category}
                       </span>
-                      <h4 className="text-lg font-bold leading-tight text-white md:text-2xl">
+                      <p className="p  bg-emerald-700/80 rounded px-2 py-2 leading-tight text-white ">
                         {item.title}
-                      </h4>
+                      </p>
                     </div>
 
                     {/* Arched Orange Button (Top Right) */}

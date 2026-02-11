@@ -32,7 +32,7 @@ const FuturisticServices = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,#10b98105_0%,transparent_70%)]" />
 
              <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:40px_40px]" />
-      <div className="pointer-events-none absolute bottom-[5%] left-[-5%] h-[500px] w-[500px] animate-pulse rounded-full bg-[#3cb878]/30 blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-[5%] left-[-5%]  h-[500px] w-[500px] animate-pulse rounded-full bg-[#3cb878]/30 blur-[100px]" />
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/10 blur-[190px]" />
       </div>
@@ -101,7 +101,7 @@ const FuturisticServices = () => {
                       {service.title}
                     </h4>
                     
-                    <p className="text-gray-400 p max-w-xl leading-relaxed font-medium">
+                    <p className="text-gray-400 p max-w-xl leading-relaxed ">
                       {service.desc}
                     </p>
                   </div>
