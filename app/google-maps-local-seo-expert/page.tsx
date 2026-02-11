@@ -1,20 +1,22 @@
 'use client';
 import Hero from "@/src/sections/google-maps-local-seo-ranking-expert/Hero";
 import MapsSeoCarousel from "@/src/sections/google-maps-local-seo-ranking-expert/MapsSeoCarousel"
-import LeadForm from 'src/components/LeadForm';
+import LeadFormDark from 'src/components/LeadFormDark';
 import { MainHeader } from '@/src/layout/header';
 import PremiumSEOExpert from '@/src/sections/google-maps-local-seo-ranking-expert/About'
 import FuturisticServices from '@/src/sections/google-maps-local-seo-ranking-expert/maps-seo-service'
 import RadarSection from '@/src/sections/google-maps-local-seo-ranking-expert/ranking-radius'
 import RankingEngine from '@/src/sections/google-maps-local-seo-ranking-expert/search-engine-optimization'
+import { Footer } from '@/src/layout/footer/v1';
+import WorkSectionDark from '@/src/sections/worksection/worksectiondark';
 import {
   motion,
  
 } from 'framer-motion';
-import { Trophy, Quote} from 'lucide-react';
+import { Trophy, Quote,ChevronDown} from 'lucide-react';
 
 
-
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -100,66 +102,11 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
       <MainHeader version="2" />
           <Hero />
           
-          <section className="relative bg-gradient-to-br from-white via-green-50 to-white py-20 overflow-hidden">
-  {/* subtle background glow */}
-  <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-green-200/30 rounded-full blur-3xl"></div>
-  <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-emerald-200/30 rounded-full blur-3xl"></div>
-
-  <div className="relative max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
-
-      
-      {/* IMAGE SIDE */}
-      <div className="relative group lg:col-span-5">
-
-        <div className="absolute inset-0 bg-gradient-to-tr from-green-400/20 to-emerald-400/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition"></div>
-
-        <img
-          src="/assets/images/best-seo-expert/local-seo-expert.webp"
-          alt="Local SEO 1st Rank Expert"
-          className="relative z-10 w-full rounded-3xl shadow-2xl border border-green-100"
-        />
-      </div>
-
-      {/* CONTENT SIDE */}
-     <div className="lg:col-span-7">
-
-        <h2 className="h2 text-gray-700 max-w-6xl leading-tight"> 
-          Expert in Local SEO #1 Rank 
-        </h2>
-
-        <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-4 mb-6"></div>
-
-        <p className="text-black p leading-relaxed">
-          Zammy Zaif and our team possess extensive expertise in securing first-rank
-          results for Google Business Profiles. Drawing from our experience with over
-          1,200 projects, we have developed tailored strategies for various industries.
-          We have established a streamlined pipeline approach to optimize Google Maps
-          business listings, ensuring strict adherence to Google’s guidelines. This
-          enables us to achieve No. 1 local SEO rankings within 45 business days. Our
-          proven strategy has been successfully implemented for over 800 businesses,
-          consistently delivering top rankings.
-        </p>
-
-        {/* CTA */}
-        <div className="mt-8">
-          <button className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
-            GET QUOTE
-            <span className="inline-block transform group-hover:translate-x-1 transition">
-              →
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> 
-      </section>
+         
       <PremiumSEOExpert />
-      <FuturisticServices />
-      <RadarSection />
-      <RankingEngine />
-      
-       <section className="relative overflow-hidden bg-white py-24 lg:py-32">
+
+
+ <section className="relative overflow-hidden bg-black py-24 lg:py-32">
          <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
       <div className="pointer-events-none absolute bottom-[5%] left-[-5%] h-[500px] w-[500px] animate-pulse rounded-full bg-[#3cb878]/30 blur-[100px]" />
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -170,7 +117,7 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
 
         <div className="mx-auto max-w-7xl px-6">
           {/* Section Header */}
-          <div className="mx-auto mb-16 max-w-7xl space-y-6 text-center">
+          <div className="mx-auto mb-6 max-w-7xl space-y-6 text-center"> 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -178,16 +125,16 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
             >
               <Trophy size={14} className="text-[#3cb878]" />
               <span className="p  font-bold uppercase  text-[#3cb878]">
-                Our First Rank Results
+                Our First Rank Result speak for us
               </span>
             </motion.div>
-            <h2 className="h2 tracking-tighter text-slate-900">
-              Expert in{' '}
+            <h2 className="h2 tracking-tighter text-white">
+              1st Rank {' '}
               <span className=" text-[#3cb878]">
-                Google Ranking Services
+               Result in 45 Days
               </span>
             </h2>
-            <p className="p text-black  max-w-7xl" >Google Ranking Services specializes in achieving the first rank on Google's SERP for clients locally & globally. We offer comprehensive services, including competitor analysis, strategic content creation, high-quality backlinks, GBP optimization & on-page technical optimization tailored to align with Google's algorithms. Our team of Google Rank Experts attracts the right audience for your business with our specialized SEO ranking services.</p>
+           
           </div>
 
           {/* Carousel Wrapper: This div prevents the spillover into the sidebar */}
@@ -259,13 +206,12 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
           }
         `}</style>
       </section>
+      <LeadFormDark />
 
-      <LeadForm />
-      
-     {/* --- SECTION: CLIENT'S REVIEWS --- */}
+       {/* --- SECTION: CLIENT'S REVIEWS --- */}
           <section
             id="testimonials"
-            className="overflow-hidden bg-slate-50 py-16"
+            className="overflow-hidden bg-black py-16"
           >
             <div className="mx-auto max-w-3xl px-6">
               {/* Header Area */}
@@ -275,16 +221,16 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
                 viewport={{ once: true }}
                 className="mb-16 space-y-4 text-center"
               >
-                <h5 className="h5  font-bold uppercase tracking-[0.4em] text-[#3cb878]">
+                <h5 className="h5  font-bold uppercase tracking-[0.2em] text-[#3cb878]">
                   Successful Businesses Testimonials
                 </h5>
-                <h3 className="h3  leading-[0.9] tracking-tighter text-slate-900">
+                <h3 className="h3  leading-[0.9] tracking-tighter text-white">
                   Client&apos;s <span className="text-[#3cb878]"> Reviews</span>
                 </h3>
               </motion.div>
 
               {/* Premium Carousel Container */}
-              <div className="relative px-4">
+              <div className="relative   px-4">
                 <Swiper
                   modules={[Pagination, Autoplay]}
                   spaceBetween={30}
@@ -299,20 +245,20 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
                     <SwiperSlide key={i}>
                       <motion.div
                         whileHover={{ y: -5 }}
-                        className="relative mx-auto max-w-4xl overflow-hidden rounded-[3rem] border border-slate-100 bg-white p-10 text-center shadow-[0_40px_100px_-20px_rgba(0,0,0,0.05)] md:p-16"
+                        className="relative mx-auto max-w-4xl bg-emerald-500/30 overflow-hidden rounded-[3rem] border border-slate-100  p-10 text-center shadow-[0_40px_100px_-20px_rgba(0,0,0,0.05)] md:p-16"
                       >
                         {/* Massive Decorative Quote Icon */}
                         <Quote
-                          className="absolute right-10 top-10 text-[#3cb878]/10"
+                          className="absolute right-10 top-10 text-white/10"
                           size={120}
                         />
 
-                        <div className="relative z-10 space-y-8">
-                          <p className="p italic leading-relaxed text-slate-900">
+                        <div className="relative  z-10 space-y-8">
+                          <p className="p italic leading-relaxed text-white">
                             &quot;{review.quote}&quot;
                           </p>
 
-                          <div className="flex flex-col items-center gap-4">
+                          <div className="flex flex-col  items-center gap-4">
                             {/* Client Logo using the dynamic logoUrl */}
                             <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-4 border-orange-50 bg-white p-2 shadow-sm">
                               <img
@@ -323,10 +269,10 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
                             </div>
 
                             <div>
-                              <h4 className="h4 font-black uppercase tracking-tighter text-slate-900">
+                              <h4 className="h4 font-black uppercase tracking-tighter text-white">
                                 {review.name}
                               </h4>
-                              <p className="p mt-1 text-xs font-black uppercase tracking-widest text-[#3cb878]">
+                              <p className="p mt-1 text-xs font-black uppercase tracking-widest text-emerald-300">
                                 {review.title}
                               </p>
                             </div>
@@ -347,7 +293,7 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className=" group rounded-2xl bg-slate-900 px-10 py-5 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
+                  className=" group rounded-2xl bg-emerald-700/50 px-10 py-5 text-white shadow-xl transition-all duration-500 hover:bg-white hover:text-[#3cb878]"
                 >
                   <span className="p flex items-center gap-3 font-bold uppercase tracking-[0.25em]">
                     Our Google Reviews
@@ -383,9 +329,242 @@ export default function GoogleMapsLocalSeoRankingExpertPage() {
               }
             `}</style>
           </section>
-
-      <MapsSeoCarousel />
+      
+      <FuturisticServices />
       <RadarSection />
+
+<section className="relative bg-black  py-20 overflow-hidden">
+  
+
+  <div className="relative max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center"> 
+
+      
+      {/* IMAGE SIDE */}
+      <div className="relative group lg:col-span-5">
+
+        <div className="absolute inset-0 bg-black rounded-3xl blur-xl  group-hover:opacity-100 transition"></div>
+
+        <img
+          src="/assets/images/best-seo-expert/global-google-ranking-expert.webp"
+          alt="Local SEO 1st Rank Expert"
+          className="relative z-10 w-full rounded-3xl shadow-2xl border border-green-100"
+        />
+      </div>
+
+      {/* CONTENT SIDE */}
+     <div className="lg:col-span-7">
+       <span className="p text-emerald-400 font-medium uppercase">Zammy Zaif</span>
+        <h2 className="h2 text-white max-w-6xl leading-tight"> 
+         Global Google Ranking Expert
+        </h2>
+
+        <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-4 mb-6"></div>
+   
+        <p className="text-white p leading-relaxed">
+          Zammy Zaif is a recognized authority in Google Business Profile (formerly Google My Business) optimization, celebrated for his profound understanding of Google’s guidelines, ranking factors, and algorithms. With a proven track record across various industries and countries, he has effectively resolved claims and verification issues while optimizing profiles to secure the No. 1 rank. Since the platform's inception, Zammy has adhered to best practices to achieve and maintain top rankings for businesses on Google Maps.
+        </p>
+
+        {/* CTA */}
+        <div className="mt-8">
+          <button className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
+            GET QUOTE
+            <span className="inline-block transform group-hover:translate-x-1 transition">
+              →
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> 
+      </section>
+
+      
+      <section className="relative bg-black  py-20 overflow-hidden">
+  
+
+  <div className="relative max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center"> 
+
+      
+            
+              {/* CONTENT SIDE */}
+     <div className="lg:col-span-7">
+       <span className="p text-emerald-400 font-medium uppercase">Zammy Zaif</span>
+        <h2 className="h2 text-white max-w-6xl leading-tight"> 
+        Expert Local SEO Consultant
+        </h2>
+
+        <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-4 mb-6"></div>
+   
+        <p className="text-white p leading-relaxed">As a team, we have successfully completed numerous local, city, state, national, and global SEO projects, focusing on tailored competition, keyword, and user intent analysis to identify keywords that drive business and revenue for our clients. After finalizing target keywords, we consult with our clients in detail before initiating each project, ensuring our commitment to achieving No. 1 rankings for local SEO within 45 working days. For city-based projects, we typically achieve first rankings within 6 months, while state-level rankings take about 9 months. Country-level rankings require 12 to 16 months, and general keyword rankings on a global scale can take between 24 to 36 months. Our expertise in data analysis and strategic implementation has solidified our reputation as leading experts in Local SEO, helping businesses maximize their visibility and performance in local search results.
+        </p>
+
+       
+            </div>
+            
+      {/* IMAGE SIDE */}
+      <div className="relative group lg:col-span-5">
+
+        <div className="absolute inset-0 bg-black rounded-3xl blur-xl  group-hover:opacity-100 transition"></div>
+
+        <img
+          src="/assets/images/best-seo-expert/expert-local-seo-consultant.webp"
+          alt="Local SEO 1st Rank Expert"
+          className="relative z-10 w-full rounded-3xl shadow-2xl border border-green-100"
+        />
+      </div>
+
+    
+    </div>
+  </div> 
+      </section>
+
+
+<WorkSectionDark/>
+
+
+
+
+      <section className="relative bg-black  py-20 overflow-hidden">
+  
+
+  <div className="relative max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center"> 
+
+      
+      {/* IMAGE SIDE */}
+      <div className="relative group lg:col-span-5">
+
+        <div className="absolute inset-0 bg-white/20 rounded-3xl blur-xl  group-hover:opacity-100 transition"></div>
+
+        <img
+          src="/assets/images/best-seo-expert/local-seo (1).webp"
+          alt="Local SEO 1st Rank Expert"
+          className="relative z-10 w-full rounded-3xl shadow-2xl border border-green-100"
+        />
+      </div>
+
+      {/* CONTENT SIDE */}
+     <div className="lg:col-span-7">
+      
+        <h2 className="h2 text-white max-w-6xl leading-tight"> 
+         Google Places to Google Maps
+        </h2>
+
+        <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-4 mb-6"></div>
+   
+        <p className="text-white p leading-relaxed">
+         In early 2009, Google introduced Google Places as a simple way for businesses to claim their location on Google Maps. By 2014, it was rebranded as Google My Business, a free tool that allows businesses to manage their online presence across Google. It’s a crucial platform for local businesses, as nearly half of Google’s 4 billion daily searches are for local businesses. In 2020, Google My Business was renamed Google Business Profile, merging with Google Maps to help businesses better manage their online presence. This shift emphasizes the importance of having a physical location to appear on Google Maps, providing an essential connection between local businesses and customers.
+        </p>
+
+        {/* CTA */}
+        <div className="mt-8">
+          <button className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300">
+            Contact Now
+            <span className="inline-block transform group-hover:translate-x-1 transition">
+              →
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> 
+      </section>
+
+
+      
+      
+      <RankingEngine/>
+     
+      
+
+
+            <section className="font-sans flex min-h-[650px] w-full flex-col bg-black lg:flex-row">
+              {/* LEFT SIDE: ONLY IMAGE - CLEAN VERSION */}
+              <div className="relative flex w-full items-end justify-center overflow-hidden bg-emerald-900/40 pt-10 lg:w-1/2 lg:pt-20">
+                <div className="relative z-10 w-full px-4 lg:px-10">
+                  <img
+                    src="https://it2.tv/img/google-maps-local-seo-ranking-expert/first-rank-expert.webp"
+                    alt="Best SEO Expert"
+                    className="mx-auto block h-auto max-h-[600px] w-full object-contain"
+                  />
+                </div>
+              </div>
+      
+              {/* RIGHT SIDE: FORM COLUMN */}
+              <div className="flex w-full items-center justify-center bg-emerald-900/50 p-6 md:p-12 lg:w-1/2 lg:p-16">
+                <div className="w-full max-w-2xl rounded-[2.5rem] border-[3px] border-white/30 p-8 md:p-12">
+                  {/* Form Heading: H2 inside H2 as requested */}
+                  <h4 className="h4 mb-10 text-center tracking-tight text-white">
+                    Get a free SEO plan
+                  </h4>
+      
+                  <form className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                    <input
+                      type="text"
+                      placeholder="Name*"
+                      required
+                      className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Your Phone*"
+                      required
+                      className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Your Email*"
+                      required
+                      className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                    />
+      
+                    <div className="relative">
+                      <select className="h-14 w-full cursor-pointer appearance-none rounded-full bg-white px-6 text-slate-500 focus:outline-none">
+                        <option value="">Website SEO Services</option>
+                        <option value="google-ranking">Google Ranking</option>
+                        <option value="local-seo">Local SEO</option>
+                      </select>
+                      <ChevronDown
+                        className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 text-slate-400"
+                        size={20}
+                      />
+                    </div>
+      
+                    <input
+                      type="text"
+                      placeholder="GBP or Website URL"
+                      className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Subject"
+                      className="h-14 w-full rounded-full bg-white px-6 text-slate-800 placeholder:text-slate-400 focus:outline-none"
+                    />
+      
+                    {/* ReCAPTCHA Container */}
+                    <div className="flex justify-center py-2 md:col-span-2">
+                      <div className="scale-90 transform rounded-xl bg-white p-2 shadow-md md:scale-100">
+                        <ReCAPTCHA
+                          sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                          onChange={(val: string | null) => console.log(val)}
+                        />
+                      </div>
+                    </div>
+      
+                    <button
+                      type="submit"
+                      className="mt-2 rounded-full bg-emerald-400/40 py-5 font-black uppercase tracking-wider text-white shadow-xl transition-all duration-300 hover:bg-slate-900 active:scale-95 md:col-span-2"
+                    >
+                      Submit Seo Estimate Request
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </section>
+      <Footer/>
     </main>
+    
   );
 }

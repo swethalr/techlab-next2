@@ -228,7 +228,14 @@ type CardItem = {
         </div>
           </section>*/}
           
-   <section className="bg-white py-16 md:py-24 font-sans">
+          <section className="bg-white relative py-16 md:py-24 font-sans">
+            
+ <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
+      <div className="pointer-events-none absolute bottom-[5%] left-[-5%] h-[500px] w-[500px] animate-pulse rounded-full bg-[#3cb878]/30 blur-[100px]" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/10 blur-[190px]" />
+      </div>
+
   <div className="container mx-auto px-4 max-w-7xl">
     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -304,7 +311,7 @@ type CardItem = {
             <div
               key={index}
               className={`
-                relative overflow-hidden rounded-2xl bg-[#f7f7f7] p-8
+                relative overflow-hidden rounded-2xl border-4 border-[#3cb878] bg-[#f7f7f7] p-8
                 transition-colors duration-500 group
                 ${card.active ? "text-white" : "text-[#222]"}
               `}
@@ -322,7 +329,7 @@ type CardItem = {
 
               {/* CONTENT */}
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-lg font-semibold mb-4">
+                <h3 className="text-lg tracking-tighter font-semibold mb-4"> 
                   {card.title}
                 </h3>
 
@@ -332,7 +339,7 @@ type CardItem = {
                     ${
                       card.active
                         ? "text-white"
-                        : "text-[#444] group-hover:text-white"
+                        : "text-black group-hover:text-white"
                     }
                   `}
                 >
@@ -405,9 +412,9 @@ type CardItem = {
     </section> 
 
 
-          <section className="overflow-hidden relative bg-white py-24 selection:bg-orange-100 lg:py-32">
+          <section className="overflow-hidden relative py-24 selection:bg-orange-100 lg:py-32">
          <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
-      <div className="pointer-events-none absolute bottom-[5%] left-[-5%] h-[500px] w-[500px] animate-pulse rounded-full bg-[#3cb878]/30 blur-[100px]" />
+     
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/10 blur-[190px]" />
       </div>
@@ -501,7 +508,14 @@ type CardItem = {
           </section>
           
 
-           <section className="bg-white py-20 md:py-28">
+          <section className=" relative py-20 md:py-28">
+            
+ {/* Background Grids and Glows */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-[-5%] top-[-10%] h-[50%] w-[95%] rounded-full bg-[#3cb878]/20 blur-[100px]" />
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 text-center">
         
         {/* Small Heading */}
@@ -544,7 +558,16 @@ type CardItem = {
       </div>
           </section>
           
-  <section className="bg-white py-20 md:py-28">
+          <section className=" relative py-20 md:py-28">
+            
+   {/* Background Grids and Glows */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-[-5%] top-[-10%] h-[30%] w-[95%] rounded-full bg-[#3cb878]/10 blur-[100px]" />
+      </div>
+          
+
+
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Section Heading */}
